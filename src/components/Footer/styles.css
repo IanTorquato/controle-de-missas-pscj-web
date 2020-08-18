@@ -1,0 +1,92 @@
+footer.rodape {
+	align-items: center;
+	background-color: #2c2c2c;
+	display: flex;
+	flex-direction: column;
+	font-family: Roboto;
+}
+
+nav {
+	margin: 60px auto 30px auto;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	border-radius: 50%;
+	margin: 0 10px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+nav ul li:hover {
+	box-shadow: 0 30px 24px 0 #000000;
+	transform: translateY(-20px);
+}
+
+nav ul li a {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 60px;
+	width: 60px;
+}
+
+nav img.icons {
+	max-width: 60%;
+}
+
+nav a.facebook {
+	background-color: #1877f2;
+}
+
+nav a.facebook img {
+	height: 65%;
+}
+
+nav a.instagram {
+	background-color: #ec5cbe;
+}
+
+nav a.youtube {
+	background-color: #ff0000;
+}
+
+nav a.whatsapp {
+	background-color: #00e676;
+}
+
+p.copyright {
+	cursor: default;
+	font-size: 1.5rem;
+	margin-top: 20px;
+}
+
+a.contatos {
+	background-color: #555;
+	border-radius: 10px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin: 35px 0;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+a.contatos:hover {
+	background-color: #777;
+}
+
+p.topoPagina {
+	border-radius: 50%;
+	bottom: 20px;
+	cursor: pointer;
+	margin-left: 47vw;
+	position: fixed;
+}
+
+p.topoPagina:hover {
+	transform: scale(1.3);
+}

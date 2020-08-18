@@ -1,0 +1,176 @@
+section.secHome {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+}
+
+div.centralInfo {
+	background-color: #000000aa;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 0 auto 0 auto;
+	padding: 5px 0 10px 0;
+	text-align: center;
+	width: 36vw;
+}
+
+div.centralInfo:hover {
+	background-color: #000000e0;
+}
+
+div.centralInfo:hover hr {
+	width: 26vw;
+}
+
+img.logo {
+	height: 75px;
+	margin: 0 auto 0 auto;
+	width: 65px;
+}
+
+hr.linha {
+	background-image: linear-gradient(to right, transparent, #fff, transparent);
+	border: 0;
+	height: 2px;
+	margin: 10px auto 10px auto;
+	min-width: 100px;
+	width: 12vw;
+}
+
+h1.tituloSCJ {
+	font-family: Cookie, cursive;
+	font-size: 6rem;
+	text-shadow: 2px 1px #000;
+}
+
+h2.subTituloSCJ {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2.1rem;
+	margin: 20px auto 0 auto;
+}
+
+section.sectionBotoes {
+	background-color: #000000aa;
+	display: flex;
+	flex-direction: row;
+	padding: 4vh 0;
+}
+
+div.alinhaCentro {
+	align-items: center;
+	display: flex;
+	margin: 0 auto 0 auto;
+}
+
+a.btnCadastrar {
+	background-color: #ffc32c;
+	border-radius: 50px;
+	box-shadow: 0 0 25px #00000044;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2.4rem;
+	margin-right: 12.5px;
+	padding: 15px;
+	text-align: center;
+	text-shadow: 0 0 5px #00000099;
+	width: 16vw;
+}
+
+a.btnCadastrar:hover {
+	background-color: #dfa81d;
+	box-shadow: 0 0 20px #ffffffbb;
+}
+
+a.btnEditar {
+	background-color: #4190d4;
+	border-radius: 50px;
+	box-shadow: 0 0 25px #00000044;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2.4rem;
+	margin-left: 12.5px;
+	padding: 15px;
+	text-align: center;
+	text-shadow: 0 0 5px #00000099;
+	width: 16vw;
+}
+
+a.btnEditar:hover {
+	background-color: #3a7fbb;
+	box-shadow: 0 0 20px #ffffffbb;
+}
+
+section.cronograma {
+	align-items: center;
+	background-color: #df0505a1;
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 8vh;
+	text-align: center;
+}
+
+h1.proximasMissas {
+	background-color: #3e0001;
+	border-radius: 5px;
+	font-family: 'Cinzel', serif;
+	font-size: 2rem;
+	margin: 14vh 0 8vh 0;
+	padding: 8px;
+	text-align: center;
+}
+
+div.gridMissas {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	width: 90%;
+}
+
+div.detalhesMissa {
+	align-items: center;
+	background-image: url('../../assets/fundoDetalhes.webp');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	height: 28vh;
+}
+
+h1.tituloMissa {
+	font-family: 'Merriweather', serif;
+	font-size: 3rem;
+	margin-top: 8vh;
+}
+
+h2.subTituloMissa {
+	color: #ddd;
+	font-family: 'Cinzel', serif;
+	font-size: 1.2rem;
+	margin-top: 15px;
+	max-width: 40ch;
+}
+
+div.detalhesMissa:hover h1 {
+	transform: scale(1.2);
+}
+
+div.detalhesMissa:hover h2 {
+	transform: scale(1.1);
+}
+
+@media (min-width:1750px) {
+	html {
+		font-size: 90%;
+	}
+	
+	div.gridMissas {
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	}
+	
+	h1.tituloMissa {
+		margin-top: 9vh;
+	}
+}

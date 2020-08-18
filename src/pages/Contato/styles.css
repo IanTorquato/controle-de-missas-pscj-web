@@ -1,0 +1,105 @@
+div.imgFundoContato {
+	background-attachment: fixed;
+	background-image: url('../../assets/fundoContato.webp');
+	background-position: center;
+	background-size: cover;
+}
+
+section.secContato {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+section.pessoas {
+	background-color: #555;
+	border-radius: 15px;
+	display: flex;
+	margin: 0 3vw;
+	padding: 40px;
+}
+
+img.imgContato {
+	border: 2px solid #000;
+	border-radius: 20px;
+	box-shadow: 0px 0px 16px #00000077;
+	height: 15vw;
+	margin-right: 20px;
+	width: 15vw;
+}
+
+div.dadosPessoa {
+	display: flex;
+	flex-direction: column;
+}
+
+h1.nomeContato {
+	font-size: 2.2rem;
+	margin-top: 10px;
+	text-shadow: 1px 1px 3px #000;
+}
+
+h2.setorContato {
+	color: #ccc;
+	font-size: 1.7rem;
+	margin-top: 5px;
+}
+
+ul.redesSociaisContato {
+	align-items: center;
+	display: flex;
+	font-size: 1.5rem;
+	height: 100%;
+	justify-content: center;
+	list-style: none;
+}
+
+ul.redesSociaisContato li {
+	align-items: center;
+	display: flex;
+	margin: 15px 10px;
+}
+
+ul.redesSociaisContato span {
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0px 0px 8px #00000088;
+	display: flex;
+	padding: 5px;
+}
+
+ul.redesSociaisContato span.spanGmail {
+	background-color: #c03c2f;
+}
+
+ul.redesSociaisContato span.spanFace {
+	background-color: #1877f2;
+}
+
+ul.redesSociaisContato span.spanInsta {
+	background-color: #ec5cbe;
+}
+
+ul.redesSociaisContato span.spanWhats {
+	background-color: #00e676;
+}
+
+ul.redesSociaisContato span.spanGithub {
+	background-color: #24292d;
+}
+
+ul.redesSociaisContato span.spanLinkedin {
+	background-color: #1877f2;
+}
+
+ul.redesSociaisContato a {
+	color: #ddd;
+	font-weight: bold;
+	padding: 5px;
+	text-decoration: none;
+}
+
+ul.redesSociaisContato a:hover {
+	background-color: #555;
+}

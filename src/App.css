@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	color: #fff;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 0.5s;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #eee;
+}
+
+div.imgFundo {
+	background-attachment: fixed;
+	background-image: url('./assets/fundoHome.webp');
+	background-position: center;
+	background-size: cover;
+}
+
+::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #222222;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
