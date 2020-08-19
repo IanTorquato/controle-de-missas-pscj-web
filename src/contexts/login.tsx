@@ -19,14 +19,16 @@ export const LoginProvider: React.FC = ({ children }) => {
 
 	async function logar(user: User) {
 		try {
-			const response = await api.post(`/pascom/login`, user)
+			const { data } = await api.post(`/pascom/login`, user)
 
-			if (response.data.user) {
-				localStorage.setItem('@PSCJ:user', JSON.stringify(response.data.user))
-				setUsuario(response.data)
+			if (data.nome && data.senha) {
+				const usuarioPascom = { nome: data.nome, senha: data.senha }
+
+				localStorage.setItem('@PSCJ:user', JSON.stringify(usuarioPascom))
+				setUsuario(data)
 			}
 			else (
-				alert(response.data.erro)
+				alert(data.erro)
 			)
 		} catch (erro) {
 			alert(erro)
