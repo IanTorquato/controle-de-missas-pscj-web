@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 
-import api from '../services/api_node'
+import api from '../services/api'
 
 interface User {
 	nome: string

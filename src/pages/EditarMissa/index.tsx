@@ -3,7 +3,7 @@ import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react'
 import './styles.css'
 import Footer from '../../components/Footer'
 import Sucesso from '../../components/Sucesso'
-import api from '../../services/api_node'
+import api from '../../services/api'
 
 interface Missa {
 	id: number

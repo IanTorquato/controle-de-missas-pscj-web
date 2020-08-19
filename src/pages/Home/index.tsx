@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './styles.css'
 import logo from '../../assets/logo.webp'
 import Footer from '../../components/Footer'
-import api from '../../services/api_node'
+import api from '../../services/api'
 
 interface Missa {
 	id: number
