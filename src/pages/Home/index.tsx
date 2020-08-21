@@ -41,7 +41,7 @@ const Home = () => {
 						<img className="logo" src={logo} alt="Brasão da Paróquia" />
 						<hr className="linha" />
 
-						<h1 className="tituloSCJ">Santuário Sagrado Coração de Jesus</h1>
+						<h1 className="tituloSCJ">Santuário Sagrado <br /> Coração de Jesus</h1>
 
 						<hr className="linha" />
 						<h2 className="subTituloSCJ">Gravatal - SC</h2>

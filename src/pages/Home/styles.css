@@ -5,27 +5,27 @@ section.secHome {
 }
 
 div.centralInfo {
+	align-items: center;
 	background-color: #000000aa;
-	border-radius: 10px;
+	border-radius: 8px;
 	cursor: pointer;
-	margin: 0 auto 0 auto;
-	padding: 5px 0 10px 0;
-	text-align: center;
-	width: 36vw;
+	display: flex;
+	flex-direction: column;
+	height: 296px;
+	justify-content: center;
+	margin: 0 auto;
+	width: 504px;
 }
 
 div.centralInfo:hover {
 	background-color: #000000e0;
 }
 
-div.centralInfo:hover hr {
-	width: 26vw;
-}
 
 img.logo {
-	height: 75px;
+	height: 64px;
 	margin: 0 auto 0 auto;
-	width: 65px;
+	width: 56px;
 }
 
 hr.linha {
@@ -37,9 +37,13 @@ hr.linha {
 	width: 12vw;
 }
 
+div.centralInfo:hover hr.linha {
+	width: 26vw;
+}
+
 h1.tituloSCJ {
 	font-family: Cookie, cursive;
-	font-size: 6rem;
+	font-size: 56px;
 	text-shadow: 2px 1px #000;
 }
 
