@@ -9,36 +9,29 @@ interface User {
 
 interface LoginContextData {
 	logado: boolean
-	logar(user: User): Promise<void>
+	logar(user: User): void
+	deslogar(): void
 }
 
 const LoginContext = createContext<LoginContextData>({} as LoginContextData)
 
 export const LoginProvider: React.FC = ({ children }) => {
-	const [usuario, setUsuario] = useState(localStorage.getItem('@PSCJ:user'))
+	const [logado, setLogado] = useState(!!localStorage.getItem('@PSCJ:pascomLogada'))
 
-	async function logar(user: User) {
-		try {
-			const { data } = await api.post(`/pascom/login`, user)
+	function logar(user: User) {
+		api.post(`/pascom/login`, user).then(() => {
 
-			if (data.nome && data.senha) {
-				const usuarioPascom = { nome: data.nome, senha: data.senha }
-
-				localStorage.setItem('@PSCJ:user', JSON.stringify(usuarioPascom))
-				setUsuario(data)
-			}
-			else (
-				alert(data.erro)
-			)
-		} catch (erro) {
-			alert(erro)
-		}
+			localStorage.setItem('@PSCJ:pascomLogada', 'true')
+			setLogado(true)
+		}).catch(({ response }) => alert(response.data.erro))
 	}
 
-	return (
-		<LoginContext.Provider value={{ logado: !!usuario, logar }}>
-			{children}
-		</LoginContext.Provider>
-	)
+	function deslogar() {
+		localStorage.clear()
+		setLogado(false)
+	}
+
+	return <LoginContext.Provider value={{ logado, logar, deslogar }}> {children} </LoginContext.Provider>
 }
+
 export default LoginContext
