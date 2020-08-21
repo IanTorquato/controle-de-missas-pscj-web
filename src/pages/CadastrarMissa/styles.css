@@ -6,7 +6,7 @@ section.secCadastrar {
 	justify-content: center;
 }
 
-form {
+section.secCadastrar form {
 	align-items: center;
 	background-color: #800000;
 	border-radius: 10px;
