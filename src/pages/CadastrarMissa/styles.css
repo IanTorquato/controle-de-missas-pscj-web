@@ -28,7 +28,7 @@ form h1 {
 	text-shadow: 2px 2px 5px #000;
 }
 
-form hr {
+form hr.linhaCadastrar {
 	background-image: linear-gradient(to right, transparent, #fff, transparent);
 	border: 0;
 	height: 2px;
@@ -36,7 +36,7 @@ form hr {
 	width: 15vw;
 }
 
-form:hover hr {
+form:hover hr.linhaCadastrar {
 	width: 30vw;
 }
 

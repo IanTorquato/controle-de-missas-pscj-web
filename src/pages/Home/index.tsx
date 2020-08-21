@@ -43,11 +43,11 @@ const Home = () => {
 				<section className="secHome">
 					<div className="centralInfo" onClick={scrollCronograma}>
 						<img className="logo" src={logo} alt="Brasão da Paróquia" />
-						<hr className="linha" />
+						<hr className="linhaHome" />
 
 						<h1 className="tituloSCJ">Santuário Sagrado <br /> Coração de Jesus</h1>
 
-						<hr className="linha" />
+						<hr className="linhaHome" />
 						<h2 className="subTituloSCJ">Gravatal - SC</h2>
 					</div>
 				</section>

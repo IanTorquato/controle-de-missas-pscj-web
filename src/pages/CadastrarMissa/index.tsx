@@ -79,7 +79,7 @@ const CadastrarMissa = () => {
 				<section className="secCadastrar">
 					<form onSubmit={handleSubmit}>
 						<h1>CADASTRAR MISSA</h1>
-						<hr />
+						<hr className="linhaCadastrar" />
 
 						<fieldset className="fieldsetCadastrar">
 							<legend>
@@ -87,8 +87,8 @@ const CadastrarMissa = () => {
 							</legend>
 
 							<div className="field">
-								<select name="local" className="local" onChange={clicouLocal}>
-									<option value="0" disabled selected hidden>Selecione um Local</option>
+								<select name="local" defaultValue={0} className="local" onChange={clicouLocal}>
+									<option value="0" disabled hidden>Selecione um Local</option>
 									<option value="1">Centro</option>
 									<option value="2">Termas</option>
 								</select>

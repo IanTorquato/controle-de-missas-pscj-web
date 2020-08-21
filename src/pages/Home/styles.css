@@ -28,7 +28,7 @@ img.logo {
 	width: 56px;
 }
 
-hr.linha {
+hr.linhaHome {
 	background-image: linear-gradient(to right, transparent, #fff, transparent);
 	border: 0;
 	height: 2px;
@@ -37,7 +37,7 @@ hr.linha {
 	width: 12vw;
 }
 
-div.centralInfo:hover hr.linha {
+div.centralInfo:hover hr.linhaHome {
 	width: 26vw;
 }
 
