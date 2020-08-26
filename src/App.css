@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	color: #fff;
+	color: #e5e5e5;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -9,17 +9,13 @@
 
 html {
 	font-size: 62.5%;
+	background-color: #121212;
 }
 
-body {
-	background-color: #eee;
-}
-
-div.imgFundo {
-	background-attachment: fixed;
-	background-image: url('./assets/fundoHome.webp');
-	background-position: center;
-	background-size: cover;
+html,
+body,
+#root {
+	height: 100%;
 }
 
 ::-webkit-scrollbar {

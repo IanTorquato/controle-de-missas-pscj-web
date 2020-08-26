@@ -1,56 +1,124 @@
 section.secHome {
-	align-items: center;
-	display: flex;
+	background-color: #121212;
 	height: 100vh;
+	padding: 16px 128px;
 }
 
-div.centralInfo {
-	align-items: center;
-	background-color: #000000aa;
-	border-radius: 8px;
-	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	height: 296px;
-	justify-content: center;
-	margin: 0 auto;
-	width: 504px;
-}
-
-div.centralInfo:hover {
-	background-color: #000000e0;
-}
-
-
-img.logo {
-	height: 64px;
-	margin: 0 auto 0 auto;
-	width: 56px;
-}
-
-hr.linhaHome {
-	background-image: linear-gradient(to right, transparent, #fff, transparent);
-	border: 0;
-	height: 2px;
-	margin: 10px auto 10px auto;
-	min-width: 100px;
-	width: 12vw;
-}
-
-div.centralInfo:hover hr.linhaHome {
-	width: 26vw;
-}
-
-h1.tituloSCJ {
+h1.tituloSSCJ {
 	font-family: Cookie, cursive;
-	font-size: 56px;
-	text-shadow: 2px 1px #000;
+	font-size: 144px;
+	font-weight: normal;
 }
 
-h2.subTituloSCJ {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 2.1rem;
-	margin: 20px auto 0 auto;
+div.alinhaHorizontal {
+	display: flex;
+}
+
+div.alinhaHorizontal>div.alinhaHorizontal {
+	margin-top: 112px;
+}
+
+div.curiosidade {
+	align-items: center;
+	background-color: #252525;
+	border-radius: 8px;
+	display: flex;
+	height: 128px;
+	justify-content: center;
+	margin-right: 24px;
+	transform-style: preserve-3d;
+	width: 128px;
+}
+
+div.curiosidade:hover {
+	transform-origin: bottom center;
+	transform: rotateX(-90deg) translateY(100%);
+}
+
+div.curiosidade#corVermelha {
+	border: 1px solid #e41325;
+}
+
+div.curiosidade#corVermelha:after {
+	align-items: center;
+	background-color: #e5e5e5;
+	border: 1px solid #e41325;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #e41325;
+	content: "Desenvolvido para a nossa paróquia";
+	display: flex;
+	font-family: Oswald;
+	font-size: 20px;
+	height: 128px;
+	padding: 16px;
+	position: absolute;
+	text-align: center;
+	top: -100%;
+	transform: rotateX(90deg);
+	transform-origin: left bottom;
+	width: 128px;
+}
+
+div.curiosidade#corDourada {
+	border: 1px solid #ffc32c;
+}
+
+div.curiosidade#corDourada:after {
+	align-items: center;
+	background-color: #e5e5e5;
+	border: 1px solid #ffc32c;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #ffc32c;
+	content: "Focado em celebrações mais seguras";
+	display: flex;
+	font-family: Oswald;
+	font-size: 20px;
+	height: 128px;
+	padding: 16px;
+	position: absolute;
+	text-align: center;
+	top: -100%;
+	transform: rotateX(90deg);
+	transform-origin: left bottom;
+	width: 128px;
+}
+
+div.curiosidade#corAzul {
+	border: 1px solid #4396df;
+}
+
+div.curiosidade#corAzul:after {
+	align-items: center;
+	background-color: #e5e5e5;
+	border: 1px solid #4396df;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #4396df;
+	content: "Criado para auxiliar a Pascom";
+	display: flex;
+	font-family: Oswald;
+	font-size: 20px;
+	height: 128px;
+	padding: 16px;
+	position: absolute;
+	text-align: center;
+	top: -100%;
+	transform: rotateX(90deg);
+	transform-origin: left bottom;
+	width: 128px;
+}
+
+div.imagemDecorada {
+	margin-left: 32px;
+}
+
+div.imagemDecorada img {
+	border-radius: 8px;
+	margin-left: 88px;
+	margin-top: -120px;
+	width: 608px;
 }
 
 section.sectionBotoes {
