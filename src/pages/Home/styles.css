@@ -1,13 +1,17 @@
 section.secHome {
+	align-items: center;
 	background-color: #121212;
+	display: flex;
 	height: 100vh;
-	padding: 16px 128px;
+	justify-content: center;
+}
+
+section.secHome div.alinhamento {
+	width: 1248px;
 }
 
 h1.tituloSSCJ {
-	font-family: Cookie, cursive;
-	font-size: 144px;
-	font-weight: normal;
+	font: normal 144px 'Cookie', cursive;
 }
 
 div.alinhaHorizontal {
@@ -35,11 +39,11 @@ div.curiosidade:hover {
 	transform: rotateX(-90deg) translateY(100%);
 }
 
-div.curiosidade#corVermelha {
+div.curiosidade#curiosidadeVermelha {
 	border: 1px solid #e41325;
 }
 
-div.curiosidade#corVermelha:after {
+div.curiosidade#curiosidadeVermelha:after {
 	align-items: center;
 	background-color: #e5e5e5;
 	border: 1px solid #e41325;
@@ -60,11 +64,11 @@ div.curiosidade#corVermelha:after {
 	width: 128px;
 }
 
-div.curiosidade#corDourada {
+div.curiosidade#curiosidadeDourada {
 	border: 1px solid #ffc32c;
 }
 
-div.curiosidade#corDourada:after {
+div.curiosidade#curiosidadeDourada:after {
 	align-items: center;
 	background-color: #e5e5e5;
 	border: 1px solid #ffc32c;
@@ -85,11 +89,11 @@ div.curiosidade#corDourada:after {
 	width: 128px;
 }
 
-div.curiosidade#corAzul {
+div.curiosidade#curiosidadeAzul {
 	border: 1px solid #4396df;
 }
 
-div.curiosidade#corAzul:after {
+div.curiosidade#curiosidadeAzul:after {
 	align-items: center;
 	background-color: #e5e5e5;
 	border: 1px solid #4396df;
@@ -112,13 +116,40 @@ div.curiosidade#corAzul:after {
 
 div.imagemDecorada {
 	margin-left: 32px;
+	margin-top: -232px;
+	position: relative;
 }
 
 div.imagemDecorada img {
 	border-radius: 8px;
 	margin-left: 88px;
-	margin-top: -120px;
+	margin-top: 112px;
+	position: absolute;
 	width: 608px;
+}
+
+div.decoracaoImagem {
+	border-radius: 8px;
+	height: 256px;
+	position: absolute;
+	width: 560px;
+}
+
+div.decoracaoImagem#divVermelha {
+	border: 1px solid #e41325;
+	left: 200px;
+	top: 0;
+}
+
+div.decoracaoImagem#divDourada {
+	border: 1px solid #ffc32c;
+	top: 144px;
+}
+
+div.decoracaoImagem#divAzul {
+	border: 1px solid #4396df;
+	left: 112px;
+	top: 256px;
 }
 
 section.sectionBotoes {
