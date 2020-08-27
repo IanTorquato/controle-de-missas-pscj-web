@@ -1,13 +1,42 @@
+header.cabecalho {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	margin-bottom: -80px;
+	width: 100%;
+}
+
+header.cabecalho div {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	margin-left: 16px;
+}
+
+header.cabecalho img.logo {
+	height: 64px;
+	width: 56px;
+}
+
+header.cabecalho h1.tituloPSCJ {
+	font: normal 40px 'Cormorant Garamond', serif;
+	margin-left: 8px;
+}
+
+header.cabecalho h2.tituloLocal {
+	cursor: default;
+	font: normal 32px 'Cormorant Garamond', serif;
+	margin-right: 24px;
+}
+
 section.secHome {
 	align-items: center;
 	background-color: #121212;
+	cursor: default;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
-}
-
-section.secHome div.alinhamento {
-	width: 1248px;
 }
 
 h1.tituloSSCJ {
@@ -16,6 +45,7 @@ h1.tituloSSCJ {
 
 div.alinhaHorizontal {
 	display: flex;
+	width: 72vw;
 }
 
 div.alinhaHorizontal>div.alinhaHorizontal {
@@ -45,7 +75,7 @@ div.curiosidade#curiosidadeVermelha {
 
 div.curiosidade#curiosidadeVermelha:after {
 	align-items: center;
-	background-color: #e5e5e5;
+	background-color: #fff;
 	border: 1px solid #e41325;
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -55,7 +85,7 @@ div.curiosidade#curiosidadeVermelha:after {
 	font-family: Oswald;
 	font-size: 20px;
 	height: 128px;
-	padding: 16px;
+	padding: 8px;
 	position: absolute;
 	text-align: center;
 	top: -100%;
@@ -70,7 +100,7 @@ div.curiosidade#curiosidadeDourada {
 
 div.curiosidade#curiosidadeDourada:after {
 	align-items: center;
-	background-color: #e5e5e5;
+	background-color: #fff;
 	border: 1px solid #ffc32c;
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -80,7 +110,7 @@ div.curiosidade#curiosidadeDourada:after {
 	font-family: Oswald;
 	font-size: 20px;
 	height: 128px;
-	padding: 16px;
+	padding: 8px;
 	position: absolute;
 	text-align: center;
 	top: -100%;
@@ -95,7 +125,7 @@ div.curiosidade#curiosidadeAzul {
 
 div.curiosidade#curiosidadeAzul:after {
 	align-items: center;
-	background-color: #e5e5e5;
+	background-color: #fff;
 	border: 1px solid #4396df;
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -105,7 +135,7 @@ div.curiosidade#curiosidadeAzul:after {
 	font-family: Oswald;
 	font-size: 20px;
 	height: 128px;
-	padding: 16px;
+	padding: 8px;
 	position: absolute;
 	text-align: center;
 	top: -100%;
@@ -115,51 +145,48 @@ div.curiosidade#curiosidadeAzul:after {
 }
 
 div.imagemDecorada {
-	margin-left: 32px;
+	margin-left: 48px;
 	margin-top: -232px;
-	position: relative;
 }
 
 div.imagemDecorada img {
 	border-radius: 8px;
-	margin-left: 88px;
-	margin-top: 112px;
-	position: absolute;
+	margin-left: 56px;
+	margin-top: 64px;
 	width: 608px;
 }
 
 div.decoracaoImagem {
 	border-radius: 8px;
 	height: 256px;
-	position: absolute;
 	width: 560px;
 }
 
-div.decoracaoImagem#divVermelha {
+div.decoracaoImagem#decoracaoImgVermelha {
 	border: 1px solid #e41325;
-	left: 200px;
-	top: 0;
+	margin-left: 144px;
+	margin-top: -400px;
 }
 
-div.decoracaoImagem#divDourada {
+div.decoracaoImagem#decoracaoImgDourada {
 	border: 1px solid #ffc32c;
-	top: 144px;
+	margin-top: -144px;
 }
 
-div.decoracaoImagem#divAzul {
+div.decoracaoImagem#decoracaoImgAzul {
 	border: 1px solid #4396df;
-	left: 112px;
-	top: 256px;
+	margin-left: 80px;
+	margin-top: -200px;
 }
 
-section.sectionBotoes {
-	background-color: #000000aa;
+section.secBotoes {
+	align-items: center;
+	background-color: #212121;
 	display: flex;
-	flex-direction: row;
-	padding: 4vh 0;
+	height: 100vh;
 }
 
-div.alinhaCentro {
+section.secBotoes div {
 	align-items: center;
 	display: flex;
 	margin: 0 auto 0 auto;

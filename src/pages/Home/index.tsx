@@ -4,8 +4,8 @@ import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
+import logo from '../../assets/logo.webp'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.webp'
-import Header from '../../components/Header'
 import LoginContext from '../../contexts/login'
 import api from '../../services/api'
 import Footer from '../../components/Footer'
@@ -42,9 +42,18 @@ const Home = () => {
 
 	return (
 		<>
-			<Header />
+			<header className="cabecalho">
+				<div onClick={() => { window.location.reload() }}>
+					<img className="logo" src={logo} alt="Brasão da Paróquia" />
+
+					<h1 className="tituloPSCJ">PSCJ</h1>
+				</div>
+
+				<h2 className="tituloLocal">Gravatal - SC</h2>
+			</header>
+
 			<section className="secHome" onDoubleClick={deslogar}>
-				<div className="alinhamento">
+				<div>
 					<h1 className="tituloSSCJ">Santuário Sagrado <br /> Coração de <br /> Jesus</h1>
 
 					<div className="alinhaHorizontal">
@@ -52,29 +61,41 @@ const Home = () => {
 							<div className="curiosidade" id="curiosidadeVermelha" >
 								<BiChurch size={64} />
 							</div>
+
 							<div className="curiosidade" id="curiosidadeDourada" >
 								<GiHealthNormal size={64} />
 							</div>
+
 							<div className="curiosidade" id="curiosidadeAzul" >
 								<RiComputerLine size={64} />
 							</div>
 						</div>
 
 						<div className="imagemDecorada">
-							<div className="decoracaoImagem" id="divVermelha"></div>
-							<div className="decoracaoImagem" id="divDourada"></div>
-							<div className="decoracaoImagem" id="divAzul"></div>
-
 							<img src={igrejaCentro} alt="Igreja do Centro" />
+
+							<div className="decoracaoImagem" id="decoracaoImgVermelha"></div>
+							<div className="decoracaoImagem" id="decoracaoImgDourada"></div>
+							<div className="decoracaoImagem" id="decoracaoImgAzul"></div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="sectionBotoes">
-				<div className="alinhaCentro">
-					<Link to="/cadastrar-missa" className="btnCadastrar" onClick={() => { window.scrollTo(0, 0) }}>Cadastrar Missa</Link>
-					<Link to="/editar-missa" className="btnEditar" onClick={() => { window.scrollTo(0, 0) }}>Editar Missa</Link>
+			<section className="secBotoes">
+				<div>
+					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
+					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
+					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
+
+					<div className="conteudoBotoes"></div>
+
+					<Link className="btnCadastrar" to="/cadastrar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+						Cadastrar Missa
+						</Link>
+					<Link className="btnEditar" to="/editar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+						Editar Missa
+						</Link>
 				</div>
 			</section>
 
