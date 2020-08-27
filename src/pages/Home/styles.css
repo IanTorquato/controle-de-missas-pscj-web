@@ -181,55 +181,118 @@ div.decoracaoImagem#decoracaoImgAzul {
 
 section.secBotoes {
 	align-items: center;
-	background-color: #212121;
+	background-color: #121212;
 	display: flex;
 	height: 100vh;
+	justify-content: center;
 }
 
-section.secBotoes div {
+section.secBotoes div.decoracaoBotoes {
+	border-radius: 8px;
+	height: 568px;
+	width: 960px;
+}
+
+section.secBotoes div.decoracaoBotoes#decoracaoBtnVermelho {
+	border: 1px solid #e41325;
+	margin-left: 296px;
+	margin-top: -40px;
+}
+
+section.secBotoes div.decoracaoBotoes#decoracaoBtnDourado {
+	border: 1px solid #ffc32c;
+	margin-top: -416px;
+}
+
+section.secBotoes div.decoracaoBotoes#decoracaoBtnAzul {
+	border: 1px solid #4396df;
+	margin-left: 144px;
+	margin-top: -440px;
+}
+
+section.secBotoes div.conteudoBotoes {
+	background-color: #252525;
+	height: 736px;
+	margin-left: 48px;
+	margin-top: -776px;
+	padding-top: 16px;
+	width: 1160px;
+}
+
+section.secBotoes h1.tituloBotoes {
+	font: normal 96px 'Oswald';
+	margin-left: 56px;
+}
+
+section.secBotoes div.alinhaDireita {
+	align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	margin-top: -48px;
+}
+
+section.secBotoes div.alinhaDireita div.mensagensBotoes {
 	align-items: center;
 	display: flex;
-	margin: 0 auto 0 auto;
+	flex-direction: column;
+	margin-right: 112px;
+	position: relative;
 }
 
-a.btnCadastrar {
+section.secBotoes div.descricaoBotao {
+	font: normal 24px 'Shadows Into Light Two', cursive;
+	letter-spacing: 2px;
+	line-height: 32px;
+}
+
+section.secBotoes div.descricaoBotao#txtAlinhadoDireita {
+	margin-bottom: 32px;
+	margin-right: -16px;
+	text-align: end;
+}
+
+section.secBotoes img.flechaLoop {
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+section.secBotoes nav {
+	display: flex;
+	flex-direction: column;
+	height: 128px;
+	justify-content: space-between;
+	margin: 16px 0;
+	width: 312px;
+}
+
+a.btnsNavegacao {
+	align-items: center;
+	border: 2px solid #ffc32c;
+	border-radius: 4px;
+	color: #ffc32c;
+	display: flex;
+	font: normal 24px 'Roboto';
+	height: 48px;
+	justify-content: center;
+	padding: 16px 0;
+	width: 312px;
+}
+
+a.btnsNavegacao:hover {
 	background-color: #ffc32c;
-	border-radius: 50px;
-	box-shadow: 0 0 25px #00000044;
-	cursor: pointer;
-	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
-	font-size: 2.4rem;
-	margin-right: 12.5px;
-	padding: 15px;
-	text-align: center;
-	text-shadow: 0 0 4px #00000099;
-	width: 16vw;
+	color: #252525;
 }
 
-a.btnCadastrar:hover {
-	background-color: #dfa81d;
-	box-shadow: 0 0 20px #ffffffbb;
+section.secBotoes div.descricaoBotao#txtcoladoDireita {
+	margin-left: 152px;
+	margin-top: 32px;
 }
 
-a.btnEditar {
-	background-color: #4190d4;
-	border-radius: 50px;
-	box-shadow: 0 0 25px #00000044;
-	cursor: pointer;
-	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
-	font-size: 2.4rem;
-	margin-left: 12.5px;
-	padding: 15px;
-	text-align: center;
-	text-shadow: 0 0 4px #00000099;
-	width: 16vw;
-}
-
-a.btnEditar:hover {
-	background-color: #3a7fbb;
-	box-shadow: 0 0 20px #ffffffbb;
+section.secBotoes img.flechaCurva {
+	left: 16px;
+	position: absolute;
+	top: 216px;
 }
 
 section.cronograma {

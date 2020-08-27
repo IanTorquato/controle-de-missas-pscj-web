@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 
 import logo from '../../assets/logo.webp'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.webp'
+import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
+import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
 import LoginContext from '../../contexts/login'
 import api from '../../services/api'
 import Footer from '../../components/Footer'
@@ -84,18 +86,37 @@ const Home = () => {
 
 			<section className="secBotoes">
 				<div>
-					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
-					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
-					<div className="decoracaoBotoes" id="decoracaoBtn"></div>
+					<div className="decoracaoBotoes" id="decoracaoBtnVermelho"></div>
+					<div className="decoracaoBotoes" id="decoracaoBtnDourado"></div>
+					<div className="decoracaoBotoes" id="decoracaoBtnAzul"></div>
 
-					<div className="conteudoBotoes"></div>
+					<div className="conteudoBotoes">
+						<h1 className="tituloBotoes">Então, o que temos <br /> pra hoje?</h1>
 
-					<Link className="btnCadastrar" to="/cadastrar-missa" onClick={() => { window.scrollTo(0, 0) }}>
-						Cadastrar Missa
-						</Link>
-					<Link className="btnEditar" to="/editar-missa" onClick={() => { window.scrollTo(0, 0) }}>
-						Editar Missa
-						</Link>
+						<div className="alinhaDireita">
+							<div className="mensagensBotoes">
+								<div className="descricaoBotao" id="txtAlinhadoDireita">
+									Aqui, você pode cadastrar <br /> uma nova missa...
+									<img className="flechaLoop" src={iconFlexaLoop} alt="Flecha" />
+								</div>
+
+								<nav>
+									<Link className="btnsNavegacao" to="/cadastrar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+										Cadastro de Missas
+									</Link>
+
+									<Link className="btnsNavegacao" to="/editar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+										Lista de Missas
+									</Link>
+								</nav>
+
+								<div className="descricaoBotao" id="txtcoladoDireita">
+									<img className="flechaCurva" src={iconFlexaCurva} alt="Flecha" />
+									...e aqui, você vê as missas <br /> cadastradas e pode editá-las <br /> ou excluí-las!
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
