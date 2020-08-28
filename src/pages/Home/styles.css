@@ -25,7 +25,6 @@ header.cabecalho h1.tituloPSCJ {
 }
 
 header.cabecalho h2.tituloLocal {
-	cursor: default;
 	font: normal 32px 'Cormorant Garamond', serif;
 	margin-right: 24px;
 }
@@ -33,7 +32,6 @@ header.cabecalho h2.tituloLocal {
 section.secHome {
 	align-items: center;
 	background-color: #121212;
-	cursor: default;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
@@ -297,72 +295,60 @@ section.secBotoes img.flechaCurva {
 
 section.secCronograma {
 	align-items: center;
-	background-color: #df0505a1;
-	cursor: default;
+	background-color: #121212;
 	display: flex;
-	flex-direction: column;
-	padding-bottom: 8vh;
-	text-align: center;
+	height: 100vh;
 }
 
-h1.proximasMissas {
-	background-color: #3e0001;
-	border-radius: 5px;
-	font-family: 'Cinzel', serif;
-	font-size: 2rem;
-	margin: 14vh 0 8vh 0;
-	padding: 8px;
-	text-align: center;
-}
-
-div.gridMissas {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	width: 90%;
-}
-
-div.detalhesMissa {
-	align-items: center;
-	background-position: center center;
+section.secCronograma div.tituloCronograma {
+	background-image: url('../../assets/tituloCronograma.png');
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	height: 288px;
+	width: 50%;
+}
+
+section.secCronograma h2.erroListagem {
+	font: normal 40px 'Merriweather';
+	max-width: 50%;
+}
+
+section.secCronograma aside.gridMissas {
+	display: grid;
+	grid-template-columns: 320px 320px;
+	gap: 88px 64px;
+	margin: 0 auto;
+}
+
+section.secCronograma div.detalhesMissa {
+	background-color: #252525;
+	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
-	height: 28vh;
+	height: 176px;
+	justify-content: center;
+	text-align: center;
+	width: 320px;
 }
 
-h1.tituloMissa {
-	font-family: 'Merriweather', serif;
-	font-size: 3rem;
-	margin-top: 8vh;
+section.secCronograma div.detalhesMissa#detalhesMissaVermelha {
+	border: 1px solid #e41325;
 }
 
-h2.subTituloMissa {
-	color: #ddd;
-	font-family: 'Cinzel', serif;
-	font-size: 1.2rem;
-	margin-top: 15px;
-	max-width: 40ch;
+section.secCronograma div.detalhesMissa#detalhesMissaDourada {
+	border: 1px solid #ffc32c;
 }
 
-div.detalhesMissa:hover h1 {
-	transform: scale(1.2);
+section.secCronograma div.detalhesMissa#detalhesMissaAzul {
+	border: 1px solid #4396df;
 }
 
-div.detalhesMissa:hover h2 {
-	transform: scale(1.1);
+section.secCronograma h1 {
+	font: normal 40px 'Merriweather';
+	margin-bottom: 8px;
 }
 
-@media (min-width:1750px) {
-	html {
-		font-size: 90%;
-	}
-	
-	div.gridMissas {
-		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-	}
-	
-	h1.tituloMissa {
-		margin-top: 9vh;
-	}
+section.secCronograma h2 {
+	color: #e5e5e5;
+	font: normal 24px 'Cinzel';
 }

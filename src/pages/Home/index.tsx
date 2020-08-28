@@ -121,12 +121,12 @@ const Home = () => {
 			</section>
 
 			<section className="secCronograma">
-				<h1 className="proximasMissas">PRÓXIMAS MISSAS</h1>
+				<div className="tituloCronograma"></div>
 
-				<h2>{erroMissas}</h2>
+				<h2 className="erroListagem">{erroMissas}</h2>
 
-				<div className="gridMissas">
-					{missas.map(missa => {
+				<aside className="gridMissas">
+					{missas.map((missa, index) => {
 
 						const dataCortada = missa.data.split('/')
 						const dataInvertida = `${dataCortada[2]}/${dataCortada[1]}/${dataCortada[0]}`
@@ -137,16 +137,18 @@ const Home = () => {
 							'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO']
 
 						return (
-							<div key={missa.id} className="detalhesMissa">
-								<h1 className="tituloMissa">{missa.data.slice(0, 5)} - {missa.hora}</h1>
+							<div key={missa.id} className="detalhesMissa" id={
+								index < 2 ? 'detalhesMissaVermelha' : index < 4 ? 'detalhesMissaDourada' : 'detalhesMissaAzul'
+							}>
+								<h1>{missa.data.slice(0, 5)} - {missa.hora}</h1>
 
-								<h2 className="subTituloMissa">
+								<h2>
 									{diasSemana[diaMissa.getDay()]} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}
 								</h2>
 							</div>
 						)
 					})}
-				</div>
+				</aside>
 			</section>
 			<Footer />
 		</>
