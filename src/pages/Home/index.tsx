@@ -4,8 +4,8 @@ import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
-import logo from '../../assets/logo.webp'
-import igrejaCentro from '../../assets/dentroIgrejaCentro.webp'
+import logo from '../../assets/logo.svg'
+import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
 import LoginContext from '../../contexts/login'
@@ -120,7 +120,7 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section className="cronograma">
+			<section className="secCronograma">
 				<h1 className="proximasMissas">PRÓXIMAS MISSAS</h1>
 
 				<h2>{erroMissas}</h2>

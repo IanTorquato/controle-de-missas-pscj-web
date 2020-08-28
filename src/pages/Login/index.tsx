@@ -2,7 +2,7 @@ import React, { useContext, FormEvent } from 'react'
 
 import './styles.css'
 import LoginContext from '../../contexts/login'
-import logo from '../../assets/logo.webp'
+import logo from '../../assets/logo.svg'
 
 const Login = () => {
 	const { logar } = useContext(LoginContext)
