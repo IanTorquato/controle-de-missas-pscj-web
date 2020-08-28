@@ -6,28 +6,28 @@ footer.rodape {
 	font-family: Roboto;
 }
 
-nav {
+footer.rodape nav {
 	margin: 60px auto 30px auto;
 }
 
-nav ul {
+footer.rodape nav ul {
 	display: flex;
 	list-style: none;
 }
 
-nav ul li {
+footer.rodape nav ul li {
 	border-radius: 50%;
 	margin: 0 10px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
 }
 
-nav ul li:hover {
+footer.rodape nav ul li:hover {
 	box-shadow: 0 30px 24px 0 #000000;
 	transform: translateY(-20px);
 }
 
-nav ul li a {
+footer.rodape nav ul li a {
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -35,37 +35,37 @@ nav ul li a {
 	width: 60px;
 }
 
-nav img.icons {
+footer.rodape nav img.icons {
 	max-width: 60%;
 }
 
-nav a.facebook {
+footer.rodape nav a.facebook {
 	background-color: #1877f2;
 }
 
-nav a.facebook img {
+footer.rodape nav a.facebook img {
 	height: 65%;
 }
 
-nav a.instagram {
+footer.rodape nav a.instagram {
 	background-color: #ec5cbe;
 }
 
-nav a.youtube {
+footer.rodape nav a.youtube {
 	background-color: #ff0000;
 }
 
-nav a.whatsapp {
+footer.rodape nav a.whatsapp {
 	background-color: #00e676;
 }
 
-p.copyright {
+footer.rodape p.copyright {
 	cursor: default;
 	font-size: 1.5rem;
 	margin-top: 20px;
 }
 
-a.contatos {
+footer.rodape a.contatos {
 	background-color: #555;
 	border-radius: 10px;
 	font-size: 1.6rem;
@@ -75,18 +75,18 @@ a.contatos {
 	text-decoration: none;
 }
 
-a.contatos:hover {
+footer.rodape a.contatos:hover {
 	background-color: #777;
 }
 
-p.topoPagina {
+footer.rodape p.topoPagina {
 	border-radius: 50%;
 	bottom: 20px;
 	cursor: pointer;
-	margin-left: 47vw;
+	margin-left: 92vw;
 	position: fixed;
 }
 
-p.topoPagina:hover {
+footer.rodape p.topoPagina:hover {
 	transform: scale(1.3);
 }

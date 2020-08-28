@@ -15,8 +15,8 @@ header.cabecalho div {
 }
 
 header.cabecalho img.logo {
-	height: 64px;
-	width: 56px;
+	height: 44px;
+	width: 32px;
 }
 
 header.cabecalho h1.tituloPSCJ {
@@ -39,20 +39,20 @@ section.secHome {
 	justify-content: center;
 }
 
-h1.tituloSSCJ {
+section.secHome h1.tituloSSCJ {
 	font: normal 144px 'Cookie', cursive;
 }
 
-div.alinhaHorizontal {
+section.secHome div.alinhaHorizontal {
 	display: flex;
 	width: 72vw;
 }
 
-div.alinhaHorizontal>div.alinhaHorizontal {
+section.secHome div.alinhaHorizontal>div.alinhaHorizontal {
 	margin-top: 112px;
 }
 
-div.curiosidade {
+section.secHome div.curiosidade {
 	align-items: center;
 	background-color: #252525;
 	border-radius: 8px;
@@ -64,16 +64,16 @@ div.curiosidade {
 	width: 128px;
 }
 
-div.curiosidade:hover {
+section.secHome div.curiosidade:hover {
 	transform-origin: bottom center;
 	transform: rotateX(-90deg) translateY(100%);
 }
 
-div.curiosidade#curiosidadeVermelha {
+section.secHome div.curiosidade#curiosidadeVermelha {
 	border: 1px solid #e41325;
 }
 
-div.curiosidade#curiosidadeVermelha:after {
+section.secHome div.curiosidade#curiosidadeVermelha:after {
 	align-items: center;
 	background-color: #fff;
 	border: 1px solid #e41325;
@@ -94,11 +94,11 @@ div.curiosidade#curiosidadeVermelha:after {
 	width: 128px;
 }
 
-div.curiosidade#curiosidadeDourada {
+section.secHome div.curiosidade#curiosidadeDourada {
 	border: 1px solid #ffc32c;
 }
 
-div.curiosidade#curiosidadeDourada:after {
+section.secHome div.curiosidade#curiosidadeDourada:after {
 	align-items: center;
 	background-color: #fff;
 	border: 1px solid #ffc32c;
@@ -119,11 +119,11 @@ div.curiosidade#curiosidadeDourada:after {
 	width: 128px;
 }
 
-div.curiosidade#curiosidadeAzul {
+section.secHome div.curiosidade#curiosidadeAzul {
 	border: 1px solid #4396df;
 }
 
-div.curiosidade#curiosidadeAzul:after {
+section.secHome div.curiosidade#curiosidadeAzul:after {
 	align-items: center;
 	background-color: #fff;
 	border: 1px solid #4396df;
@@ -144,36 +144,36 @@ div.curiosidade#curiosidadeAzul:after {
 	width: 128px;
 }
 
-div.imagemDecorada {
+section.secHome div.imagemDecorada {
 	margin-left: 48px;
 	margin-top: -232px;
 }
 
-div.imagemDecorada img {
+section.secHome div.imagemDecorada img {
 	border-radius: 8px;
 	margin-left: 56px;
 	margin-top: 64px;
 	width: 608px;
 }
 
-div.decoracaoImagem {
+section.secHome div.decoracaoImagem {
 	border-radius: 8px;
 	height: 256px;
 	width: 560px;
 }
 
-div.decoracaoImagem#decoracaoImgVermelha {
+section.secHome div.decoracaoImagem#decoracaoImgVermelha {
 	border: 1px solid #e41325;
 	margin-left: 144px;
 	margin-top: -400px;
 }
 
-div.decoracaoImagem#decoracaoImgDourada {
+section.secHome div.decoracaoImagem#decoracaoImgDourada {
 	border: 1px solid #ffc32c;
 	margin-top: -144px;
 }
 
-div.decoracaoImagem#decoracaoImgAzul {
+section.secHome div.decoracaoImagem#decoracaoImgAzul {
 	border: 1px solid #4396df;
 	margin-left: 80px;
 	margin-top: -200px;
@@ -266,7 +266,7 @@ section.secBotoes nav {
 	width: 312px;
 }
 
-a.btnsNavegacao {
+section.secBotoes a.btnsNavegacao {
 	align-items: center;
 	border: 2px solid #ffc32c;
 	border-radius: 4px;
@@ -279,7 +279,7 @@ a.btnsNavegacao {
 	width: 312px;
 }
 
-a.btnsNavegacao:hover {
+section.secBotoes a.btnsNavegacao:hover {
 	background-color: #ffc32c;
 	color: #252525;
 }
@@ -295,7 +295,7 @@ section.secBotoes img.flechaCurva {
 	top: 216px;
 }
 
-section.cronograma {
+section.secCronograma {
 	align-items: center;
 	background-color: #df0505a1;
 	cursor: default;
@@ -323,7 +323,6 @@ div.gridMissas {
 
 div.detalhesMissa {
 	align-items: center;
-	background-image: url('../../assets/fundoDetalhes.webp');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
