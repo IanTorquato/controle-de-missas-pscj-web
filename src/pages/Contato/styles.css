@@ -1,7 +1,3 @@
-div.imgFundoContato {
-	background-color: #121212;
-}
-
 section.secContato {
 	align-items: center;
 	display: flex;
@@ -9,92 +5,142 @@ section.secContato {
 	justify-content: center;
 }
 
-section.pessoas {
-	align-items: center;
-	background-color: #5E5E5E;
-	border-radius: 16px;
-	display: flex;
-	height: 32vh;
-	margin: 0 3vw;
-	padding: 0 40px;
-}
-
-img.imgContato {
-	border: 1px solid #000;
-	border-radius: 16px;
-	box-shadow: 0px 0px 16px #00000055;
-	height: 16vw;
-	margin-right: 24px;
-	width: 16vw;
-}
-
-h1.nomeContato {
-	color: #e9e9e9;
-	font-size: 2.2rem;
-	text-shadow: 1px 1px 4px #000;
-}
-
-h2.setorContato {
-	color: #ccc;
-	font-size: 1.7rem;
-	margin-top: 4px;
-}
-
-ul.redesSociaisContato {
-	display: flex;
-	font-size: 1.5rem;
-	justify-content: space-between;
-	list-style: none;
-	width: 256px;
-}
-
-ul.redesSociaisContato li {
+section.secContato section.contatoPessoa {
 	align-items: center;
 	display: flex;
-	margin-top: 16px;
-	width: 120px;
+	flex-direction: column;
+	margin: 0 64px;
 }
 
-ul.redesSociaisContato span {
-	align-items: center;
+section.secContato div.decoracaoContato {
 	border-radius: 8px;
-	box-shadow: 0px 0px 8px #00000055;
+	height: 232px;
+	width: 424px;
+}
+
+section.secContato div.decoracaoContato#corContatoVermelha {
+	border: 1px solid #e41325;
+	margin-bottom: -128px;
+}
+
+section.secContato div.decoracaoContato#corContatoDourada {
+	border: 1px solid #ffc32c;
+	margin-bottom: -160px;
+}
+
+section.secContato div.decoracaoContato#corContatoAzul {
+	border: 1px solid #4396df;
+	margin-bottom: -336px;
+}
+
+section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoVermelha {
+	margin-left: 200px;
+}
+
+section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoDourada {
+	margin-left: -200px;
+}
+
+section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoVermelha {
+	margin-left: -200px;
+}
+
+section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoDourada {
+	margin-left: 200px;
+}
+
+section.secContato div.conteudoContato {
+	align-items: center;
+	background-color: #252525;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 296px;
+	justify-content: space-between;
+	padding: 32px 0;
+	width: 512px;
+}
+
+section.secContato div.conteudoContato>div {
+	align-items: center;
+	display: flex;
+}
+
+section.secContato div.conteudoContato>div>img {
+	border: 1px solid #e5e5e5;
+	border-radius: 50px;
+	height: 80px;
+	margin-right: 16px;
+	width: 80px;
+}
+
+section.secContato h1.nomeContato {
+	color: #e9e9e9;
+	font: normal 24px 'Oswald';
+}
+
+section.secContato h2.setorContato {
+	color: #c3c3c3;
+	font: normal 16px 'Oswald';
+}
+
+section.secContato ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	width: 500px;
+}
+
+section.secContato ul div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+section.secContato ul div:first-child {
+	margin-bottom: 32px;
+}
+
+section.secContato ul li {
+	width: 104px;
+}
+
+section.secContato ul a {
+	align-items: center;
+	color: #c3c3c3;
+	display: flex;
+	font: normal 16px 'Oswald';
+}
+
+section.secContato ul a:hover span.spanFace>svg {
+	fill: #1877f2;
+}
+
+section.secContato ul a:hover span.spanGithub>svg {
+	fill: #000;
+}
+
+section.secContato ul a:hover span.spanLinkedin>svg {
+	fill: #1877f2;
+}
+
+section.secContato ul a:hover span.spanGmail>svg {
+	fill: #e94134;
+}
+
+section.secContato ul a:hover span.spanInsta>svg {
+	fill: #ec5cbe;
+}
+
+section.secContato ul a:hover span.spanWhats>svg {
+	fill: #00e676;
+}
+
+section.secContato ul span {
+	align-items: center;
+	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin-right: 8px;
-	padding: 6px;
-}
-
-ul.redesSociaisContato span.spanGmail {
-	background-color: #c03c2f;
-}
-
-ul.redesSociaisContato span.spanFace {
-	background-color: #1877f2;
-}
-
-ul.redesSociaisContato span.spanInsta {
-	background-color: #ec5cbe;
-}
-
-ul.redesSociaisContato span.spanWhats {
-	background-color: #00e676;
-}
-
-ul.redesSociaisContato span.spanGithub {
-	background-color: #24292d;
-}
-
-ul.redesSociaisContato span.spanLinkedin {
-	background-color: #1877f2;
-}
-
-ul.redesSociaisContato a {
-	align-items: center;
-	color: #eee;
-	display: flex;
-	font-size: 1.7rem;
-	font-weight: bold;
-	text-decoration: none;
 }
