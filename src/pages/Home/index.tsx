@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
+import { FiArrowUpCircle } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/logo.svg'
@@ -39,8 +40,6 @@ const Home = () => {
 			}))
 		}).catch(({ response }) => { setErroMissas(response.data.erro) })
 	}, [])
-
-	function scrollSecBotoes() { window.scrollTo(0, window.innerHeight) }
 
 	return (
 		<>
@@ -82,6 +81,12 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+
+				<p className="topoPagina">
+					<abbr title="Voltar ao Topo" onClick={() => { window.scrollTo(0, 0) }}>
+						<FiArrowUpCircle size={40} />
+					</abbr>
+				</p>
 			</section>
 
 			<section className="secBotoes">
