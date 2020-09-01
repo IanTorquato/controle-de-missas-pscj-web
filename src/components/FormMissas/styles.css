@@ -1,0 +1,116 @@
+section.secCadastrarEditar {
+	align-items: center;
+	background-color: #121212;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa {
+	border-radius: 8px;
+	height: 568px;
+	width: 800px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormVermelha {
+	border: 1px solid #e41325;
+	margin-bottom: -400px;
+	margin-left: 240px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormDourada {
+	border: 1px solid #ffc32c;
+	margin-bottom: -448px;
+	margin-left: -264px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
+	border: 1px solid #4396df;
+	margin-bottom: -768px;
+}
+
+section.secCadastrarEditar form {
+	align-items: center;
+	background-color: #252525;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 736px;
+	position: relative;
+	width: 960px;
+}
+
+section.secCadastrarEditar form h1 {
+	font: normal 96px 'Oswald';
+	margin-bottom: 112px;
+	margin-top: 16px;
+}
+
+section.secCadastrarEditar form>h1+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 224px;
+	margin-bottom: 112px;
+}
+
+section.secCadastrarEditar input,
+section.secCadastrarEditar select {
+	background-color: #e5e5e5;
+	border: 0;
+	border-radius: 4px;
+	color: #747474;
+	cursor: pointer;
+	font: normal 16px 'Roboto';
+	height: 48px;
+	padding: 8px;
+	width: 400px;
+}
+
+section.secCadastrarEditar select option {
+	background-color: rgb(71, 202, 77);
+	color: #333;
+}
+
+section.secCadastrarEditar form div.msgEsquerda {
+	font: normal 24px 'Shadows Into Light Two';
+	left: 40px;
+	position: absolute;
+	text-align: center;
+	top: 448px;
+	width: 212px;
+}
+
+section.secCadastrarEditar form div.msgEsquerda img {
+	margin-left: 112px;
+	transform: rotate(-64deg);
+}
+
+section.secCadastrarEditar form div.msgDireita {
+	font: normal 24px 'Shadows Into Light Two';
+	left: 752px;
+	position: absolute;
+	text-align: center;
+	top: 448px;
+	width: 128px;
+}
+
+section.secCadastrarEditar form div.msgDireita img {}
+
+section.secCadastrarEditar button {
+	background-color: #252525;
+	border: 2px solid #4396df;
+	border-radius: 4px;
+	color: #4396df;
+	cursor: pointer;
+	font: normal 24px 'Roboto';
+	height: 48px;
+	text-align: center;
+	width: 400px;
+}
+
+section.secCadastrarEditar button:hover {
+	background-color: #4396df;
+	color: #252525;
+}
