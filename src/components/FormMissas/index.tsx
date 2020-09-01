@@ -52,35 +52,26 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 		setDataMissa({ data: `${anoMissa}/${mesMissa}/${diaMissa}`, hora: `${horaMissa}:${minutosMissa}` })
 	}
 
-	async function handleSubmit(event: FormEvent) {
+	function criarEditarMissa(event: FormEvent) {
 		event.preventDefault()
 
 		const { data, hora } = dataMissa
 
-		// Verificações de Entrada de Dados
-		if (local_id === 0) {
-			alert('[ERRO] O campo "Local" é obrigatório!')
-			return
-		}
-
-		if (data === undefined) {
-			alert('[ERRO] O campo "Data e Horário" é obrigatório!')
-			return
-		}
-		if (max_pessoas <= 0) {
-			alert('[ERRO] O campo "Quantidade Máxima de Pessoas" não pode ser Nulo ou Negativo!')
-			return
-		}
-
 		const dadosMissa = { local_id, data, hora, max_pessoas }
 
-		await api.post('missas', dadosMissa)
+		api.post('missas', dadosMissa).then(({ data }) => {
+			alert(data.mensagem)
+		}).catch(({ response }) => { alert(response.data.erro) })
 
-		window.scrollTo(0, 0)
-		window.onscroll = () => (window.scrollTo(0, 0))
-		const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
-		if (teste) teste.style.zIndex = '1'
+		window.location.reload()
+
+		// const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
+		// if (teste) teste.style.zIndex = '1'
 	}
+
+	let dataAtual = new Date().toLocaleString()
+	const dataAtualCortada = dataAtual.slice(0, 16).replace(' ', '/').split('/')
+	dataAtual = `${dataAtualCortada[2]}-${dataAtualCortada[1]}-${dataAtualCortada[0]}T${dataAtualCortada[3]}`
 
 	return (
 		<section className="secCadastrarEditar">
@@ -88,14 +79,13 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 			<div className="decoracaoFormMissa" id="decoracaoFormDourada"></div>
 			<div className="decoracaoFormMissa" id="decoracaoFormAzul"></div>
 
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={criarEditarMissa}>
 				<h1>{titulo}</h1>
 
 				<div>
-
 					<div>
-						<select name="local" defaultValue={0} onChange={clicouLocal}>
-							<option value="0" disabled hidden>Selecione um local</option>
+						<select name="local" defaultValue={0} onChange={clicouLocal} required>
+							<option value="" hidden>Selecione um local</option>
 							<option value="1">Centro</option>
 							<option value="2">Termas</option>
 						</select>
@@ -104,13 +94,13 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 					</div>
 
 					<div>
-						<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas"
+						<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
 							onChange={digitouMaxP} />
 
 						<HiUserGroup size={20} fill="#747474" />
 					</div>
 
-					<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} />
+					<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required min={dataAtual} />
 				</div>
 
 				{mensagemEsquerda &&
