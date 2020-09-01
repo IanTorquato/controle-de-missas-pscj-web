@@ -1,9 +1,11 @@
 import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react'
 
-import './styles.css'
-import Footer from '../../components/Footer'
 import Sucesso from '../../components/Sucesso'
+import FormMissas from '../../components/FormMissas'
+import Footer from '../../components/Footer'
 import api from '../../services/api'
+
+import './styles.css'
 
 interface Missa {
 	id: number
@@ -134,9 +136,11 @@ const EditarMissa = () => {
 
 	return (
 		<>
-			<div className="imgFundo">
-				<Sucesso />
-				<section className="secEditar">
+			<Sucesso />
+
+			<FormMissas titulo="Crie uma nova missa" txtBtn="Cadastrar" mensagemDireita="Eu avisei! [Risos]" />
+
+			{/* <section className="secEditar">
 					<form onSubmit={handleSubmit}>
 						<h1>EDITAR MISSA</h1>
 						<hr />
@@ -186,8 +190,7 @@ const EditarMissa = () => {
 
 						<button type="submit" className="editarMissa">Editar Missa</button>
 					</form>
-				</section>
-			</div>
+				</section> */}
 			<Footer />
 		</>
 	)

@@ -43,7 +43,7 @@ section.secCadastrarEditar form {
 
 section.secCadastrarEditar form h1 {
 	font: normal 96px 'Oswald';
-	margin-bottom: 112px;
+	margin-bottom: 88px;
 	margin-top: 16px;
 }
 
@@ -51,8 +51,12 @@ section.secCadastrarEditar form>h1+div {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 224px;
+	height: 248px;
 	margin-bottom: 112px;
+}
+
+section.secCadastrarEditar form>h1+div>div {
+	position: relative;
 }
 
 section.secCadastrarEditar input,
@@ -60,17 +64,35 @@ section.secCadastrarEditar select {
 	background-color: #e5e5e5;
 	border: 0;
 	border-radius: 4px;
-	color: #747474;
+	color: #000;
 	cursor: pointer;
 	font: normal 16px 'Roboto';
 	height: 48px;
 	padding: 8px;
+	transition: border 0s;
 	width: 400px;
 }
 
+section.secCadastrarEditar form>h1+div svg {
+	background-color: #e5e5e5;
+	box-sizing: content-box;
+	padding: 8px;
+	position: absolute;
+	right: 0;
+	top: 6px;
+}
+
+section.secCadastrarEditar input:focus,
+section.secCadastrarEditar select:focus {
+	border: 2px solid #4396df;
+}
+
+section.secCadastrarEditar input::placeholder {
+	color: #000;
+}
+
 section.secCadastrarEditar select option {
-	background-color: rgb(71, 202, 77);
-	color: #333;
+	color: #000;
 }
 
 section.secCadastrarEditar form div.msgEsquerda {
@@ -95,8 +117,6 @@ section.secCadastrarEditar form div.msgDireita {
 	top: 448px;
 	width: 128px;
 }
-
-section.secCadastrarEditar form div.msgDireita img {}
 
 section.secCadastrarEditar button {
 	background-color: #252525;

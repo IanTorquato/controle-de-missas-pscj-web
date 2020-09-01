@@ -1,4 +1,6 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react'
+import { FaMapMarkedAlt } from 'react-icons/fa'
+import { HiUserGroup } from 'react-icons/hi'
 
 import flechaTorta from '../../assets/icons/flechaTorta.svg'
 import sublinhado from '../../assets/sublinhado.png'
@@ -90,14 +92,23 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 				<h1>{titulo}</h1>
 
 				<div>
-					<select name="local" defaultValue={0} onChange={clicouLocal}>
-						<option value="0" disabled hidden>Selecione um local</option>
-						<option value="1">Centro</option>
-						<option value="2">Termas</option>
-					</select>
 
-					<input type="number" name="maxPessoas" className="maxPessoas" defaultValue={0} onChange={digitouMaxP} />
+					<div>
+						<select name="local" defaultValue={0} onChange={clicouLocal}>
+							<option value="0" disabled hidden>Selecione um local</option>
+							<option value="1">Centro</option>
+							<option value="2">Termas</option>
+						</select>
 
+						<FaMapMarkedAlt size={20} fill="#747474" />
+					</div>
+
+					<div>
+						<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas"
+							onChange={digitouMaxP} />
+
+						<HiUserGroup size={20} fill="#747474" />
+					</div>
 
 					<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} />
 				</div>
