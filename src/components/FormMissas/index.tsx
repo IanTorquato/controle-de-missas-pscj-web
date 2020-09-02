@@ -8,9 +8,19 @@ import api from '../../services/api'
 
 import './styles.css'
 
+interface Missa {
+	id: number
+	local_id: number
+	data: string
+	hora: string
+	max_pessoas: number
+	pessoas_cadastradas: number
+}
+
 interface FormMissa {
 	titulo: string,
 	txtBtn: string,
+	missa?: Missa,
 	mensagemEsquerda?: string,
 	mensagemDireita?: string
 }
@@ -20,7 +30,8 @@ interface DataMissa {
 	hora: string
 }
 
-const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, mensagemDireita }) => {
+const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquerda, mensagemDireita }) => {
+	console.log(missa);
 	const [local_id, setLocal_id] = useState(0)
 	const [max_pessoas, setMax_pessoas] = useState(0)
 	const [dataMissa, setDataMissa] = useState<DataMissa>({} as DataMissa)
@@ -32,22 +43,13 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 	function clicouData(event: ChangeEvent<HTMLInputElement>) {
 		const dataHoraMissa = new Date(event.target.value)
 
+		function validaQuantNum(campo: string) { return campo.length === 1 ? `0${campo}` : campo }
+
 		const anoMissa = dataHoraMissa.getFullYear()
-		let mesMissa = (dataHoraMissa.getMonth() + 1).toString()
-		let diaMissa = (dataHoraMissa.getDate()).toString()
-		let horaMissa = (dataHoraMissa.getHours()).toString()
-		let minutosMissa = (dataHoraMissa.getMinutes()).toString()
-
-		function validaQuantNum(campo: string) {
-			if (campo.length === 1) { campo = `0${campo}` }
-
-			return campo
-		}
-
-		mesMissa = validaQuantNum(mesMissa)
-		diaMissa = validaQuantNum(diaMissa)
-		horaMissa = validaQuantNum(horaMissa)
-		minutosMissa = validaQuantNum(minutosMissa)
+		const mesMissa = validaQuantNum((dataHoraMissa.getMonth() + 1).toString())
+		const diaMissa = validaQuantNum(dataHoraMissa.getDate().toString())
+		const horaMissa = validaQuantNum(dataHoraMissa.getHours().toString())
+		const minutosMissa = validaQuantNum(dataHoraMissa.getMinutes().toString())
 
 		setDataMissa({ data: `${anoMissa}/${mesMissa}/${diaMissa}`, hora: `${horaMissa}:${minutosMissa}` })
 	}
@@ -59,11 +61,18 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, mensagemEsquerda, men
 
 		const dadosMissa = { local_id, data, hora, max_pessoas }
 
-		api.post('missas', dadosMissa).then(({ data }) => {
-			alert(data.mensagem)
-		}).catch(({ response }) => { alert(response.data.erro) })
+		if (!missa) {
+			// api.post('missas', dadosMissa).then(({ data }) => {
+			// 	alert(data.mensagem)
+			//  window.location.reload()
+			// }).catch(({ response }) => { return alert(response.data.erro) })
+		} else {
+			// api.put(`missas/${missa.id}`, dadosMissa).then(({ data }) => {
+			// 	alert(data.mensagem)
+			// 	window.location.reload()
+			// }).catch(({ response }) => { return alert(response) })
+		}
 
-		window.location.reload()
 
 		// const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
 		// if (teste) teste.style.zIndex = '1'
