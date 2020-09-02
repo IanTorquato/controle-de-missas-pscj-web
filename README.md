@@ -8,11 +8,11 @@
     <img alt="Feito por Ian Torquato" src="https://img.shields.io/badge/made%20by-Ian%20Torquato-%2304D361">
   </a>
   
-  <a href="https://github.com/IanTorquato/Projeto_PSCJ/search?l=typescript">
+  <a href="https://github.com/IanTorquato/Projeto_PSCJ-web/search?l=typescript">
     <img alt="Quantidade de linguagens" src="https://img.shields.io/github/languages/count/IanTorquato/Projeto_PSCJ-web">
   </a>
   
-  <a href="https://github.com/IanTorquato/Ecoleta-Rocketseat-NLW/stargazers">
+  <a href="https://github.com/IanTorquato/Projeto_PSCJ-web/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/IanTorquato/Projeto_PSCJ-web">
   </a>
 </p>
