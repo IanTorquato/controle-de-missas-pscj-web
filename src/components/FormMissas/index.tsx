@@ -34,8 +34,12 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 	const [local_id, setLocal_id] = useState(missa?.local_id || 0)
 	const [max_pessoas, setMax_pessoas] = useState(missa?.max_pessoas)
 	const [dataMissa, setDataMissa] = useState<DataMissa>({ data: missa?.data, hora: missa?.hora })
-	const [dataAtual, setDataAtual] = useState(new Date().toLocaleString())
 	const [dataMissaSerializada, setDataMissaSerializada] = useState('')
+
+	// Data mínima do elemento select
+	let dataAtual = new Date().toLocaleString()
+	const dataAtualCortada = dataAtual.slice(0, 16).replace(' ', '/').split('/')
+	dataAtual = `${dataAtualCortada[2]}-${dataAtualCortada[1]}-${dataAtualCortada[0]}T${dataAtualCortada[3]}`
 
 	useEffect(() => {
 		if (missa) {
@@ -45,11 +49,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 				setDataMissaSerializada(`${dataMissaCortada[2]}-${dataMissaCortada[1]}-${dataMissaCortada[0]}T${missa.hora}`)
 			}
 		}
-
-		// Data mínima do elemento select
-		const dataAtualCortada = dataAtual.slice(0, 16).replace(' ', '/').split('/')
-		setDataAtual(`${dataAtualCortada[2]}-${dataAtualCortada[1]}-${dataAtualCortada[0]}T${dataAtualCortada[3]}`)
-	}, [])
+	}, [dataAtual, dataMissa.data, missa])
 
 	function clicouLocal(event: ChangeEvent<HTMLSelectElement>) { setLocal_id(event.target.selectedIndex) }
 
@@ -71,27 +71,33 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 
 	function criarEditarMissa(event: FormEvent) {
 		event.preventDefault()
+
 		if (dataMissa) {
 			const { data, hora } = dataMissa
 
 			const dadosMissa = { local_id, data, hora, max_pessoas }
+
+			if (!missa) {
+				api.post('missas', dadosMissa).then(({ data }) => {
+					alert(data.mensagem)
+					window.location.reload()
+				}).catch(({ response }) => {
+					console.log(response.data)
+					return alert(response.data.erro)
+				})
+			} else {
+				api.put(`missas/${missa.id}`, dadosMissa).then(({ data }) => {
+					alert(data.mensagem)
+					//window.location.reload()
+				}).catch(({ response }) => {
+					console.log(response.data)
+					return alert(response.data.erro)
+				})
+			}
+
+			// const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
+			// if (teste) teste.style.zIndex = '1'
 		}
-
-		if (!missa) {
-			// api.post('missas', dadosMissa).then(({ data }) => {
-			// 	alert(data.mensagem)
-			//  window.location.reload()
-			// }).catch(({ response }) => { return alert(response.data.erro) })
-		} else {
-			// api.put(`missas/${missa.id}`, dadosMissa).then(({ data }) => {
-			// 	alert(data.mensagem)
-			// 	window.location.reload()
-			// }).catch(({ response }) => { return alert(response) })
-		}
-
-
-		// const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
-		// if (teste) teste.style.zIndex = '1'
 	}
 
 	return (
@@ -106,7 +112,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 				<div>
 					<div>
 						<select name="local" defaultValue={local_id} onChange={clicouLocal} required>
-							<option hidden>Selecione um local</option>
+							<option value="" hidden>Selecione um local</option>
 							<option value="1">Centro</option>
 							<option value="2">Termas</option>
 						</select>
