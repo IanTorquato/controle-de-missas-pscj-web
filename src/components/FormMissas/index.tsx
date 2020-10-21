@@ -54,8 +54,6 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 		}
 	}, [dataAtual, dataMissa.data, missa])
 
-	function digitouNome() { }
-
 	function clicouData(event: ChangeEvent<HTMLInputElement>) {
 		const dataHoraMissa = new Date(event.target.value)
 
@@ -76,7 +74,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 		if (dataMissa) {
 			const { data, hora } = dataMissa
 
-			const dadosMissa = { local_id, data, hora, max_pessoas }
+			const dadosMissa = { nome, local_id, data, hora, max_pessoas }
 
 			if (!missa) {
 				api.post('missas', dadosMissa).then(({ data }) => {
@@ -110,7 +108,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 				<div className="containerInputsForm">
 					<div>
 						<input type="text" name="nome" className="nome" placeholder="Dê um nome à missa" required
-							onChange={digitouNome} defaultValue={nome} />
+							onChange={({ target }) => setNome(target.value)} defaultValue={nome} />
 
 						<BiChurch size={20} fill="#747474" />
 					</div>
