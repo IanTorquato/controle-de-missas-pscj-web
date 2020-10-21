@@ -52,6 +52,10 @@ section.secLogin div.insereDados svg {
 	width: 20px;
 }
 
+section.secLogin div.insereDados svg path {
+	transition: all 0s;
+}
+
 section.secLogin div.insereDados input:focus {
 	border: 1px solid #e5e5e5;
 }
