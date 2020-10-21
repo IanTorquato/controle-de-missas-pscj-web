@@ -12,7 +12,7 @@ interface Pascom {
 interface LoginContextData {
 	logado: boolean
 	pascom: Pascom | null
-	logar(nome: string, senha: string): void
+	logar(nome: string, senha: string): Promise<boolean>
 	deslogar(): void
 }
 
@@ -39,8 +39,8 @@ export const LoginProvider: React.FC = ({ children }) => {
 		return null
 	}
 
-	function logar(nome: string, senha: string) {
-		api.post(`/login_pascom`, { nome, senha }).then(({ data }: AxiosResponse<ResponseData>) => {
+	async function logar(nome: string, senha: string) {
+		await api.post(`/login_pascom`, { nome, senha }).then(({ data }: AxiosResponse<ResponseData>) => {
 			setPascom(data.pascom)
 
 			api.defaults.headers.Authorization = `Bearer ${data.token}`
@@ -49,8 +49,9 @@ export const LoginProvider: React.FC = ({ children }) => {
 			localStorage.setItem('@PSCJ:token', data.token)
 		}).catch(({ response }) => {
 			console.log(response)
-			return alert(response.data?.erro || 'Falha ao efetuar o login')
+			alert(response.data.erro || 'Falha ao efetuar o login')
 		})
+		return true
 	}
 
 	function deslogar() {

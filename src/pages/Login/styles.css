@@ -32,40 +32,37 @@ section.secLogin div.insereDados {
 }
 
 section.secLogin div.insereDados input {
-	background-color: #121212;
-	border: 0;
+	background-color: transparent;
+	border: solid 1px #fff;
 	border-radius: 4px;
-	color: #e5e5e5;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	color: #fff;
+	font: normal 16px 'Roboto', sans-serif;
 	height: 48px;
-	padding-left: 48px;
-	padding-right: 16px;
+	outline: none;
+	padding: 0 24px;
 	width: 320px;
 }
 
-section.secLogin div.insereDados svg {
-	height: 20px;
-	margin-left: 14px;
-	margin-top: 14px;
+section.secLogin div.insereDados input.erro {
+	border: 2px solid #E41325;
+}
+
+section.secLogin div.insereDados input:focus+span,
+section.secLogin div.insereDados input:not([value=""])+span {
+	transform: translateX(-8px) translateY(-24px);
+	color: #fff;
+}
+
+section.secLogin div.insereDados span {
+	background-color: #252525;
+	color: #747474;
+	font: normal 16px 'Roboto', sans-serif;
+	left: 16px;
+	padding: 0 8px;
 	position: absolute;
-	width: 20px;
-}
-
-section.secLogin div.insereDados svg path {
-	transition: all 0s;
-}
-
-section.secLogin div.insereDados input:focus {
-	border: 1px solid #e5e5e5;
-}
-
-section.secLogin div.insereDados path {
-	fill: #747474;
-}
-
-section.secLogin div.insereDados input:focus+svg path {
-	fill: #e5e5e5
+	pointer-events: none;
+	top: 14px;
+	transition: 0.4s
 }
 
 section.secLogin form button {
@@ -75,8 +72,7 @@ section.secLogin form button {
 	box-shadow: 0 0 24px #ff000088;
 	color: #e5e5e5;
 	cursor: pointer;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
+	font: normal 24px 'Roboto', sans-serif;
 	height: 48px;
 	margin-top: 32px;
 	padding: 8px 0;
