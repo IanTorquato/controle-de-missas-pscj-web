@@ -2,9 +2,9 @@ import React, { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
 
+import api from '../../services/api'
 import flechaTorta from '../../assets/icons/flechaTorta.svg'
 import sublinhado from '../../assets/sublinhado.png'
-import api from '../../services/api'
 
 import './styles.css'
 
@@ -82,16 +82,16 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 					alert(data.mensagem)
 					window.location.reload()
 				}).catch(({ response }) => {
-					console.log(response.data)
-					return alert(response.data.erro)
+					console.log(response)
+					return alert(response.data.erro || 'Falha ao cadastrar a missa')
 				})
 			} else {
 				api.put(`missas/${missa.id}`, dadosMissa).then(({ data }) => {
 					alert(data.mensagem)
 					//window.location.reload()
 				}).catch(({ response }) => {
-					console.log(response.data)
-					return alert(response.data.erro)
+					console.log(response)
+					return alert(response.data.erro || 'Falha ao atualizar a missa')
 				})
 			}
 
