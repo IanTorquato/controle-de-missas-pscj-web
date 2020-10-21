@@ -1,11 +1,12 @@
-import React, { useContext, FormEvent } from 'react'
+import React, { FormEvent } from 'react'
 
-import './styles.css'
-import LoginContext from '../../contexts/login'
+import { useLogin } from '../../contexts/login'
 import logo from '../../assets/logo.svg'
 
+import './styles.css'
+
 const Login = () => {
-	const { logar } = useContext(LoginContext)
+	const { logar } = useLogin()
 
 	function entrar(event: FormEvent) {
 		event.preventDefault()
@@ -13,16 +14,12 @@ const Login = () => {
 		const nome = document.querySelector<HTMLInputElement>('input#nome')?.value.trim()
 		const senha = document.querySelector<HTMLInputElement>('input#senha')?.value.trim()
 
-		if (nome && senha) {
-			logar({ nome, senha })
-		} else {
-			alert('Preencha todos os campos para logar!')
-		}
+		if (nome && senha) { logar(nome, senha) }
 	}
 
 	return (
 		<section className="secLogin">
-			<form onSubmit={entrar}>
+			<form onSubmit={entrar} autoComplete="off">
 				<img src={logo} alt="Brasão da Paróquia" />
 
 				<div className="insereDados">
@@ -34,7 +31,7 @@ const Login = () => {
 				</div>
 
 				<div className="insereDados">
-					<input type="password" id="senha" placeholder="Senha" autoComplete="off" required minLength={8} />
+					<input type="password" id="senha" placeholder="Senha" minLength={8} autoComplete="off" required />
 
 					<svg>
 						<path d="M15.625 8.75H14.6875V5.9375C14.6875 2.66406 12.0234 0 8.75 0C5.47656 0 2.8125 2.66406 2.8125 5.9375V8.75H1.875C0.839844 8.75 0 9.58984 0 10.625V18.125C0 19.1602 0.839844 20 1.875 20H15.625C16.6602 20 17.5 19.1602 17.5 18.125V10.625C17.5 9.58984 16.6602 8.75 15.625 8.75ZM11.5625 8.75H5.9375V5.9375C5.9375 4.38672 7.19922 3.125 8.75 3.125C10.3008 3.125 11.5625 4.38672 11.5625 5.9375V8.75Z" />

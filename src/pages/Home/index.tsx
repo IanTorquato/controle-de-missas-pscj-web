@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
 import { FiArrowUpCircle } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
 
+import api from '../../services/api'
+import { useLogin } from '../../contexts/login'
+import Footer from '../../components/Footer'
 import logo from '../../assets/logo.svg'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
-import LoginContext from '../../contexts/login'
-import api from '../../services/api'
-import Footer from '../../components/Footer'
 
 import './styles.css'
 
@@ -28,7 +28,7 @@ const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
 	const [erroMissas, setErroMissas] = useState('')
 
-	const { deslogar } = useContext(LoginContext)
+	const { deslogar } = useLogin()
 
 	useEffect(() => {
 		api.get('missas?quantMissas=6').then(({ data }) => {
@@ -38,7 +38,10 @@ const Home = () => {
 
 				return missa
 			}))
-		}).catch(({ response }) => { setErroMissas(response.data.erro) })
+		}).catch(({ response }) => {
+			console.log(response)
+			return setErroMissas(response.data.erro || 'Falha ao listar missas.')
+		})
 	}, [])
 
 	return (
