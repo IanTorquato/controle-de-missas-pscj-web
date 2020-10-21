@@ -1,4 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent, useEffect } from 'react'
+import { BiChurch } from 'react-icons/bi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
 
@@ -10,6 +11,7 @@ import './styles.css'
 
 interface Missa {
 	id: number
+	nome: string
 	local_id: number
 	data: string
 	hora: string
@@ -31,6 +33,7 @@ interface DataMissa {
 }
 
 const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquerda, mensagemDireita }) => {
+	const [nome, setNome] = useState(missa?.nome || '')
 	const [local_id, setLocal_id] = useState(missa?.local_id || 0)
 	const [max_pessoas, setMax_pessoas] = useState(missa?.max_pessoas)
 	const [dataMissa, setDataMissa] = useState<DataMissa>({ data: missa?.data, hora: missa?.hora })
@@ -51,9 +54,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 		}
 	}, [dataAtual, dataMissa.data, missa])
 
-	function clicouLocal(event: ChangeEvent<HTMLSelectElement>) { setLocal_id(event.target.selectedIndex) }
-
-	function digitouMaxP(event: ChangeEvent<HTMLInputElement>) { setMax_pessoas(Number(event.target.value)) }
+	function digitouNome() { }
 
 	function clicouData(event: ChangeEvent<HTMLInputElement>) {
 		const dataHoraMissa = new Date(event.target.value)
@@ -94,9 +95,6 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 					return alert(response.data.erro || 'Falha ao atualizar a missa')
 				})
 			}
-
-			// const teste = document.body.querySelector<HTMLDivElement>('div.divSucesso')
-			// if (teste) teste.style.zIndex = '1'
 		}
 	}
 
@@ -109,9 +107,16 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 			<form onSubmit={criarEditarMissa}>
 				<h1>{titulo}</h1>
 
-				<div>
+				<div className="containerInputsForm">
 					<div>
-						<select name="local" defaultValue={local_id} onChange={clicouLocal} required>
+						<input type="text" name="nome" className="nome" placeholder="Dê um nome à missa" required
+							onChange={digitouNome} defaultValue={nome} />
+
+						<BiChurch size={20} fill="#747474" />
+					</div>
+
+					<div>
+						<select name="local" defaultValue={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
 							<option value="" hidden>Selecione um local</option>
 							<option value="1">Centro</option>
 							<option value="2">Termas</option>
@@ -120,15 +125,17 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 						<FaMapMarkedAlt size={20} fill="#747474" />
 					</div>
 
-					<div>
-						<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
-							onChange={digitouMaxP} defaultValue={max_pessoas} />
+					<div className="maxPessoasData">
+						<div>
+							<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
+								onChange={({ target }) => setMax_pessoas(+target.value)} defaultValue={max_pessoas} />
 
-						<HiUserGroup size={20} fill="#747474" />
+							<HiUserGroup size={20} fill="#747474" />
+						</div>
+
+						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required min={dataAtual}
+							defaultValue={dataMissaSerializada} />
 					</div>
-
-					<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required min={dataAtual}
-						defaultValue={dataMissaSerializada} />
 				</div>
 
 				{mensagemEsquerda &&

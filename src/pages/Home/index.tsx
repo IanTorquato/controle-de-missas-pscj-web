@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
-import { FiArrowUpCircle } from 'react-icons/fi'
 
 import api from '../../services/api'
 import { useLogin } from '../../contexts/login'
@@ -17,6 +16,7 @@ import './styles.css'
 
 interface Missa {
 	id: number
+	nome: string
 	local_id: number
 	data: string
 	hora: string

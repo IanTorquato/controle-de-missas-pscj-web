@@ -47,20 +47,27 @@ section.secCadastrarEditar form h1 {
 	margin-top: 16px;
 }
 
-section.secCadastrarEditar form>h1+div {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 248px;
+section.secCadastrarEditar form>div.containerInputsForm {
 	margin-bottom: 112px;
 }
 
-section.secCadastrarEditar form>h1+div>div {
+section.secCadastrarEditar form>div.containerInputsForm>div {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div {
 	position: relative;
 }
 
-section.secCadastrarEditar input,
-section.secCadastrarEditar select {
+section.secCadastrarEditar form>div.containerInputsForm input,
+section.secCadastrarEditar form>div.containerInputsForm select {
 	background-color: #e5e5e5;
 	border: 0;
 	border-radius: 4px;
@@ -68,31 +75,40 @@ section.secCadastrarEditar select {
 	cursor: pointer;
 	font: normal 16px 'Roboto';
 	height: 48px;
-	padding: 8px;
+	padding: 0 8px;
 	transition: border 0s;
 	width: 400px;
 }
 
-section.secCadastrarEditar form>h1+div svg {
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child input {
+	width: 192px;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm svg {
 	background-color: #e5e5e5;
 	box-sizing: content-box;
 	padding: 8px;
+	pointer-events: none;
 	position: absolute;
 	right: 2px;
 	top: 6px;
 }
 
-section.secCadastrarEditar input:focus,
-section.secCadastrarEditar select:focus {
+section.secCadastrarEditar form>div.containerInputsForm input:focus,
+section.secCadastrarEditar form>div.containerInputsForm select:focus {
 	border: 2px solid #4396df;
 }
 
-section.secCadastrarEditar input::placeholder {
+section.secCadastrarEditar form>div.containerInputsForm input::placeholder {
+	color: #747474;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm select option {
 	color: #000;
 }
 
-section.secCadastrarEditar select option {
-	color: #000;
+section.secCadastrarEditar form>div.containerInputsForm select:first-child {
+	color: #747474;
 }
 
 section.secCadastrarEditar form div.msgEsquerda {
