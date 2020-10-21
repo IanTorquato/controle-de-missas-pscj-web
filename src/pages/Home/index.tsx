@@ -84,12 +84,6 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-
-				<p className="topoPagina">
-					<abbr title="Voltar ao Topo" onClick={() => { window.scrollTo(0, 0) }}>
-						<FiArrowUpCircle size={40} />
-					</abbr>
-				</p>
 			</section>
 
 			<section className="secBotoes">

@@ -5,7 +5,7 @@ footer.rodape {
 	height: 312px;
 	justify-content: space-between;
 	font-family: Roboto, sans-serif;
-	padding: 0 56px;
+	padding: 0 68px
 }
 
 footer.rodape nav {
@@ -78,7 +78,7 @@ footer.rodape nav a.youtube {
 
 footer.rodape p.copyright {
 	cursor: default;
-	font-size: 1.5rem;
+	font: normal 24px 'Roboto';
 	margin-top: 20px;
 }
 
