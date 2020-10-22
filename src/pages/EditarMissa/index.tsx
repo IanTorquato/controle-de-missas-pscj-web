@@ -7,24 +7,22 @@ import Missa from '../../utils/interfaces'
 
 const EditarMissa = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
+	const [MOSTRA, setMOSTRA] = useState(0)
 
 	useEffect(() => {
-		api.get('missas?quantMissas=1').then(response => {
-			setMissas(response.data.map((missa: Missa) => {
-				const dataCortada = missa.data.split('/')
-				missa.data = `${dataCortada[2]}/${dataCortada[1]}/${dataCortada[0]}`
-
-				return missa
-			}))
-		})
+		api.get('missas?quantMissas=1')
+			.then(({ data }) => setMissas(data))
+			.catch(({ response }) => {
+				console.log(response)
+				alert(response.data.erro || 'Falha ao listar missa para editar.')
+			})
 	}, [])
 
 	return (
 		<>
-			{
-				!missas[0] ? <section className="secCadastrarEditar"></section> :
-					<FormMissas titulo="Editando..." txtBtn="Editar" missa={missas[0]} mensagemDireita="Eu avisei! [Risos]" />
-			}
+			<button type="button" onClick={() => setMOSTRA(1)} style={{ color: "#000" }}>MOSTRAR</button>
+
+			{MOSTRA && <FormMissas titulo="Editando..." txtBtn="Editar" missa={missas[0]} mensagemDireita="Eu avisei! [Risos]" />}
 
 			<Footer />
 		</>

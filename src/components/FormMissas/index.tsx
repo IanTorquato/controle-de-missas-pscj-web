@@ -1,4 +1,5 @@
-import React, { useState, FormEvent, ChangeEvent, useEffect } from 'react'
+import React, { useState, FormEvent, ChangeEvent } from 'react'
+import { format } from 'date-fns'
 import { BiChurch } from 'react-icons/bi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
@@ -28,35 +29,11 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 	const [local_id, setLocal_id] = useState(missa?.local_id || 0)
 	const [max_pessoas, setMax_pessoas] = useState(missa?.max_pessoas)
 	const [dataMissa, setDataMissa] = useState<DataMissa>({ data: missa?.data, hora: missa?.hora })
-	const [dataMissaSerializada, setDataMissaSerializada] = useState('')
-
-	// Data mínima do elemento select
-	let dataAtual = new Date().toLocaleString()
-	const dataAtualCortada = dataAtual.slice(0, 16).replace(' ', '/').split('/')
-	dataAtual = `${dataAtualCortada[2]}-${dataAtualCortada[1]}-${dataAtualCortada[0]}T${dataAtualCortada[3]}`
-
-	useEffect(() => {
-		if (missa) {
-			const dataMissaCortada = dataMissa.data?.split('/')
-
-			if (dataMissaCortada) {
-				setDataMissaSerializada(`${dataMissaCortada[2]}-${dataMissaCortada[1]}-${dataMissaCortada[0]}T${missa.hora}`)
-			}
-		}
-	}, [dataAtual, dataMissa.data, missa])
 
 	function clicouData(event: ChangeEvent<HTMLInputElement>) {
-		const dataHoraMissa = new Date(event.target.value)
+		const dataMissaCortada = event.target.value.split('T')
 
-		function validaQuantNum(campo: string) { return campo.length === 1 ? `0${campo}` : campo }
-
-		const anoMissa = dataHoraMissa.getFullYear()
-		const mesMissa = validaQuantNum((dataHoraMissa.getMonth() + 1).toString())
-		const diaMissa = validaQuantNum(dataHoraMissa.getDate().toString())
-		const horaMissa = validaQuantNum(dataHoraMissa.getHours().toString())
-		const minutosMissa = validaQuantNum(dataHoraMissa.getMinutes().toString())
-
-		setDataMissa({ data: `${anoMissa}/${mesMissa}/${diaMissa}`, hora: `${horaMissa}:${minutosMissa}` })
+		setDataMissa({ data: dataMissaCortada[0], hora: dataMissaCortada[1] })
 	}
 
 	function criarEditarMissa(event: FormEvent) {
@@ -122,8 +99,8 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 							<HiUserGroup size={20} fill="#747474" />
 						</div>
 
-						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required min={dataAtual}
-							defaultValue={dataMissaSerializada} />
+						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required
+							min={format(new Date(), "yyyy-MM-dd'T'HH:mm")} defaultValue={`${dataMissa.data}T${dataMissa.hora}`} />
 					</div>
 				</div>
 

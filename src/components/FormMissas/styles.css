@@ -100,15 +100,11 @@ section.secCadastrarEditar form>div.containerInputsForm select:focus {
 }
 
 section.secCadastrarEditar form>div.containerInputsForm input::placeholder {
-	color: #747474;
+	color: #000;
 }
 
 section.secCadastrarEditar form>div.containerInputsForm select option {
 	color: #000;
-}
-
-section.secCadastrarEditar form>div.containerInputsForm select:first-child {
-	color: #747474;
 }
 
 section.secCadastrarEditar form div.msgEsquerda {
