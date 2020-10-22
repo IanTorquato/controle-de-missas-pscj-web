@@ -8,6 +8,7 @@ import api from '../../services/api'
 import { useLogin } from '../../contexts/login'
 import Footer from '../../components/Footer'
 import Missa from '../../utils/interfaces'
+import { formatDiaMesHora } from '../../utils/tratandoDatas'
 import logo from '../../assets/logo.svg'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
@@ -22,17 +23,12 @@ const Home = () => {
 	const { deslogar } = useLogin()
 
 	useEffect(() => {
-		api.get('missas?quantMissas=6').then(({ data }) => {
-			setMissas(data.map((missa: Missa) => {
-				const dataCortada = missa.data.split('/')
-				missa.data = `${dataCortada[2]}/${dataCortada[1]}/${dataCortada[0]}`
-
-				return missa
-			}))
-		}).catch(({ response }) => {
-			console.log(response)
-			return setErroMissas(response.data.erro || 'Falha ao listar missas.')
-		})
+		api.get('missas?quantMissas=6')
+			.then(({ data }) => setMissas(data))
+			.catch(({ response }) => {
+				console.log(response)
+				return setErroMissas(response.data.erro || 'Falha ao listar missas.')
+			})
 	}, [])
 
 	return (
@@ -120,24 +116,19 @@ const Home = () => {
 
 				<aside className="gridMissas">
 					{missas.map((missa, index) => {
+						const { missaSerializada, dataMissa } = formatDiaMesHora(missa)
 
-						const dataCortada = missa.data.split('/')
-						const dataInvertida = `${dataCortada[2]}/${dataCortada[1]}/${dataCortada[0]}`
-
-						const diaMissa = new Date(Date.parse(`${dataInvertida}`))
-
-						const diasSemana = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA',
-							'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO']
+						const diasSemana = [
+							'DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO'
+						]
 
 						return (
-							<div key={missa.id} className="detalhesMissa" id={
+							<div key={missa.id} className="detalhesMissa ok" id={
 								index < 2 ? 'detalhesMissaVermelha' : index < 4 ? 'detalhesMissaDourada' : 'detalhesMissaAzul'
 							}>
-								<h1>{missa.data.slice(0, 5)} - {missa.hora}</h1>
+								<h1>{missaSerializada.data} - {missaSerializada.hora}</h1>
 
-								<h2>
-									{diasSemana[diaMissa.getDay()]} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}
-								</h2>
+								<h2>{diasSemana[dataMissa.getDay()]} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}</h2>
 							</div>
 						)
 					})}

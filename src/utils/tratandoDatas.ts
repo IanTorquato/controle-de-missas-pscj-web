@@ -2,10 +2,6 @@ import { parseISO, format } from 'date-fns'
 
 import Missa from './interfaces'
 
-function transformaEmData(missa: Missa) {
-	return parseISO(`${missa.data.replace(/[/]/g, '-')}T${missa.hora}`)
-}
-
 // Cadastro Edição (mínimo select e defaultValue select) ==> 2020-10-22T10:00
 export function formatParaSelect(missa?: Missa) {
 	if (missa) {
@@ -16,19 +12,21 @@ export function formatParaSelect(missa?: Missa) {
 }
 
 // Home e Lista ==> data: "22/10" e hora: "10:00"
-export function formatDiaMesHora(missas: Missa[]) {
-	return missas.map(missa => {
-		const formatDataMissa = format(transformaEmData(missa), "dd/MM HH:mm").split(' ')
+export function formatDiaMesHora(missa: Missa) {
+	const dataMissa = parseISO(`${missa.data}T${missa.hora}`)
 
-		return { ...missa, data: formatDataMissa[0], hora: formatDataMissa[1] }
-	})
+	const formatDataMissa = format(dataMissa, "dd/MM HH:mm").split(' ')
+
+	const missaSerializada = { ...missa, data: formatDataMissa[0], hora: formatDataMissa[1] }
+
+	return { missaSerializada, dataMissa }
 }
 
 // Banco e Cadastro Edição (clicouData) ==> data: "2020/10/22" e hora: "10:00"
 export function formatParaBanco(missas?: Missa[], dataInput?: Date) {
 	if (missas) {
 		return missas.map(missa => {
-			const formatDataMissa = format(transformaEmData(missa), "yyyy/MM/dd HH:mm").split(' ')
+			const formatDataMissa = format(parseISO(`${missa.data}T${missa.hora}`), "yyyy/MM/dd HH:mm").split(' ')
 
 			return { ...missa, data: formatDataMissa[0], hora: formatDataMissa[1] }
 		})
