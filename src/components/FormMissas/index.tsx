@@ -4,20 +4,11 @@ import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
 
 import api from '../../services/api'
+import Missa from '../../utils/interfaces'
 import flechaTorta from '../../assets/icons/flechaTorta.svg'
 import sublinhado from '../../assets/sublinhado.png'
 
 import './styles.css'
-
-interface Missa {
-	id: number
-	nome: string
-	local_id: number
-	data: string
-	hora: string
-	max_pessoas: number
-	pessoas_cadastradas: number
-}
 
 interface FormMissa {
 	titulo: string,

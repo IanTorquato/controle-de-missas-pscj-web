@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
+import api from '../../services/api'
 import FormMissas from '../../components/FormMissas'
 import Footer from '../../components/Footer'
-import api from '../../services/api'
-
-interface Missa {
-	id: number
-	nome: string
-	local_id: number
-	data: string
-	hora: string
-	max_pessoas: number
-	pessoas_cadastradas: number
-}
+import Missa from '../../utils/interfaces'
 
 const EditarMissa = () => {
 	const [missas, setMissas] = useState<Missa[]>([])

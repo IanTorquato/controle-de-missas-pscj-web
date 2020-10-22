@@ -7,22 +7,13 @@ import { RiComputerLine } from 'react-icons/ri'
 import api from '../../services/api'
 import { useLogin } from '../../contexts/login'
 import Footer from '../../components/Footer'
+import Missa from '../../utils/interfaces'
 import logo from '../../assets/logo.svg'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
 
 import './styles.css'
-
-interface Missa {
-	id: number
-	nome: string
-	local_id: number
-	data: string
-	hora: string
-	max_pessoas: number
-	pessoas_cadastradas: number
-}
 
 const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
@@ -107,7 +98,7 @@ const Home = () => {
 										Cadastro de Missas
 									</Link>
 
-									<Link className="btnsNavegacao" to="/editar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+									<Link className="btnsNavegacao" to="/lista-missas" onClick={() => { window.scrollTo(0, 0) }}>
 										Lista de Missas
 									</Link>
 								</nav>
