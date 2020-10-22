@@ -1,13 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
 
+import api from '../../services/api'
 import Missa from '../../utils/interfaces'
-import TEMPORARIO from '../../assets/dentroIgrejaCentro.svg'
+import { formatDiaMesHora } from '../../utils/tratandoDatas'
 
 import './styles.css'
 
 const ListaMissas: React.FC = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
+
+	useEffect(() => {
+		api.get('missas')
+			.then(({ data }) => setMissas(data))
+			.catch(({ response }) => {
+				console.log(response)
+				alert(response.data.erro || 'Falha ao listar missas.')
+			})
+	}, [])
 
 	return (
 		<section className="secListaMissas">
@@ -20,59 +30,41 @@ const ListaMissas: React.FC = () => {
 			</div>
 
 			<div>
-				<div className="missa">
-					<img src={TEMPORARIO} alt="Imagem da Igreja" />
+				{missas.map(missa => {
+					const { missaSerializada } = formatDiaMesHora(missa)
+					const nomeLocal = missaSerializada.local_id === 1 ? 'Centro' : 'Termas'
 
-					<h1>Santa Missa com Bênção da Saúde</h1>
+					const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
 
-					<hr />
+					return (
+						<div className="missa">
+							<img src={urlImagem} alt="Imagem da Igreja" />
 
-					<h3>13/10</h3>
-					<h3>19:00</h3>
-					<h3>Termas</h3>
-					<h3>52/80</h3>
+							<h1>{missaSerializada.nome}</h1>
 
-					<hr />
+							<hr />
 
-					<div className="iconEditar">
-						<BiEditAlt size={32} color="#e5e5e5" />
-					</div>
+							<h3>{missaSerializada.data}</h3>
+							<h3>{missaSerializada.hora}</h3>
+							<h3>{nomeLocal}</h3>
+							<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
 
-					<div className="iconExcluir">
-						<BiTrash size={32} color="#e5e5e5" />
-					</div>
+							<hr />
 
-					<div className="iconDetalhes">
-						<BiDotsVerticalRounded size={32} color="#e5e5e5" />
-					</div>
-				</div>
+							<div className="iconEditar">
+								<BiEditAlt size={32} color="#e5e5e5" />
+							</div>
 
-				<div className="missa">
-					<img src={TEMPORARIO} alt="Imagem da Igreja" />
+							<div className="iconExcluir">
+								<BiTrash size={32} color="#e5e5e5" />
+							</div>
 
-					<h1>Santa Missa com Bênção da Saúde</h1>
-
-					<hr />
-
-					<h3>13/10</h3>
-					<h3>19:00</h3>
-					<h3>Termas</h3>
-					<h3>52/80</h3>
-
-					<hr />
-
-					<div className="iconEditar">
-						<BiEditAlt size={32} color="#e5e5e5" />
-					</div>
-
-					<div className="iconExcluir">
-						<BiTrash size={32} color="#e5e5e5" />
-					</div>
-
-					<div className="iconDetalhes">
-						<BiDotsVerticalRounded size={32} color="#e5e5e5" />
-					</div>
-				</div>
+							<div className="iconDetalhes">
+								<BiDotsVerticalRounded size={32} color="#e5e5e5" />
+							</div>
+						</div>
+					)
+				})}
 			</div>
 		</section>
 	)
