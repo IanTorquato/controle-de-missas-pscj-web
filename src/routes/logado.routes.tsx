@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import CadastrarMissa from '../pages/CadastrarMissa'
 import EditarMissa from '../pages/EditarMissa'
 import ListaMissas from '../pages/ListaMissas'
+import DetalhesMissa from '../pages/DetalhesMissa'
 import Contato from '../pages/Contato'
 
 const RoutesLogado = () => {
@@ -14,6 +15,7 @@ const RoutesLogado = () => {
 			<Route component={CadastrarMissa} path="/cadastrar-missa" />
 			<Route component={EditarMissa} path='/editar-missa' />
 			<Route component={ListaMissas} path='/lista-missas' />
+			<Route component={DetalhesMissa} path='/detalhes-missa' />
 			<Route component={Contato} path='/contato' />
 		</BrowserRouter>
 	)
