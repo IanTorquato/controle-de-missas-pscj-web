@@ -45,22 +45,29 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 			const dadosMissa = { nome, local_id, data, hora, max_pessoas }
 
 			if (!missa) {
-				api.post('missas', dadosMissa).then(({ data }) => {
-					alert(data.mensagem)
-					window.location.reload()
-				}).catch(({ response }) => {
-					console.log(response)
-					return alert(response.data.erro || 'Falha ao cadastrar a missa')
-				})
+				api.post('missas', dadosMissa)
+					.then(({ data }) => {
+						alert(data.mensagem)
+					})
+					.catch(({ response }) => {
+						console.log(response)
+						return alert(response.data.erro || 'Falha ao cadastrar a missa')
+					})
 			} else {
-				api.put(`missas/${missa.id}`, dadosMissa).then(({ data }) => {
-					alert(data.mensagem)
-					//window.location.reload()
-				}).catch(({ response }) => {
-					console.log(response)
-					return alert(response.data.erro || 'Falha ao atualizar a missa')
-				})
+				api.put(`missas/${missa.id}`, dadosMissa)
+					.then(({ data }) => {
+						alert(data.mensagem)
+					})
+					.catch(({ response }) => {
+						console.log(response)
+						return alert(response.data.erro || 'Falha ao atualizar a missa')
+					})
 			}
+
+			setNome('')
+			setLocal_id(0)
+			setMax_pessoas(0)
+			setDataMissa({ data: undefined, hora: undefined })
 		}
 	}
 
@@ -76,13 +83,13 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 				<div className="containerInputsForm">
 					<div>
 						<input type="text" name="nome" className="nome" placeholder="Dê um nome à missa" required
-							onChange={({ target }) => setNome(target.value)} defaultValue={nome} />
+							onChange={({ target }) => setNome(target.value)} value={nome} />
 
 						<BiChurch size={20} fill="#747474" />
 					</div>
 
 					<div>
-						<select name="local" defaultValue={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
+						<select name="local" value={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
 							<option value="" hidden>Selecione um local</option>
 							<option value="1">Centro</option>
 							<option value="2">Termas</option>
@@ -94,13 +101,13 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 					<div className="maxPessoasData">
 						<div>
 							<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
-								onChange={({ target }) => setMax_pessoas(+target.value)} defaultValue={max_pessoas} />
+								onChange={({ target }) => setMax_pessoas(+target.value)} value={max_pessoas} />
 
 							<HiUserGroup size={20} fill="#747474" />
 						</div>
 
 						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required
-							min={format(new Date(), "yyyy-MM-dd'T'HH:mm")} defaultValue={`${dataMissa.data}T${dataMissa.hora}`} />
+							min={format(new Date(), "yyyy-MM-dd'T'HH:mm")} value={`${dataMissa.data}T${dataMissa.hora}`} />
 					</div>
 				</div>
 
