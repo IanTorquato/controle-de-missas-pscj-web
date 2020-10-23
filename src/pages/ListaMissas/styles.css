@@ -16,12 +16,33 @@ section.secListaMissas div.headerLista {
 section.secListaMissas div.headerLista h3 {
 	color: #c3c3c3;
 	font: normal 24px 'Roboto', sans-serif;
-	margin-right: 32px;
 }
 
-section.secListaMissas div.headerLista h3:first-child {
-	margin-left: 112px;
-	margin-right: 474px;
+section.secListaMissas div.headerLista>h3:first-child {
+	padding-left: 112px;
+	margin: 0;
+	width: 584px;
+}
+
+section.secListaMissas div.headerLista div {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 16px;
+	padding: 0 16px;
+	width: 526px;
+}
+
+section.secListaMissas div.headerLista div h3:first-child {
+	margin-left: 6px;
+	margin-right: -6px;
+}
+
+section.secListaMissas div.headerLista div h3+h3+h3 {
+	margin-right: -8px;
+}
+
+section.secListaMissas div.headerLista div h3+h3+h3+h3 {
+	margin-right: -12px;
 }
 
 section.secListaMissas div.missa {
@@ -31,14 +52,19 @@ section.secListaMissas div.missa {
 	display: flex;
 	height: 96px;
 	margin-bottom: 24px;
-	width: 1320px
 }
 
 section.secListaMissas div.missa:hover {
 	background-color: #353535;
 }
 
-section.secListaMissas div.missa>img {
+section.secListaMissas div.missa div.imagemNomeMissa {
+	align-items: center;
+	display: flex;
+	width: 568px;
+}
+
+section.secListaMissas div.missa div.imagemNomeMissa>img {
 	border-radius: 100px;
 	height: 64px;
 	margin: 0 24px;
@@ -46,21 +72,34 @@ section.secListaMissas div.missa>img {
 	width: 64px;
 }
 
-section.secListaMissas div.missa h1 {
+section.secListaMissas div.missa div.imagemNomeMissa h1 {
 	font: normal 32px 'Cormorant Garamond', serif;
 }
 
 section.secListaMissas div.missa hr {
 	height: 74px;
-	margin: 0 45px;
-}
-
-section.secListaMissas div.missa h3 {
-	font: normal 24px 'Merriweather';
 	margin: 0 16px;
 }
 
-section.secListaMissas div.missa div {
+section.secListaMissas div.missa div.dadosMissa {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16px;
+	width: 524px;
+}
+
+section.secListaMissas div.missa div.dadosMissa h3 {
+	font: normal 24px 'Merriweather';
+}
+
+section.secListaMissas div.missa div.btnsMissa {
+	display: flex;
+	justify-content: center;
+	margin-left: -16px;
+	width: 176px;
+}
+
+section.secListaMissas div.missa div.btnsMissa div {
 	align-items: center;
 	border-radius: 8px;
 	display: flex;
@@ -69,18 +108,18 @@ section.secListaMissas div.missa div {
 	width: 48px
 }
 
-section.secListaMissas div.missa div.iconEditar:hover {
+section.secListaMissas div.missa div div.btnEditar:hover {
 	background-color: #4396dfcc;
 }
 
-section.secListaMissas div.missa div.iconExcluir {
-	margin: 0 16px;
+section.secListaMissas div.missa div div.btnExcluir {
+	margin: 0 8px;
 }
 
-section.secListaMissas div.missa div.iconExcluir:hover {
+section.secListaMissas div.missa div div.btnExcluir:hover {
 	background-color: #E41325cc;
 }
 
-section.secListaMissas div.missa div.iconDetalhes:hover {
+section.secListaMissas div.missa div div.btnDetalhes:hover {
 	background-color: #747474;
 }

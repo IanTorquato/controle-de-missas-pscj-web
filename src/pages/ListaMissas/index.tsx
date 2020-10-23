@@ -23,10 +23,13 @@ const ListaMissas: React.FC = () => {
 		<section className="secListaMissas">
 			<div className="headerLista">
 				<h3>Missa</h3>
-				<h3>Data</h3>
-				<h3>Horário</h3>
-				<h3>Local</h3>
-				<h3>Pessoas</h3>
+
+				<div>
+					<h3>Data</h3>
+					<h3>Horário</h3>
+					<h3>Local</h3>
+					<h3>Pessoas</h3>
+				</div>
 			</div>
 
 			<div>
@@ -38,29 +41,35 @@ const ListaMissas: React.FC = () => {
 
 					return (
 						<div className="missa">
-							<img src={urlImagem} alt="Imagem da Igreja" />
+							<div className="imagemNomeMissa">
+								<img src={urlImagem} alt="Imagem da Igreja" />
 
-							<h1>{missaSerializada.nome}</h1>
+								<h1>{missaSerializada.nome}</h1>
+							</div>
 
 							<hr />
 
-							<h3>{missaSerializada.data}</h3>
-							<h3>{missaSerializada.hora}</h3>
-							<h3>{nomeLocal}</h3>
-							<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
+							<div className="dadosMissa">
+								<h3>{missaSerializada.data}</h3>
+								<h3>{missaSerializada.hora}</h3>
+								<h3>{nomeLocal}</h3>
+								<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
+							</div>
 
 							<hr />
 
-							<div className="iconEditar">
-								<BiEditAlt size={32} color="#e5e5e5" />
-							</div>
+							<div className="btnsMissa">
+								<div className="btnEditar">
+									<BiEditAlt size={32} color="#e5e5e5" />
+								</div>
 
-							<div className="iconExcluir">
-								<BiTrash size={32} color="#e5e5e5" />
-							</div>
+								<div className="btnExcluir">
+									<BiTrash size={32} color="#e5e5e5" />
+								</div>
 
-							<div className="iconDetalhes">
-								<BiDotsVerticalRounded size={32} color="#e5e5e5" />
+								<div className="btnDetalhes">
+									<BiDotsVerticalRounded size={32} color="#e5e5e5" />
+								</div>
 							</div>
 						</div>
 					)
