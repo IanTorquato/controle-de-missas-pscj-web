@@ -9,7 +9,7 @@ section.secListaMissas {
 section.secListaMissas div.headerLista {
 	display: flex;
 	margin-bottom: 8px;
-	margin-top: 64px;
+	margin-top: 24px;
 	width: 1320px
 }
 
@@ -99,6 +99,7 @@ section.secListaMissas div.missa div.btnsMissa {
 	width: 176px;
 }
 
+section.secListaMissas div.missa div.btnsMissa a,
 section.secListaMissas div.missa div.btnsMissa div {
 	align-items: center;
 	border-radius: 8px;
@@ -108,7 +109,7 @@ section.secListaMissas div.missa div.btnsMissa div {
 	width: 48px
 }
 
-section.secListaMissas div.missa div div.btnEditar:hover {
+section.secListaMissas div.missa div a.btnEditar:hover {
 	background-color: #4396dfcc;
 }
 
@@ -120,6 +121,6 @@ section.secListaMissas div.missa div div.btnExcluir:hover {
 	background-color: #E41325cc;
 }
 
-section.secListaMissas div.missa div div.btnDetalhes:hover {
+section.secListaMissas div.missa div a.btnDetalhes:hover {
 	background-color: #747474;
 }

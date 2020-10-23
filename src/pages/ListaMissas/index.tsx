@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
 
 import api from '../../services/api'
@@ -18,6 +19,18 @@ const ListaMissas: React.FC = () => {
 				alert(response.data.erro || 'Falha ao listar missas.')
 			})
 	}, [])
+
+	function excluirMissa(id: number) {
+		api.delete(`missas/${id}`)
+			.then(({ data }) => {
+				alert(data.mensagem)
+				window.location.reload()
+			})
+			.catch(({ response }) => {
+				console.log(response)
+				alert(response.data.erro || 'Falha ao excluir missa.')
+			})
+	}
 
 	return (
 		<section className="secListaMissas">
@@ -40,7 +53,7 @@ const ListaMissas: React.FC = () => {
 					const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
 
 					return (
-						<div className="missa">
+						<div className="missa" key={missaSerializada.id}>
 							<div className="imagemNomeMissa">
 								<img src={urlImagem} alt="Imagem da Igreja" />
 
@@ -59,17 +72,17 @@ const ListaMissas: React.FC = () => {
 							<hr />
 
 							<div className="btnsMissa">
-								<div className="btnEditar">
+								<Link to="/editar-missa" className="btnEditar">
 									<BiEditAlt size={32} color="#e5e5e5" />
-								</div>
+								</Link>
 
-								<div className="btnExcluir">
+								<div className="btnExcluir" onClick={() => excluirMissa(missaSerializada.id)}>
 									<BiTrash size={32} color="#e5e5e5" />
 								</div>
 
-								<div className="btnDetalhes">
+								<Link to="/detalhes-missa" className="btnDetalhes">
 									<BiDotsVerticalRounded size={32} color="#e5e5e5" />
-								</div>
+								</Link>
 							</div>
 						</div>
 					)
