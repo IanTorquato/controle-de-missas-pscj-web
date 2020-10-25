@@ -13,9 +13,9 @@ const RoutesLogado = () => {
 		<BrowserRouter>
 			<Route component={Home} path="/" exact />
 			<Route component={CadastrarMissa} path="/cadastrar-missa" />
-			<Route component={EditarMissa} path='/editar-missa' />
+			<Route component={EditarMissa} path='/editar-missa/:id' />
 			<Route component={ListaMissas} path='/lista-missas' />
-			<Route component={DetalhesMissa} path='/detalhes-missa' />
+			<Route component={DetalhesMissa} path='/detalhes-missa/:id' />
 			<Route component={Contato} path='/contato' />
 		</BrowserRouter>
 	)
