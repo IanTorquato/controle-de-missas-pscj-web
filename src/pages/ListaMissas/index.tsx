@@ -21,15 +21,20 @@ const ListaMissas: React.FC = () => {
 	}, [])
 
 	function excluirMissa(id: number) {
-		api.delete(`missas/${id}`)
-			.then(({ data }) => {
-				alert(data.mensagem)
-				window.location.reload()
-			})
-			.catch(({ response }) => {
-				console.log(response)
-				alert(response.data.erro || 'Falha ao excluir missa.')
-			})
+		// eslint-disable-next-line no-restricted-globals
+		if (confirm('Deseja realmente excluir esta missa?')) {
+			setMissas(missas.filter(missa => missa.id !== id))
+
+			api.delete(`missas/${id}`)
+				.then(({ data }) => {
+					alert(data.mensagem)
+				})
+				.catch(({ response }) => {
+					console.log(response)
+					alert(response.data.erro || 'Falha ao excluir missa.')
+					window.location.reload()
+				})
+		}
 	}
 
 	return (
@@ -80,7 +85,7 @@ const ListaMissas: React.FC = () => {
 									<BiTrash size={32} color="#e5e5e5" />
 								</div>
 
-								<Link to="/detalhes-missa/${missa.id}" className="btnDetalhes">
+								<Link to={`/detalhes-missa/${missa.id}`} className="btnDetalhes">
 									<BiDotsVerticalRounded size={32} color="#e5e5e5" />
 								</Link>
 							</div>
