@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { BiEditAlt, BiTrash, BiCalendar } from 'react-icons/bi'
 import { FiClock } from 'react-icons/fi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
@@ -17,8 +17,11 @@ interface RouteParams {
 }
 
 const DetalhesMissa: React.FC = () => {
-	// const { id } = useParams<RouteParams>()
 	// const [missa, setMissa] = useState<Missa | null>(null)
+
+	const { goBack } = useHistory()
+
+	const { id } = useParams<RouteParams>()
 
 	// useEffect(() => {
 	// 	api.get(`missas?missa_id=${id}`)
@@ -28,6 +31,21 @@ const DetalhesMissa: React.FC = () => {
 	// 			alert(response.data.erro || 'Falha ao listar uma única missa.')
 	// 		})
 	// }, [])
+
+	function excluirMissa(id: number) {
+		// eslint-disable-next-line no-restricted-globals
+		if (confirm('Deseja realmente excluir esta missa?')) {
+			api.delete(`missas/${id}`)
+				.then(({ data }) => {
+					alert(data.mensagem)
+					goBack()
+				})
+				.catch(({ response }) => {
+					console.log(response)
+					alert(response.data.erro || 'Falha ao excluir missa.')
+				})
+		}
+	}
 
 	return (
 		<section className="secDetalhesMissa">
@@ -39,8 +57,13 @@ const DetalhesMissa: React.FC = () => {
 						<h1>Solenidade de N. Srª. Aparecida</h1>
 
 						<div>
-							<div><BiTrash size={24} color="#e5e5e5" /></div>
-							<div><BiEditAlt size={24} color="#e5e5e5" /></div>
+							<div onClick={() => excluirMissa(+id)}>
+								<BiTrash size={24} color="#e5e5e5" />
+							</div>
+
+							<Link to={`/editar-missa/${id}`}>
+								<BiEditAlt size={24} color="#e5e5e5" />
+							</Link>
 						</div>
 					</div>
 

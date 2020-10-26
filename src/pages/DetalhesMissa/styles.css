@@ -45,25 +45,26 @@ section.secDetalhesMissa header div.dadosMissa div:first-child div {
 	text-align: center;
 }
 
-section.secDetalhesMissa header div.dadosMissa div:first-child div>div {
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
+section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
 	align-items: center;
 	border-radius: 8px;
 	display: flex;
 	height: 48px;
 	justify-content: center;
-	width: 48px
+	width: 48px;
 }
 
-section.secDetalhesMissa header div.dadosMissa div:first-child div>div:first-child {
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div {
 	margin-bottom: 8px;
 	margin-top: 24px;
 }
 
-section.secDetalhesMissa header div.dadosMissa div:first-child div>div:first-child:hover {
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div:hover {
 	background-color: #E41325cc;
 }
 
-section.secDetalhesMissa header div.dadosMissa div:first-child div>div:last-child:hover {
+section.secDetalhesMissa header div.dadosMissa div:first-child div>a:hover {
 	background-color: #4396dfcc;
 }
 

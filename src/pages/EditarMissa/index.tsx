@@ -10,8 +10,6 @@ interface RouteParams {
 	id: string
 }
 
-
-
 const EditarMissa = () => {
 	const { id } = useParams<RouteParams>()
 	const [missa, setMissa] = useState<Missa | null>(null)
