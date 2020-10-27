@@ -24,16 +24,15 @@ a {
 }
 
 ::-webkit-scrollbar {
-	height: 10px;
-	width: 10px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #999999;
+	background-color: #121212;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #222222;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
+	background-color: #747474;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
