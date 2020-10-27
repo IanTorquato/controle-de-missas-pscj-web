@@ -1,0 +1,30 @@
+header.cabecalho {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	margin-bottom: -80px;
+	width: 100%;
+}
+
+header.cabecalho div {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	margin-left: 16px;
+}
+
+header.cabecalho img.logo {
+	height: 44px;
+	width: 32px;
+}
+
+header.cabecalho h1.tituloPSCJ {
+	font: normal 40px 'Cormorant Garamond', serif;
+	margin-left: 8px;
+}
+
+header.cabecalho h2.tituloLocal {
+	font: normal 32px 'Cormorant Garamond', serif;
+	margin-right: 24px;
+}

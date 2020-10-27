@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
 
 import api from '../../services/api'
+import Header from '../../components/Header'
 import Missa from '../../utils/interfaces'
 import { formatDiaMesHora } from '../../utils/tratandoDatas'
 
@@ -38,62 +39,66 @@ const ListaMissas: React.FC = () => {
 	}
 
 	return (
-		<section className="secListaMissas">
-			<div className="headerLista">
-				<h3>Missa</h3>
+		<>
+			<Header />
+
+			<section className="secListaMissas">
+				<div className="headerLista">
+					<h3>Missa</h3>
+
+					<div>
+						<h3>Data</h3>
+						<h3>Horário</h3>
+						<h3>Local</h3>
+						<h3>Pessoas</h3>
+					</div>
+				</div>
 
 				<div>
-					<h3>Data</h3>
-					<h3>Horário</h3>
-					<h3>Local</h3>
-					<h3>Pessoas</h3>
-				</div>
-			</div>
+					{missas.map(missa => {
+						const { missaSerializada } = formatDiaMesHora(missa)
+						const nomeLocal = missaSerializada.local_id === 1 ? 'Centro' : 'Termas'
 
-			<div>
-				{missas.map(missa => {
-					const { missaSerializada } = formatDiaMesHora(missa)
-					const nomeLocal = missaSerializada.local_id === 1 ? 'Centro' : 'Termas'
+						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
 
-					const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
+						return (
+							<div className="missa" key={missaSerializada.id}>
+								<div className="imagemNomeMissa">
+									<img src={urlImagem} alt="Imagem da Igreja" />
 
-					return (
-						<div className="missa" key={missaSerializada.id}>
-							<div className="imagemNomeMissa">
-								<img src={urlImagem} alt="Imagem da Igreja" />
-
-								<h1>{missaSerializada.nome}</h1>
-							</div>
-
-							<hr />
-
-							<div className="dadosMissa">
-								<h3>{missaSerializada.data}</h3>
-								<h3>{missaSerializada.hora}</h3>
-								<h3>{nomeLocal}</h3>
-								<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
-							</div>
-
-							<hr />
-
-							<div className="btnsMissa">
-								<Link to={`/editar-missa/${missa.id}`} className="btnEditar">
-									<BiEditAlt size={32} color="#e5e5e5" />
-								</Link>
-
-								<div className="btnExcluir" onClick={() => excluirMissa(missaSerializada.id)}>
-									<BiTrash size={32} color="#e5e5e5" />
+									<h1>{missaSerializada.nome}</h1>
 								</div>
 
-								<Link to={`/detalhes-missa/${missa.id}`} className="btnDetalhes">
-									<BiDotsVerticalRounded size={32} color="#e5e5e5" />
-								</Link>
+								<hr />
+
+								<div className="dadosMissa">
+									<h3>{missaSerializada.data}</h3>
+									<h3>{missaSerializada.hora}</h3>
+									<h3>{nomeLocal}</h3>
+									<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
+								</div>
+
+								<hr />
+
+								<div className="btnsMissa">
+									<Link to={`/editar-missa/${missa.id}`} className="btnEditar">
+										<BiEditAlt size={32} color="#e5e5e5" />
+									</Link>
+
+									<div className="btnExcluir" onClick={() => excluirMissa(missaSerializada.id)}>
+										<BiTrash size={32} color="#e5e5e5" />
+									</div>
+
+									<Link to={`/detalhes-missa/${missa.id}`} className="btnDetalhes">
+										<BiDotsVerticalRounded size={32} color="#e5e5e5" />
+									</Link>
+								</div>
 							</div>
-						</div>
-					)
-				})}
-			</div>
-		</section>
+						)
+					})}
+				</div>
+			</section>
+		</>
 	)
 }
 

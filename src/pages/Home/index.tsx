@@ -6,10 +6,10 @@ import { RiComputerLine } from 'react-icons/ri'
 
 import api from '../../services/api'
 import { useLogin } from '../../contexts/login'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Missa from '../../utils/interfaces'
 import { formatDiaMesHora } from '../../utils/tratandoDatas'
-import logo from '../../assets/logo.svg'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
@@ -33,15 +33,7 @@ const Home = () => {
 
 	return (
 		<>
-			<header className="cabecalho">
-				<div onClick={() => { window.location.reload() }}>
-					<img className="logo" src={logo} alt="Brasão da Paróquia" />
-
-					<h1 className="tituloPSCJ">PSCJ</h1>
-				</div>
-
-				<h2 className="tituloLocal">Gravatal - SC</h2>
-			</header>
+			<Header />
 
 			<section className="secHome" onDoubleClick={deslogar}>
 				<div>
