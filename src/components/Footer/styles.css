@@ -4,7 +4,6 @@ footer.rodape {
 	display: flex;
 	height: 312px;
 	justify-content: space-between;
-	font-family: Roboto, sans-serif;
 	padding: 0 68px
 }
 
@@ -21,7 +20,7 @@ footer.rodape ul li {
 	border-radius: 50%;
 	margin-right: 16px;
 	overflow: hidden;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 footer.rodape li:hover {

@@ -51,21 +51,6 @@ section.secCadastrarEditar form>div.containerInputsForm {
 	margin-bottom: 112px;
 }
 
-section.secCadastrarEditar form>div.containerInputsForm>div {
-	position: relative;
-	margin-bottom: 40px;
-}
-
-section.secCadastrarEditar form>div.containerInputsForm>div:last-child {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 40px;
-}
-
-section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div {
-	position: relative;
-}
-
 section.secCadastrarEditar form>div.containerInputsForm input,
 section.secCadastrarEditar form>div.containerInputsForm select {
 	background-color: #e5e5e5;
@@ -80,7 +65,23 @@ section.secCadastrarEditar form>div.containerInputsForm select {
 	width: 400px;
 }
 
-section.secCadastrarEditar form>div.containerInputsForm>div:last-child input {
+section.secCadastrarEditar form>div.containerInputsForm>div {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child {
+	display: flex;
+	justify-content: space-between;
+	/* margin-bottom: 40px; */
+}
+
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div {
+	position: relative;
+}
+
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div input,
+section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div select {
 	width: 192px;
 }
 

@@ -89,25 +89,27 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 					</div>
 
 					<div>
-						<select name="local" value={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
-							<option value="" hidden>Selecione um local</option>
-							<option value="1">Centro</option>
-							<option value="2">Termas</option>
-						</select>
-
-						<FaMapMarkedAlt size={20} fill="#747474" />
+						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required
+							min={format(new Date(), "yyyy-MM-dd'T'HH:mm")} value={`${dataMissa.data}T${dataMissa.hora}`} />
 					</div>
 
-					<div className="maxPessoasData">
+					<div>
+						<div>
+							<select name="local" value={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
+								<option value="" hidden>Selecione um local</option>
+								<option value="1">Centro</option>
+								<option value="2">Termas</option>
+							</select>
+
+							<FaMapMarkedAlt size={20} fill="#747474" />
+						</div>
+
 						<div>
 							<input type="number" name="maxPessoas" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
 								onChange={({ target }) => setMax_pessoas(+target.value)} value={max_pessoas} />
 
 							<HiUserGroup size={20} fill="#747474" />
 						</div>
-
-						<input type="datetime-local" name="dataHora" className="dataHora" onChange={clicouData} required
-							min={format(new Date(), "yyyy-MM-dd'T'HH:mm")} value={`${dataMissa.data}T${dataMissa.hora}`} />
 					</div>
 				</div>
 

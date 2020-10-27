@@ -112,6 +112,10 @@ section.secContato ul a {
 	font: normal 16px 'Oswald';
 }
 
+section.secContato ul a span>svg {
+	transition: fill 0.01s
+}
+
 section.secContato ul a:hover span.spanFace>svg {
 	fill: #1877f2;
 }
