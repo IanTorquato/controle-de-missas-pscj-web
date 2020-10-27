@@ -2,14 +2,14 @@ section.secListaMissas {
 	align-items: center;
 	background-color: #121212;
 	display: flex;
-	height: 100vh;
 	flex-direction: column;
+	height: 100vh;
 }
 
 section.secListaMissas div.headerLista {
 	display: flex;
-	margin-bottom: 8px;
-	margin-top: 24px;
+	margin-bottom: 16px;
+	margin-top: 88px;
 	width: 1320px
 }
 
@@ -25,24 +25,11 @@ section.secListaMissas div.headerLista>h3:first-child {
 }
 
 section.secListaMissas div.headerLista div {
-	display: flex;
-	justify-content: space-between;
-	margin: 0 16px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	padding: 0 16px;
-	width: 526px;
-}
-
-section.secListaMissas div.headerLista div h3:first-child {
-	margin-left: 6px;
-	margin-right: -6px;
-}
-
-section.secListaMissas div.headerLista div h3+h3+h3 {
-	margin-right: -8px;
-}
-
-section.secListaMissas div.headerLista div h3+h3+h3+h3 {
-	margin-right: -12px;
+	text-align: center;
+	width: 556px;
 }
 
 section.secListaMissas div.missa {
@@ -82,14 +69,14 @@ section.secListaMissas div.missa hr {
 }
 
 section.secListaMissas div.missa div.dadosMissa {
-	display: flex;
-	justify-content: space-between;
-	padding: 0 16px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	width: 524px;
 }
 
 section.secListaMissas div.missa div.dadosMissa h3 {
 	font: normal 24px 'Merriweather';
+	text-align: center;
 }
 
 section.secListaMissas div.missa div.btnsMissa {
