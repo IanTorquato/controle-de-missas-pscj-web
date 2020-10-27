@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import api from '../../services/api'
 import FormMissas from '../../components/FormMissas'
-import Footer from '../../components/Footer'
 import Missa from '../../utils/interfaces'
 import { useParams } from 'react-router-dom'
 
@@ -24,11 +23,7 @@ const EditarMissa = () => {
 	}, [])
 
 	return (
-		<>
-			{missa && <FormMissas titulo="Editando..." txtBtn="Editar" missa={missa} mensagemDireita="Eu avisei! [Risos]" />}
-
-			<Footer />
-		</>
+		missa && <FormMissas titulo="Editando..." txtBtn="Editar" missa={missa} mensagemDireita="Eu avisei! [Risos]" />
 	)
 }
 
