@@ -23,17 +23,17 @@ const Login: React.FC = () => {
 
 	return (
 		<section className="secLogin">
-			<form onSubmit={entrar} autoComplete="off">
+			<form onSubmit={entrar}>
 				<img src={logo} alt="Brasão da Paróquia" />
 
 				<div className="insereDados">
-					<input type="text" id="nome" value={nome} autoComplete="off" required className={erroLogin ? 'erro' : ''}
+					<input type="text" id="nome" value={nome} required className={erroLogin ? 'erro' : ''}
 						onFocus={() => setErroLogin(false)} onChange={({ target }) => setNome(target.value)} />
 					<span>Usuário</span>
 				</div>
 
 				<div className="insereDados">
-					<input type="password" id="senha" value={senha} autoComplete="off" required className={erroLogin ? 'erro' : ''}
+					<input type="password" id="senha" value={senha} required className={erroLogin ? 'erro' : ''}
 						onFocus={() => setErroLogin(false)} onChange={({ target }) => setSenha(target.value)} minLength={8} />
 					<span>Senha</span>
 				</div>
