@@ -8,17 +8,13 @@ import './styles.css'
 const Login: React.FC = () => {
 	const [nome, setNome] = useState('')
 	const [senha, setSenha] = useState('')
-	const [erroLogin, setErroLogin] = useState(false)
 
-	const { logar } = useLogin()
+	const { logar, erroLogin, setErroLogin } = useLogin()
 
 	async function entrar(event: FormEvent) {
 		event.preventDefault()
 
-		setErroLogin(await logar(nome, senha))
-
-		setNome('')
-		setSenha('')
+		logar(nome, senha)
 	}
 
 	return (
@@ -28,15 +24,17 @@ const Login: React.FC = () => {
 
 				<div className="insereDados">
 					<input type="text" id="nome" value={nome} required className={erroLogin ? 'erro' : ''}
-						onFocus={() => setErroLogin(false)} onChange={({ target }) => setNome(target.value)} />
+						onFocus={() => setErroLogin('')} onChange={({ target }) => setNome(target.value)} />
 					<span>Usuário</span>
 				</div>
 
 				<div className="insereDados">
 					<input type="password" id="senha" value={senha} required className={erroLogin ? 'erro' : ''}
-						onFocus={() => setErroLogin(false)} onChange={({ target }) => setSenha(target.value)} minLength={8} />
+						onFocus={() => setErroLogin('')} onChange={({ target }) => setSenha(target.value)} minLength={8} />
 					<span>Senha</span>
 				</div>
+
+				{erroLogin && <label>{erroLogin}</label>}
 
 				<button type="submit">Entrar</button>
 			</form>

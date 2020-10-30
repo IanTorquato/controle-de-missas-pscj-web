@@ -71,6 +71,14 @@ section.secLogin div.insereDados span {
 	transition: 0.4s
 }
 
+section.secLogin label {
+	color: #e41325;
+	font: normal 16px 'Roboto', sans-serif;
+	margin-bottom: -8px;
+	margin-top: -8px;
+	width: 320px;
+}
+
 section.secLogin form button {
 	background-color: #e41325;
 	border: none;

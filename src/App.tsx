@@ -1,14 +1,18 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+
+import { LoginProvider } from './contexts/login'
+import Routes from './routes'
 
 import './App.css'
-import Routes from './routes'
-import { LoginProvider } from './contexts/login'
 
 const App = () => {
 	return (
-		<LoginProvider>
-			<Routes />
-		</LoginProvider>
+		<BrowserRouter>
+			<LoginProvider>
+				<Routes />
+			</LoginProvider>
+		</BrowserRouter>
 	)
 }
 
