@@ -27,7 +27,7 @@ const Home = () => {
 			.then(({ data }) => setMissas(data))
 			.catch(({ response }) => {
 				console.log(response)
-				return setErroMissas(response.data.erro || 'Falha ao listar missas.')
+				return setErroMissas(response?.data.erro || 'Falha ao listar missas.')
 			})
 	}, [])
 

@@ -51,7 +51,7 @@ export const LoginProvider: React.FC = ({ children }) => {
 			setTokenPascom(data.token)
 		}).catch((error) => {
 			console.log(error)
-			setErroLogin(error.response.data.erro || 'Falha ao efetuar o login')
+			setErroLogin(error.response?.data.erro || 'Falha ao efetuar o login')
 		})
 	}
 

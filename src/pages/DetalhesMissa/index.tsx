@@ -39,9 +39,9 @@ const DetalhesMissa: React.FC = () => {
 			})
 			.catch(({ response }) => {
 				console.log(response)
-				alert(response.data.erro || 'Falha ao listar uma única missa.')
+				alert(response?.data.erro || 'Falha ao listar uma única missa.')
 			})
-	}, [])
+	}, [id])
 
 	function excluirMissa(id: number) {
 		// eslint-disable-next-line no-restricted-globals
@@ -53,7 +53,7 @@ const DetalhesMissa: React.FC = () => {
 				})
 				.catch(({ response }) => {
 					console.log(response)
-					alert(response.data.erro || 'Falha ao excluir missa.')
+					alert(response?.data.erro || 'Falha ao excluir missa.')
 				})
 		}
 	}

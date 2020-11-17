@@ -17,7 +17,7 @@ const ListaMissas: React.FC = () => {
 			.then(({ data }) => setMissas(data))
 			.catch(({ response }) => {
 				console.log(response)
-				alert(response.data.erro || 'Falha ao listar missas.')
+				alert(response?.data.erro || 'Falha ao listar missas.')
 			})
 	}, [])
 
@@ -32,7 +32,7 @@ const ListaMissas: React.FC = () => {
 				})
 				.catch(({ response }) => {
 					console.log(response)
-					alert(response.data.erro || 'Falha ao excluir missa.')
+					alert(response?.data.erro || 'Falha ao excluir missa.')
 					window.location.reload()
 				})
 		}

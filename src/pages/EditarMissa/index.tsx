@@ -10,17 +10,18 @@ interface RouteParams {
 }
 
 const EditarMissa = () => {
-	const { id } = useParams<RouteParams>()
 	const [missa, setMissa] = useState<Missa | null>(null)
+
+	const { id } = useParams<RouteParams>()
 
 	useEffect(() => {
 		api.get(`missas?missa_id=${id}`)
 			.then(({ data }) => setMissa(data))
 			.catch(({ response }) => {
 				console.log(response)
-				alert(response.data.erro || 'Falha ao listar uma única missa.')
+				alert(response?.data.erro || 'Falha ao listar uma única missa.')
 			})
-	}, [])
+	}, [id])
 
 	return (
 		missa && <FormMissas titulo="Editando..." txtBtn="Editar" missa={missa} mensagemDireita="Eu avisei! [Risos]" />
