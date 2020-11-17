@@ -27,9 +27,6 @@ const ListaMissas: React.FC = () => {
 			setMissas(missas.filter(missa => missa.id !== id))
 
 			api.delete(`missas/${id}`)
-				.then(({ data }) => {
-					alert(data.mensagem)
-				})
 				.catch(({ response }) => {
 					console.log(response)
 					alert(response?.data.erro || 'Falha ao excluir missa.')

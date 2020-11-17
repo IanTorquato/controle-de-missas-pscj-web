@@ -38,7 +38,8 @@ section.secDetalhesMissa header div.dadosMissa div:first-child {
 
 section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
 	font: normal 80px 'Oswald';
-	line-height: 128px
+	line-height: 128px;
+	overflow: auto;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div {
@@ -99,7 +100,6 @@ section.secDetalhesMissa div.gridUsuarios div.usuario {
 	background-color: #747474;
 	display: flex;
 	height: 132px;
-	justify-content: center;
 	width: 286px;
 }
 
