@@ -10,6 +10,7 @@ import EditarMissa from '../pages/EditarMissa'
 import ListaMissas from '../pages/ListaMissas'
 import DetalhesMissa from '../pages/DetalhesMissa'
 import Contato from '../pages/Contato'
+import NotFound from '../pages/NotFound'
 
 const Routes = () => {
 	const { logado } = useLogin()
@@ -28,7 +29,7 @@ const Routes = () => {
 					<Route component={ListaMissas} path='/lista-missas' />
 					<Route component={DetalhesMissa} path='/detalhes-missa/:id' />
 					<Route component={Contato} path='/contato' />
-					<Route component={() => <h1>AQUI 404</h1>} />
+					<Route component={NotFound} />
 				</Switch>
 			)
 	)
