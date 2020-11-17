@@ -5,7 +5,6 @@ import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
 
 import api from '../../services/api'
-import { useLogin } from '../../contexts/login'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Missa from '../../utils/interfaces'
@@ -20,8 +19,6 @@ const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
 	const [erroMissas, setErroMissas] = useState('')
 
-	const { deslogar } = useLogin()
-
 	useEffect(() => {
 		api.get('missas?quantMissas=6')
 			.then(({ data }) => setMissas(data))
@@ -35,7 +32,7 @@ const Home = () => {
 		<>
 			<Header />
 
-			<section className="secHome" onDoubleClick={deslogar}>
+			<section className="secHome">
 				<div>
 					<h1 className="tituloSSCJ">Santuário Sagrado <br /> Coração de <br /> Jesus</h1>
 

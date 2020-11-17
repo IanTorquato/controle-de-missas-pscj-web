@@ -1,6 +1,7 @@
 header.cabecalho {
 	align-items: center;
 	display: flex;
+	font-family: 'Cormorant Garamond', serif;
 	justify-content: space-between;
 	height: 80px;
 	margin-bottom: -80px;
@@ -9,22 +10,28 @@ header.cabecalho {
 
 header.cabecalho div {
 	align-items: center;
-	cursor: pointer;
 	display: flex;
-	margin-left: 16px;
 }
 
-header.cabecalho img.logo {
+header.cabecalho div:first-child {
+	cursor: pointer;
+}
+
+header.cabecalho div:first-child img {
 	height: 44px;
+	margin: 0 8px 0 24px;
 	width: 32px;
 }
 
-header.cabecalho h1.tituloPSCJ {
-	font: normal 40px 'Cormorant Garamond', serif;
-	margin-left: 8px;
+header.cabecalho div:first-child h1 {
+	font-size: 40px;
 }
 
-header.cabecalho h2.tituloLocal {
-	font: normal 32px 'Cormorant Garamond', serif;
-	margin-right: 24px;
+header.cabecalho div:last-child h2 {
+	font-size: 32px;
+}
+
+header.cabecalho div:last-child svg {
+	cursor: pointer;
+	margin: 0 24px;
 }
