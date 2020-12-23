@@ -18,6 +18,11 @@ section.secNotFound div {
 	width: 376px;
 }
 
+section.secNotFound div a {
+	color: #ffc32c;
+	text-decoration: underline;
+}
+	
 section.secNotFound img {
 	bottom: 64px;
 	height: 800px;
