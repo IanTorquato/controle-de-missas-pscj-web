@@ -19,8 +19,6 @@ const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
 	const [erroMissas, setErroMissas] = useState('')
 
-	const { push } = useHistory()
-
 	useEffect(() => {
 		api.get('missas?quantMissas=6')
 			.then(({ data }) => setMissas(formatDiaMesHora(data)))
@@ -103,7 +101,7 @@ const Home = () => {
 			<section className="secCronograma">
 				<div className="tituloCronograma"></div>
 
-				<h2 className="erroListagem">{erroMissas}</h2>
+				<h2 className="semMissas">{erroMissas}</h2>
 
 				<aside className="gridMissas">
 					{missas.map((missa, index) => {

@@ -134,8 +134,8 @@ const DetalhesMissa: React.FC = () => {
 									</div>
 								))}
 							</div> :
-							<div>
-								<h3>Nenhum usuário cadastrado</h3>
+							<div className="semUsuarios">
+								<h3>Ish! Ninguém se cadastrou ainda...</h3>
 							</div>
 						}
 					</>

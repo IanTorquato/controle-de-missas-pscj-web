@@ -53,6 +53,7 @@ section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
 	display: flex;
 	height: 48px;
 	justify-content: center;
+	transition: background-color 0.4s;
 	width: 48px;
 }
 
@@ -124,4 +125,11 @@ section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
 	margin-right: 12px;
+}
+
+section.secDetalhesMissa div.semUsuarios h3{
+	font: normal 28px 'Shadows Into Light Two';
+	font-weight: normal;
+	letter-spacing: 4px;
+	margin-top: 32px;
 }

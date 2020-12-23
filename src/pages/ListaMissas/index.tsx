@@ -11,13 +11,14 @@ import './styles.css'
 
 const ListaMissas: React.FC = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
+	const [erroMissas, setErroMissas] = useState('')
 
 	useEffect(() => {
 		api.get('missas')
 			.then(({ data }) => setMissas(formatDiaMesHora(data)))
 			.catch(({ response }) => {
 				console.log(response)
-				alert(response?.data.erro || 'Falha ao listar missas.')
+				setErroMissas(response?.data.erro || 'Falha ao listar missas.')
 			})
 	}, [])
 
@@ -52,14 +53,14 @@ const ListaMissas: React.FC = () => {
 				</div>
 
 				<div>
-					{missas.map(missa => {
+					{missas[0] ? missas.map(missa => {
 						const [data, hora] = missa.data_hora.split('T')
 						const nomeLocal = missa.local_id === 1 ? 'Centro' : 'Termas'
 
 						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
 
 						return (
-							<Link to={`/detalhes-missa/${missa.id}`} className="missa" key={missa.id}>
+							<div className="missa" key={missa.id}>
 								<div className="imagemNomeMissa">
 									<img src={urlImagem} alt="Imagem da Igreja" />
 
@@ -90,9 +91,11 @@ const ListaMissas: React.FC = () => {
 										<BiDotsVerticalRounded size={32} color="#e5e5e5" />
 									</Link>
 								</div>
-							</Link>
+							</div>
 						)
-					})}
+					}) :
+						<h2 className="semMissas">{erroMissas}</h2>
+					}
 				</div>
 			</section>
 		</>

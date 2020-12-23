@@ -277,9 +277,11 @@ section.secCronograma div.tituloCronograma {
 	width: 50%;
 }
 
-section.secCronograma h2.erroListagem {
-	font: normal 40px 'Merriweather';
-	max-width: 50%;
+section.secCronograma h2.semMissas {
+	font: normal 28px 'Shadows Into Light Two';
+	font-weight: normal;
+	letter-spacing: 4px;
+	margin-top: 32px;
 }
 
 section.secCronograma aside.gridMissas {
