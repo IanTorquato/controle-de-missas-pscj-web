@@ -1,25 +1,29 @@
 import { parseISO, format } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 
 import Missa from './interfaces'
 
+const diasSemana = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO']
+
 // Home e Lista ==> data: "22/10" e hora: "10:00"
-export function formatDiaMesHora(missa: Missa) {
-	const dataMissa = parseISO(`${missa.data}T${missa.hora}`)
+export function formatDiaMesHora(missas: Missa[]) {
 
-	const formatDataMissa = format(dataMissa, "dd/MM HH:mm").split(' ')
+	return missas.map(missa => {
+		const dataMissa = parseISO(missa.data_hora)
 
-	const missaSerializada = { ...missa, data: formatDataMissa[0], hora: formatDataMissa[1] }
+		const data_hora = format(dataMissa, "dd/MM'T'HH:mm", { locale: ptBR })
 
-	return { missaSerializada, dataMissa }
+		return { ...missa, data_hora, dia_semana: diasSemana[dataMissa.getDay()] }
+	})
 }
 
 // Detalhes ==> data: "22/10/2021" e hora: "10:00"
-export function formatDataHora(missa: Missa) {
-	const dataMissa = parseISO(`${missa.data}T${missa.hora}`)
+export function formatDataHora(missas: Missa[]) {
+	return missas.map(missa => {
+		const dataMissa = parseISO(missa.data_hora)
 
-	const formatDataMissa = format(dataMissa, "dd/MM/yyyy HH:mm").split(' ')
+		const data_hora = format(dataMissa, "dd/MM/yyyy'T'HH:mm", { locale: ptBR })
 
-	const missaSerializada = { ...missa, data: formatDataMissa[0], hora: formatDataMissa[1] }
-
-	return { missaSerializada, dataMissa }
+		return { ...missa, data_hora, dia_semana: diasSemana[dataMissa.getDay()] }
+	})
 }
