@@ -27,21 +27,25 @@ const DetalhesMissa: React.FC = () => {
 	const [missa, setMissa] = useState<Missa | null>(null)
 	const [usuarios, setUsuarios] = useState<Usuarios[] | null>(null)
 
-	const { goBack } = useHistory()
+	const { push } = useHistory()
 
 	const { id } = useParams<RouteParams>()
+
+	const [data, hora] = missa ? missa.data_hora.split('T') : []
 
 	useEffect(() => {
 		api.get(`missas?missa_id_usuarios=${id}`)
 			.then(({ data }) => {
-				setMissa(formatDataHora(data.missa).missaSerializada)
+				setMissa(formatDataHora([data.missa])[0])
+
 				if (data.usuarios) { setUsuarios(data.usuarios) }
 			})
 			.catch(({ response }) => {
 				console.log(response)
 				alert(response?.data.erro || 'Falha ao listar uma única missa.')
+				push('/lista-missas')
 			})
-	}, [id])
+	}, [id, push])
 
 	function excluirMissa(id: number) {
 		// eslint-disable-next-line no-restricted-globals
@@ -49,17 +53,18 @@ const DetalhesMissa: React.FC = () => {
 			api.delete(`missas/${id}`)
 				.then(({ data }) => {
 					alert(data.mensagem)
-					goBack()
+					push('/lista-missas')
 				})
 				.catch(({ response }) => {
 					console.log(response)
 					alert(response?.data.erro || 'Falha ao excluir missa.')
+					window.location.reload()
 				})
 		}
 	}
 
 	const nomeLocal = missa?.local_id === 1 ? 'Centro' : 'Termas'
-	const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
+	const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
 
 	return (
 		<>
@@ -89,12 +94,12 @@ const DetalhesMissa: React.FC = () => {
 								<div>
 									<span>
 										<BiCalendar size={24} color="#e5e5e5" />
-										{missa.data}
+										{data}
 									</span>
 
 									<span>
 										<FiClock size={24} color="#e5e5e5" />
-										{missa.hora}
+										{hora}
 									</span>
 
 									<span>

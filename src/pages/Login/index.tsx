@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 				</div>
 
 				<div className="insereDados">
-					<input type="password" id="senha" value={senha} required className={erroLogin ? 'erro' : ''}
+					<input type="password" id="senha" value={senha} required className={erroLogin ? 'erro' : ''} autoComplete="off"
 						onFocus={() => setErroLogin('')} onChange={({ target }) => setSenha(target.value)} minLength={8} />
 					<span>Senha</span>
 				</div>

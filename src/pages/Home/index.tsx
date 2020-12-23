@@ -21,7 +21,7 @@ const Home = () => {
 
 	useEffect(() => {
 		api.get('missas?quantMissas=6')
-			.then(({ data }) => setMissas(data))
+			.then(({ data }) => setMissas(formatDiaMesHora(data)))
 			.catch(({ response }) => {
 				console.log(response)
 				return setErroMissas(response?.data.erro || 'Falha ao listar missas.')
@@ -105,24 +105,21 @@ const Home = () => {
 
 				<aside className="gridMissas">
 					{missas.map((missa, index) => {
-						const { missaSerializada, dataMissa } = formatDiaMesHora(missa)
-
-						const diasSemana = [
-							'DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO'
-						]
+						const [data, hora] = missa.data_hora.split('T')
 
 						return (
 							<div key={missa.id} className="detalhesMissa ok" id={
 								index < 2 ? 'detalhesMissaVermelha' : index < 4 ? 'detalhesMissaDourada' : 'detalhesMissaAzul'
 							}>
-								<h1>{missaSerializada.data} - {missaSerializada.hora}</h1>
+								<h1>{data} - {hora}</h1>
 
-								<h2>{diasSemana[dataMissa.getDay()]} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}</h2>
+								<h2>{missa.dia_semana} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}</h2>
 							</div>
 						)
 					})}
 				</aside>
 			</section>
+
 			<Footer />
 		</>
 	)

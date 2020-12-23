@@ -14,7 +14,7 @@ const ListaMissas: React.FC = () => {
 
 	useEffect(() => {
 		api.get('missas')
-			.then(({ data }) => setMissas(data))
+			.then(({ data }) => setMissas(formatDiaMesHora(data)))
 			.catch(({ response }) => {
 				console.log(response)
 				alert(response?.data.erro || 'Falha ao listar missas.')
@@ -53,26 +53,26 @@ const ListaMissas: React.FC = () => {
 
 				<div>
 					{missas.map(missa => {
-						const { missaSerializada } = formatDiaMesHora(missa)
-						const nomeLocal = missaSerializada.local_id === 1 ? 'Centro' : 'Termas'
+						const [data, hora] = missa.data_hora.split('T')
+						const nomeLocal = missa.local_id === 1 ? 'Centro' : 'Termas'
 
-						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.png`
+						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
 
 						return (
-							<div className="missa" key={missaSerializada.id}>
+							<div className="missa" key={missa.id}>
 								<div className="imagemNomeMissa">
 									<img src={urlImagem} alt="Imagem da Igreja" />
 
-									<h1>{missaSerializada.nome}</h1>
+									<h1>{missa.nome}</h1>
 								</div>
 
 								<hr />
 
 								<div className="dadosMissa">
-									<h3>{missaSerializada.data}</h3>
-									<h3>{missaSerializada.hora}</h3>
+									<h3>{data}</h3>
+									<h3>{hora}</h3>
 									<h3>{nomeLocal}</h3>
-									<h3>{missaSerializada.pessoas_cadastradas}/{missaSerializada.max_pessoas}</h3>
+									<h3>{missa.pessoas_cadastradas}/{missa.max_pessoas}</h3>
 								</div>
 
 								<hr />
@@ -82,7 +82,7 @@ const ListaMissas: React.FC = () => {
 										<BiEditAlt size={32} color="#e5e5e5" />
 									</Link>
 
-									<div className="btnExcluir" onClick={() => excluirMissa(missaSerializada.id)}>
+									<div className="btnExcluir" onClick={() => excluirMissa(missa.id)}>
 										<BiTrash size={32} color="#e5e5e5" />
 									</div>
 

@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 
 import api from '../../services/api'
 import FormMissas from '../../components/FormMissas'
 import Missa from '../../utils/interfaces'
-import { useParams } from 'react-router-dom'
+import { formatDataHora } from '../../utils/tratandoDatas'
 
-interface RouteParams {
-	id: string
-}
+interface RouteParams { id: string }
 
 const EditarMissa = () => {
 	const [missa, setMissa] = useState<Missa | null>(null)
 
+	const { push } = useHistory()
 	const { id } = useParams<RouteParams>()
 
 	useEffect(() => {
 		api.get(`missas?missa_id=${id}`)
-			.then(({ data }) => setMissa(data))
+			.then(({ data }) => setMissa(formatDataHora([data])[0]))
 			.catch(({ response }) => {
 				console.log(response)
 				alert(response?.data.erro || 'Falha ao listar uma única missa.')
+				push('/lista-missas')
 			})
-	}, [id])
+	}, [id, push])
 
 	return (
 		missa && <FormMissas titulo="Editando..." txtBtn="Editar" missa={missa} mensagemDireita="Eu avisei! [Risos]" />
