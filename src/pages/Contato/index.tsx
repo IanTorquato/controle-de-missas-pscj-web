@@ -57,7 +57,7 @@ const Contato = () => {
 							</li>
 
 							<li>
-								<a href="https://www.instagram.com/ian_1408" target="_blank" rel="noopener noreferrer">
+								<a href="https://www.instagram.com/iantorquato" target="_blank" rel="noopener noreferrer">
 									<span className="spanInsta"> <FaInstagramSquare size={40} /> </span>
 										Instagram
 									</a>

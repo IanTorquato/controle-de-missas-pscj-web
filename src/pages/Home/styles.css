@@ -289,7 +289,7 @@ section.secCronograma aside.gridMissas {
 	margin: 0 auto;
 }
 
-section.secCronograma div.detalhesMissa {
+section.secCronograma a.detalhesMissa {
 	background-color: #252525;
 	border-radius: 8px;
 	display: flex;
@@ -297,18 +297,23 @@ section.secCronograma div.detalhesMissa {
 	height: 176px;
 	justify-content: center;
 	text-align: center;
+	transition: background-color 0.2s;
 	width: 320px;
 }
 
-section.secCronograma div.detalhesMissa#detalhesMissaVermelha {
+section.secCronograma a.detalhesMissa:hover {
+	background-color: #353535;
+}
+
+section.secCronograma a.detalhesMissa#detalhesMissaVermelha {
 	border: 1px solid #e41325;
 }
 
-section.secCronograma div.detalhesMissa#detalhesMissaDourada {
+section.secCronograma a.detalhesMissa#detalhesMissaDourada {
 	border: 1px solid #ffc32c;
 }
 
-section.secCronograma div.detalhesMissa#detalhesMissaAzul {
+section.secCronograma a.detalhesMissa#detalhesMissaAzul {
 	border: 1px solid #4396df;
 }
 

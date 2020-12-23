@@ -32,26 +32,28 @@ section.secListaMissas div.headerLista div {
 	width: 556px;
 }
 
-section.secListaMissas div.missa {
+section.secListaMissas a.missa {
 	align-items: center;
 	background-color: #252525;
 	border-radius: 8px;
+	cursor: default;
 	display: flex;
 	height: 96px;
 	margin-bottom: 24px;
+	transition: background-color 0.2s;
 }
 
-section.secListaMissas div.missa:hover {
+section.secListaMissas a.missa:hover {
 	background-color: #353535;
 }
 
-section.secListaMissas div.missa div.imagemNomeMissa {
+section.secListaMissas a.missa div.imagemNomeMissa {
 	align-items: center;
 	display: flex;
 	width: 568px;
 }
 
-section.secListaMissas div.missa div.imagemNomeMissa>img {
+section.secListaMissas a.missa div.imagemNomeMissa>img {
 	border-radius: 100%;
 	height: 64px;
 	margin: 0 24px;
@@ -59,55 +61,57 @@ section.secListaMissas div.missa div.imagemNomeMissa>img {
 	width: 64px;
 }
 
-section.secListaMissas div.missa div.imagemNomeMissa h1 {
+section.secListaMissas a.missa div.imagemNomeMissa h1 {
 	font: normal 32px 'Cormorant Garamond', serif;
 }
 
-section.secListaMissas div.missa hr {
+section.secListaMissas a.missa hr {
 	height: 74px;
 	margin: 0 16px;
 }
 
-section.secListaMissas div.missa div.dadosMissa {
+section.secListaMissas a.missa div.dadosMissa {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	width: 524px;
 }
 
-section.secListaMissas div.missa div.dadosMissa h3 {
+section.secListaMissas a.missa div.dadosMissa h3 {
 	font: normal 24px 'Merriweather';
 	text-align: center;
 }
 
-section.secListaMissas div.missa div.btnsMissa {
+section.secListaMissas a.missa div.btnsMissa {
 	display: flex;
 	justify-content: center;
 	margin-left: -16px;
 	width: 176px;
 }
 
-section.secListaMissas div.missa div.btnsMissa a,
-section.secListaMissas div.missa div.btnsMissa div {
+section.secListaMissas a.missa div.btnsMissa a,
+section.secListaMissas a.missa div.btnsMissa div {
 	align-items: center;
 	border-radius: 8px;
 	display: flex;
 	height: 48px;
 	justify-content: center;
+	transition: background-color 0.4s;
 	width: 48px
 }
 
-section.secListaMissas div.missa div a.btnEditar:hover {
+section.secListaMissas a.missa div.btnsMissa a.btnEditar:hover {
 	background-color: #4396dfcc;
 }
 
-section.secListaMissas div.missa div div.btnExcluir {
+section.secListaMissas a.missa div.btnsMissa div.btnExcluir {
 	margin: 0 8px;
 }
 
-section.secListaMissas div.missa div div.btnExcluir:hover {
+section.secListaMissas a.missa div.btnsMissa div.btnExcluir:hover {
 	background-color: #E41325cc;
+	cursor: pointer;
 }
 
-section.secListaMissas div.missa div a.btnDetalhes:hover {
+section.secListaMissas a.missa div.btnsMissa a.btnDetalhes:hover {
 	background-color: #747474;
 }

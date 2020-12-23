@@ -59,7 +59,7 @@ const ListaMissas: React.FC = () => {
 						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
 
 						return (
-							<div className="missa" key={missa.id}>
+							<Link to={`/detalhes-missa/${missa.id}`} className="missa" key={missa.id}>
 								<div className="imagemNomeMissa">
 									<img src={urlImagem} alt="Imagem da Igreja" />
 
@@ -90,7 +90,7 @@ const ListaMissas: React.FC = () => {
 										<BiDotsVerticalRounded size={32} color="#e5e5e5" />
 									</Link>
 								</div>
-							</div>
+							</Link>
 						)
 					})}
 				</div>

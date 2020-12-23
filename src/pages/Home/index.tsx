@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
@@ -18,6 +18,8 @@ import './styles.css'
 const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
 	const [erroMissas, setErroMissas] = useState('')
+
+	const { push } = useHistory()
 
 	useEffect(() => {
 		api.get('missas?quantMissas=6')
@@ -108,13 +110,13 @@ const Home = () => {
 						const [data, hora] = missa.data_hora.split('T')
 
 						return (
-							<div key={missa.id} className="detalhesMissa ok" id={
+							<Link to={`/detalhes-missa/${missa.id}`} key={missa.id} className="detalhesMissa" id={
 								index < 2 ? 'detalhesMissaVermelha' : index < 4 ? 'detalhesMissaDourada' : 'detalhesMissaAzul'
 							}>
 								<h1>{data} - {hora}</h1>
 
 								<h2>{missa.dia_semana} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}</h2>
-							</div>
+							</Link>
 						)
 					})}
 				</aside>
