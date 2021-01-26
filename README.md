@@ -1,7 +1,7 @@
 <h1> Projeto-Missas-PSCJ web </h1>
  <h2 align="center"> Agendamento de missas da Paróquia Sagrado Coração de Jesus durante a Pandemia. </h2>
  
- <h3> <a href="https://www.figma.com/file/mfEltQVbOUXwJQtViqHOWi/Web" target="_blank">Design Figma</a> </h3>
+ <h3 align="center"> <a href="https://www.figma.com/file/mfEltQVbOUXwJQtViqHOWi/Web" target="_blank">Design Figma</a> </h3>
  
 <p align="center">
   <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/IanTorquato/Projeto_PSCJ-Web">
@@ -18,3 +18,5 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/IanTorquato/Projeto_PSCJ-Web">
   </a>
 </p>
+
+<img alt="Page Home" src="https://raw.githubusercontent.com/IanTorquato/Projeto_PSCJ-Web/development/preview/pageHome.png">
