@@ -8,6 +8,7 @@ import './styles.css'
 const Login: React.FC = () => {
 	const [nome, setNome] = useState('')
 	const [senha, setSenha] = useState('')
+	const [focoInput, setFocoInput] = useState(true)
 
 	const { logar, erroLogin, setErroLogin } = useLogin()
 
@@ -19,17 +20,20 @@ const Login: React.FC = () => {
 
 	return (
 		<section className="secLogin">
-			<form onSubmit={entrar}>
+			<form onSubmit={entrar} autoComplete="off">
 				<img src={logo} alt="Brasão da Paróquia" />
 
 				<div className="insereDados">
-					<input type="text" id="nome" value={nome} required className={erroLogin ? 'erro' : ''}
-						onFocus={() => setErroLogin('')} onChange={({ target }) => setNome(target.value)} />
+					<input type="text" value={nome} required className={erroLogin ? 'erro' : ''} autoComplete="off" readOnly={focoInput}
+						onChange={({ target }) => setNome(target.value)} onFocus={() => {
+							setErroLogin('')
+							setFocoInput(false)
+						}} />
 					<span>Usuário</span>
 				</div>
 
 				<div className="insereDados">
-					<input type="password" id="senha" value={senha} required className={erroLogin ? 'erro' : ''} autoComplete="off"
+					<input type="password" value={senha} required className={erroLogin ? 'erro' : ''} autoComplete="off"
 						onFocus={() => setErroLogin('')} onChange={({ target }) => setSenha(target.value)} minLength={8} />
 					<span>Senha</span>
 				</div>
