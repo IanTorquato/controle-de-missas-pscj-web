@@ -1,0 +1,135 @@
+section.secDetalhesMissa {
+	align-items: center;
+	background-color: #121212;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding-top: 88px
+}
+
+section.secDetalhesMissa header {
+	align-items: center;
+	display: flex;
+	height: 392px;
+	width: 1152px
+}
+
+section.secDetalhesMissa hr {
+	background-image: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+	border: 0;
+	padding-top: 2px;
+	width: 1152px;
+}
+
+section.secDetalhesMissa header img {
+	border-radius: 100%;
+	height: 304px;
+	margin: 0 52px;
+	object-fit: cover;
+	width: 304px;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child {
+	display: flex;
+	height: 256px;
+	justify-content: space-between;
+	width: 744px;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
+	font: normal 80px 'Oswald';
+	line-height: 128px;
+	overflow: auto;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child div {
+	text-align: center;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
+section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	height: 48px;
+	justify-content: center;
+	transition: background-color 0.4s;
+	width: 48px;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div {
+	margin-bottom: 8px;
+	margin-top: 24px;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child div>div:hover {
+	background-color: #E41325cc;
+}
+
+section.secDetalhesMissa header div.dadosMissa div:first-child div>a:hover {
+	background-color: #4396dfcc;
+}
+
+section.secDetalhesMissa header div.dadosMissa div+div {
+	align-items: center;
+	display: flex;
+	height: 136px;
+	justify-content: space-between;
+}
+
+section.secDetalhesMissa header div.dadosMissa div span {
+	align-items: center;
+	display: flex;
+	font: normal 24px 'Merriweather';
+	margin-right: 48px;
+}
+
+section.secDetalhesMissa header div.dadosMissa div span svg {
+	margin-right: 8px;
+}
+
+section.secDetalhesMissa div.gridUsuarios {
+	display: grid;
+	grid-template-columns: 285px 285px 285px 285px;
+	gap: 4px;
+	margin: 48px 0;
+	width: 1152px
+}
+
+section.secDetalhesMissa div.gridUsuarios div.usuario {
+	align-items: center;
+	background-color: #747474;
+	display: flex;
+	height: 132px;
+	width: 286px;
+}
+
+section.secDetalhesMissa div.gridUsuarios div.usuario img {
+	border-radius: 100%;
+	height: 80px;
+	margin: 0 16px;
+	object-fit: cover;
+	width: 80px;
+}
+
+section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
+	font: normal 24px 'Cormorant Garamond';
+}
+
+section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
+	align-items: center;
+	display: flex;
+	font: normal 20px 'Merriweather';
+	margin-top: 8px;
+}
+
+section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
+	margin-right: 12px;
+}
+
+section.secDetalhesMissa div.semUsuarios h3{
+	font: normal 28px 'Shadows Into Light Two';
+	font-weight: normal;
+	letter-spacing: 4px;
+	margin-top: 32px;
+}

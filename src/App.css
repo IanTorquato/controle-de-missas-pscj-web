@@ -1,38 +1,38 @@
 * {
 	box-sizing: border-box;
-	color: #fff;
+	color: #e5e5e5;
 	margin: 0;
 	outline: 0;
 	padding: 0;
 	transition: all 0.5s;
+	-webkit-user-select: none;
 }
 
 html {
 	font-size: 62.5%;
+	background-color: #121212;
 }
 
-body {
-	background-color: #eee;
+html,
+body,
+#root {
+	height: 100%;
 }
 
-div.imgFundo {
-	background-attachment: fixed;
-	background-image: url('./assets/fundoHome.webp');
-	background-position: center;
-	background-size: cover;
+a {
+	text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-	height: 10px;
-	width: 10px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #999999;
+	background-color: #121212;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #222222;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
+	background-color: #747474;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
 }

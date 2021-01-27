@@ -1,56 +1,96 @@
 section.secLogin {
 	align-items: center;
-	background-color: #444;
+	background-color: #121212;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
 }
 
 section.secLogin form {
-	background-color: #222;
-	border-radius: 10px;
-	font-family: 'Roboto', sans-serif;
-	height: 550px;
-	padding: 30px;
-	width: 550px;
+	align-items: center;
+	background-color: #252525;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 544px;
+	width: 544px;
 }
 
 section.secLogin img {
-	height: 140px;
-	width: 120px;
+	height: 128px;
+	margin-bottom: 48px;
+	margin-top: 32px;
+	width: 104px;
 }
 
 section.secLogin div.insereDados {
 	display: flex;
 	flex-direction: column;
-	margin: 10px 0;
+	margin-bottom: 32px;
+	position: relative;
 	text-align: left;
 }
 
-section.secLogin div.insereDados label {
-	cursor: pointer;
-	font-size: 1.6rem;
-	margin-bottom: 5px;
-	margin-left: 8px;
+section.secLogin div.insereDados input {
+	background-color: transparent;
+	border: solid 1px #fff;
+	border-radius: 4px;
+	color: #fff;
+	font: normal 16px 'Roboto', sans-serif;
+	height: 48px;
+	outline: none;
+	padding: 0 24px;
+	width: 320px;
 }
 
-section.secLogin div.insereDados input {
-	border-radius: 30px;
-	color: #444;
-	font-size: 1.8rem;
-	padding: 10px 18px;
+section.secLogin div.insereDados input:-webkit-autofill+span {
+	background-color: transparent;
+	color: #fff !important;
+	text-shadow: 1px 1px 2px #000;
+}
+
+section.secLogin div.insereDados input.erro {
+	border: 2px solid #E41325;
+}
+
+section.secLogin div.insereDados input:focus+span,
+section.secLogin div.insereDados input:not([value=""])+span {
+	transform: translateX(-8px) translateY(-24px);
+	color: #fff;
+}
+
+section.secLogin div.insereDados span {
+	background-color: #252525;
+	color: #747474;
+	font: normal 16px 'Roboto', sans-serif;
+	left: 16px;
+	padding: 0 8px;
+	position: absolute;
+	pointer-events: none;
+	top: 14px;
+	transition: 0.4s
+}
+
+section.secLogin label {
+	color: #e41325;
+	font: normal 16px 'Roboto', sans-serif;
+	margin-bottom: -8px;
+	margin-top: -8px;
+	width: 320px;
 }
 
 section.secLogin form button {
 	background-color: #e41325;
 	border: none;
-	border-radius: 40px;
-	box-shadow: 0 0 35px #ff0000;
+	border-radius: 4px;
+	box-shadow: 0 0 24px #ff000088;
+	color: #e5e5e5;
 	cursor: pointer;
-	font-size: 2rem;
-	margin-top: 30px;
+	font: normal 24px 'Roboto', sans-serif;
+	height: 48px;
+	margin-top: 32px;
 	padding: 8px 0;
-	width: 150px;
+	width: 320px;
 }
 
 section.secLogin form button:hover {

@@ -1,44 +1,72 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
+import { AxiosResponse } from 'axios'
+import { fromUnixTime, compareAsc } from 'date-fns'
 
 import api from '../services/api'
 
-interface User {
-	nome: string
-	senha: string
-}
-
 interface LoginContextData {
 	logado: boolean
-	logar(user: User): Promise<void>
+	erroLogin: string
+	setErroLogin(msnErro: string): void
+	logar(nome: string, senha: string): Promise<void>
+	deslogar(): void
+}
+
+interface ResponseData {
+	token: string
 }
 
 const LoginContext = createContext<LoginContextData>({} as LoginContextData)
 
 export const LoginProvider: React.FC = ({ children }) => {
-	const [usuario, setUsuario] = useState(localStorage.getItem('@PSCJ:user'))
+	const [erroLogin, setErroLogin] = useState('')
+	const [tokenPascom, setTokenPascom] = useState<string | null>(pascomLogada())
 
-	async function logar(user: User) {
-		try {
-			const { data } = await api.post(`/pascom/login`, user)
+	function pascomLogada() {
+		const tokenLocalStorage = localStorage.getItem('@PSCJ:token')
 
-			if (data.nome && data.senha) {
-				const usuarioPascom = { nome: data.nome, senha: data.senha }
+		if (tokenLocalStorage) {
+			const { exp } = JSON.parse(atob(tokenLocalStorage.split('.')[1]))
 
-				localStorage.setItem('@PSCJ:user', JSON.stringify(usuarioPascom))
-				setUsuario(data)
+			const dataTokenVencimento = fromUnixTime(exp)
+
+			if (compareAsc(dataTokenVencimento, new Date()) > 0) {
+				api.defaults.headers.Authorization = `Bearer ${tokenLocalStorage}`
+
+				return tokenLocalStorage
 			}
-			else (
-				alert(data.erro)
-			)
-		} catch (erro) {
-			alert(erro)
+
+			localStorage.clear()
+			setErroLogin('Infelizmente, sua sessão expirou! Por favor, faça o login novamente.')
 		}
+
+		return null
+	}
+
+	async function logar(nome: string, senha: string) {
+		api.post(`/login_pascom`, { nome, senha }).then(({ data }: AxiosResponse<ResponseData>) => {
+			localStorage.setItem('@PSCJ:token', data.token)
+			api.defaults.headers.Authorization = `Bearer ${data.token}`
+
+			setTokenPascom(data.token)
+		}).catch((error) => {
+			console.log(error)
+			setErroLogin(error.response?.data.erro || 'Falha ao efetuar o login')
+		})
+	}
+
+	function deslogar() {
+		localStorage.clear()
+		setTokenPascom(null)
 	}
 
 	return (
-		<LoginContext.Provider value={{ logado: !!usuario, logar }}>
+		<LoginContext.Provider value={{ logado: !!tokenPascom, erroLogin, setErroLogin, logar, deslogar }}>
 			{children}
 		</LoginContext.Provider>
 	)
 }
-export default LoginContext
+
+export const useLogin = () => {
+	return useContext(LoginContext)
+}

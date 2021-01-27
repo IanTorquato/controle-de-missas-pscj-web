@@ -1,116 +1,135 @@
 import React from 'react'
-import { FaFacebook, FaEnvelope, FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaFacebookSquare, FaEnvelopeSquare, FaInstagramSquare, FaWhatsappSquare, FaGithubSquare, FaLinkedin }
+	from 'react-icons/fa'
 
 import './styles.css'
-import programador from '../../assets/programador.png'
-import designer from '../../assets/designer.png'
 
 const Contato = () => {
 	return (
-		<div className="imgFundoContato">
-			<section className="secContato">
-				<section className="pessoas">
-					<img src={programador} alt="Foto do desenvolvedor" className="imgContato" />
+		<section className="secContato">
+			<section className="contatoPessoa" id="programador">
+				<div className="decoracaoContato" id="corContatoVermelha"></div>
+				<div className="decoracaoContato" id="corContatoDourada"></div>
+				<div className="decoracaoContato" id="corContatoAzul"></div>
 
-					<div className="dadosPessoa">
+				<div className="conteudoContato">
+					<div>
+						<img src="https://avatars3.githubusercontent.com/u/61882248?s=460&u=fbacf3b2ab7fbe9e721081f8774169d9f243fffc&v=4"
+							alt="Foto do desenvolvedor" />
 
 						<div>
 							<h1 className="nomeContato">Ian da Conceição da Silva</h1>
 							<h2 className="setorContato">Programador</h2>
 						</div>
-
-						<ul className="redesSociaisContato">
-							<div>
-								<li>
-									<span className="spanGmail"><FaEnvelope size={30} /></span>
-
-									<a href="http://gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
-								</li>
-
-								<li>
-									<span className="spanFace"><FaFacebook size={30} /></span>
-
-									<a href="https://www.facebook.com/ian.conceicaodasilva" target="_blank"
-										rel="noopener noreferrer">Facebook</a>
-								</li>
-
-								<li>
-									<span className="spanInsta"><FaInstagram size={30} /></span>
-
-									<a href="https://www.instagram.com/ian_1408" target="_blank" rel="noopener noreferrer">Instagram</a>
-								</li>
-							</div>
-
-							<div>
-								<li>
-									<span className="spanWhats"><FaWhatsapp size={30} /></span>
-
-									<a href="https://api.whatsapp.com/send?phone=5548998224086" target="_blank"
-										rel="noopener noreferrer">Whatsapp</a>
-								</li>
-
-								<li>
-									<span className="spanLinkedin"><FaLinkedin size={30} /></span>
-
-									<a href="https://www.linkedin.com/in/ian-da-concei%C3%A7%C3%A3o-da-silva-67549b1a2/" target="_blank"
-										rel="noopener noreferrer">Linkedin</a>
-								</li>
-
-								<li>
-									<span className="spanGithub"><FaGithub size={30} /></span>
-
-									<a href="https://github.com/IanTorquato" target="_blank" rel="noopener noreferrer">GitHub</a>
-								</li>
-							</div>
-						</ul>
 					</div>
-				</section>
 
-				<section className="pessoas">
-					<img src={designer} alt="Foto da designer" className="imgContato" />
-
-					<div className="dadosPessoa">
+					<ul>
 						<div>
-							<h1 className="nomeContato">Ana Clara Vargas Rodrigues</h1>
-							<h2 className="setorContato">Designer</h2>
+							<li>
+								<a href="https://www.facebook.com/IanTorquato2" target="_blank" rel="noopener noreferrer">
+									<span className="spanFace"> <FaFacebookSquare size={40} /> </span>
+										Facebook
+									</a>
+							</li>
+
+							<li>
+								<a href="https://www.linkedin.com/in/ian-da-concei%C3%A7%C3%A3o-da-silva-67549b1a2/" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanLinkedin"> <FaLinkedin size={40} /> </span>
+										Linkedin
+									</a>
+							</li>
+
+							<li>
+								<a href="https://github.com/IanTorquato" target="_blank" rel="noopener noreferrer">
+									<span className="spanGithub"> <FaGithubSquare size={40} /> </span>
+										GitHub
+									</a>
+							</li>
 						</div>
 
+						<div>
+							<li>
+								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
+										Gmail
+									</a>
+							</li>
 
-						<ul className="redesSociaisContato">
-							<div>
-								<li>
-									<span className="spanGmail"><FaEnvelope size={30} /></span>
+							<li>
+								<a href="https://www.instagram.com/iantorquato" target="_blank" rel="noopener noreferrer">
+									<span className="spanInsta"> <FaInstagramSquare size={40} /> </span>
+										Instagram
+									</a>
+							</li>
 
-									<a href="http://gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
-								</li>
-
-								<li>
-									<span className="spanFace"><FaFacebook size={30} /></span>
-
-									<a href="https://pt-br.facebook.com/anaclara.vargasrodrigues" target="_blank"
-										rel="noopener noreferrer">Facebook</a>
-								</li>
-							</div>
-
-							<div>
-								<li>
-									<span className="spanInsta"><FaInstagram size={30} /></span>
-
-									<a href="https://www.instagram.com/anaclaravargs" target="_blank" rel="noopener noreferrer">Instagram</a>
-								</li>
-
-								<li>
-									<span className="spanWhats"><FaWhatsapp size={30} /></span>
-
-									<a href="https://api.whatsapp.com/send?phone=5548998301146" target="_blank"
-										rel="noopener noreferrer">Whatsapp</a>
-								</li>
-							</div>
-						</ul>
-					</div>
-				</section>
+							<li>
+								<a href="https://api.whatsapp.com/send?phone=5548998224086" target="_blank" rel="noopener noreferrer">
+									<span className="spanWhats"> <FaWhatsappSquare size={40} /> </span>
+										Whatsapp
+									</a>
+							</li>
+						</div>
+					</ul>
+				</div>
 			</section>
-		</div>
+
+			<section className="contatoPessoa" id="designer">
+				<div className="decoracaoContato" id="corContatoVermelha"></div>
+				<div className="decoracaoContato" id="corContatoDourada"></div>
+				<div className="decoracaoContato" id="corContatoAzul"></div>
+
+				<div className="conteudoContato">
+					<div>
+						<img src="https://scontent.fccm4-1.fna.fbcdn.net/v/t1.0-9/132562331_3116464351786410_1684428659415575221_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=zmT_cgBblXIAX9oSrCy&_nc_ht=scontent.fccm4-1.fna&oh=e0b56bfe559099326002afcf35a4bd45&oe=603830D2"
+							alt="Foto da designer" />
+
+						<div>
+							<h1 className="nomeContato">Ana Clara V. Rodrigues</h1>
+							<h2 className="setorContato">Designer</h2>
+						</div>
+					</div>
+
+					<ul>
+						<div>
+							<li>
+								<a href="https://pt-br.facebook.com/anaclara.vargasrodrigues" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanFace"> <FaFacebookSquare size={40} /> </span>
+										Facebook
+									</a>
+							</li>
+
+							<li>
+								<a href="https://www.instagram.com/anaclaravargs" target="_blank" rel="noopener noreferrer">
+									<span className="spanInsta"> <FaInstagramSquare size={40} /> </span>
+										Instagram
+									</a>
+							</li>
+						</div>
+
+						<div>
+							<li>
+								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
+										Gmail
+								</a>
+							</li>
+
+							<li>
+								<a href="https://api.whatsapp.com/send?phone=5548998301146" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanWhats"> <FaWhatsappSquare size={40} /> </span>
+										Whatsapp
+									</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</section>
+		</section>
 	)
 }
 

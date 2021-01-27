@@ -1,37 +1,45 @@
-import React, { useContext, FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
+
+import { useLogin } from '../../contexts/login'
+import logo from '../../assets/logo.svg'
 
 import './styles.css'
-import LoginContext from '../../contexts/login'
-import logo from '../../assets/logo.webp'
 
-const Login = () => {
-	const { logar } = useContext(LoginContext)
+const Login: React.FC = () => {
+	const [nome, setNome] = useState('')
+	const [senha, setSenha] = useState('')
+	const [focoInput, setFocoInput] = useState(true)
 
-	function entrar(event: FormEvent) {
+	const { logar, erroLogin, setErroLogin } = useLogin()
+
+	async function entrar(event: FormEvent) {
 		event.preventDefault()
 
-		const nome = document.querySelector<HTMLInputElement>('input#nome')?.value.trim()
-		const senha = document.querySelector<HTMLInputElement>('input#senha')?.value.trim()
-
-		if (nome && senha) {
-			logar({ nome, senha })
-		} else {
-			alert('Preencha todos os campos para logar!')
-		}
+		logar(nome, senha)
 	}
 
 	return (
 		<section className="secLogin">
-			<form onSubmit={entrar}>
+			<form onSubmit={entrar} autoComplete="off">
 				<img src={logo} alt="Brasão da Paróquia" />
+
 				<div className="insereDados">
-					<label htmlFor="nome">Usuário:</label>
-					<input type="text" id="nome" placeholder="Insira o usuário" />
+					<input type="text" value={nome} required className={erroLogin ? 'erro' : ''} autoComplete="off" readOnly={focoInput}
+						onChange={({ target }) => setNome(target.value)} onFocus={() => {
+							setErroLogin('')
+							setFocoInput(false)
+						}} />
+					<span>Usuário</span>
 				</div>
+
 				<div className="insereDados">
-					<label htmlFor="senha">Senha:</label>
-					<input type="text" id="senha" placeholder="Insira a senha" />
+					<input type="password" value={senha} required className={erroLogin ? 'erro' : ''} autoComplete="off"
+						onFocus={() => setErroLogin('')} onChange={({ target }) => setSenha(target.value)} minLength={8} />
+					<span>Senha</span>
 				</div>
+
+				{erroLogin && <label>{erroLogin}</label>}
+
 				<button type="submit">Entrar</button>
 			</form>
 		</section>
