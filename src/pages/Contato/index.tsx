@@ -26,7 +26,7 @@ const Contato = () => {
 					<ul>
 						<div>
 							<li>
-								<a href="https://www.facebook.com/ian.conceicaodasilva" target="_blank" rel="noopener noreferrer">
+								<a href="https://www.facebook.com/IanTorquato2" target="_blank" rel="noopener noreferrer">
 									<span className="spanFace"> <FaFacebookSquare size={40} /> </span>
 										Facebook
 									</a>
@@ -50,7 +50,8 @@ const Contato = () => {
 
 						<div>
 							<li>
-								<a href="http://gmail.com" target="_blank" rel="noopener noreferrer">
+								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
+									rel="noopener noreferrer">
 									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
 										Gmail
 									</a>
@@ -81,7 +82,7 @@ const Contato = () => {
 
 				<div className="conteudoContato">
 					<div>
-						<img src="https://i.pinimg.com/280x280_RS/81/3d/00/813d00a74318486536d85b2edbf828a2.jpg"
+						<img src="https://scontent.fccm4-1.fna.fbcdn.net/v/t1.0-9/132562331_3116464351786410_1684428659415575221_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=zmT_cgBblXIAX9oSrCy&_nc_ht=scontent.fccm4-1.fna&oh=e0b56bfe559099326002afcf35a4bd45&oe=603830D2"
 							alt="Foto da designer" />
 
 						<div>
@@ -110,10 +111,11 @@ const Contato = () => {
 
 						<div>
 							<li>
-								<a href="http://gmail.com" target="_blank" rel="noopener noreferrer">
+								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
+									rel="noopener noreferrer">
 									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
 										Gmail
-									</a>
+								</a>
 							</li>
 
 							<li>
