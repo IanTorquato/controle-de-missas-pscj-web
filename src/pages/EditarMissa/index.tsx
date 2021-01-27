@@ -6,7 +6,9 @@ import FormMissas from '../../components/FormMissas'
 import { Missa } from '../../utils/interfaces'
 import { formatDataHora } from '../../utils/tratandoDatas'
 
-interface RouteParams { id: string }
+interface RouteParams {
+	id: string
+}
 
 const EditarMissa = () => {
 	const [missa, setMissa] = useState<Missa | null>(null)
