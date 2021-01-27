@@ -19,7 +19,7 @@ header.cabecalho div:first-child {
 
 header.cabecalho div:first-child img {
 	height: 44px;
-	margin: 0 8px 0 24px;
+	margin: 0 8px 4px 24px;
 	width: 32px;
 }
 
@@ -34,4 +34,30 @@ header.cabecalho div:last-child h2 {
 header.cabecalho div:last-child svg {
 	cursor: pointer;
 	margin: 0 24px;
+}
+
+@media only screen and (max-width: 1416px) {
+	header.cabecalho {
+		height: 48px;
+	}
+	
+	header.cabecalho div:first-child img {
+		height: 36px;
+		margin: 0 8px 4px 16px;
+		width: 24px;
+	}
+	
+	header.cabecalho div:first-child h1 {
+		font-size: 32px;
+	}
+	
+	header.cabecalho div:last-child h2 {
+		font-size: 24px;
+	}
+	
+	header.cabecalho div:last-child svg {
+		height: 24px;
+		margin: 0 16px;
+		width: 24px;
+	}
 }
