@@ -63,39 +63,37 @@ const Home = () => {
 			</section>
 
 			<section className="secBotoes">
-				<div>
-					<div className="decoracaoBotoes" id="decoracaoBtnVermelho"></div>
-					<div className="decoracaoBotoes" id="decoracaoBtnDourado"></div>
-					<div className="decoracaoBotoes" id="decoracaoBtnAzul"></div>
+				<div className="conteudoBotoes">
+					<h1 className="tituloBotoes">Então, o que temos <br /> pra hoje?</h1>
 
-					<div className="conteudoBotoes">
-						<h1 className="tituloBotoes">Então, o que temos <br /> pra hoje?</h1>
-
-						<div className="alinhaDireita">
-							<div className="mensagensBotoes">
-								<div className="descricaoBotao" id="txtAlinhadoDireita">
-									Aqui, você pode cadastrar <br /> uma nova missa...
+					<div className="alinhaDireita">
+						<div className="mensagensBotoes">
+							<div className="descricaoBotao" id="txtAlinhadoDireita">
+								Aqui, você pode cadastrar <br /> uma nova missa...
 									<img className="flechaLoop" src={iconFlexaLoop} alt="Flecha" />
-								</div>
+							</div>
 
-								<nav>
-									<Link className="btnsNavegacao" to="/cadastrar-missa" onClick={() => { window.scrollTo(0, 0) }}>
-										Cadastro de Missas
+							<nav>
+								<Link className="btnsNavegacao" to="/cadastrar-missa" onClick={() => { window.scrollTo(0, 0) }}>
+									Cadastro de Missas
 									</Link>
 
-									<Link className="btnsNavegacao" to="/lista-missas" onClick={() => { window.scrollTo(0, 0) }}>
-										Lista de Missas
+								<Link className="btnsNavegacao" to="/lista-missas" onClick={() => { window.scrollTo(0, 0) }}>
+									Lista de Missas
 									</Link>
-								</nav>
+							</nav>
 
-								<div className="descricaoBotao" id="txtcoladoDireita">
-									<img className="flechaCurva" src={iconFlexaCurva} alt="Flecha" />
+							<div className="descricaoBotao" id="txtcoladoDireita">
+								<img className="flechaCurva" src={iconFlexaCurva} alt="Flecha" />
 									...e aqui, você vê as missas <br /> cadastradas e pode editá-las <br /> ou excluí-las!
 								</div>
-							</div>
 						</div>
 					</div>
 				</div>
+
+				<div className="decoracaoBotoes" id="decoracaoBtnVermelho"></div>
+				<div className="decoracaoBotoes" id="decoracaoBtnDourado"></div>
+				<div className="decoracaoBotoes" id="decoracaoBtnAzul"></div>
 			</section>
 
 			<section className="secCronograma">
