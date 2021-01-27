@@ -1,9 +1,17 @@
+div.scrollFixado{
+	height: 100vh;
+	overflow-y: scroll;
+	position: relative;
+	scroll-snap-type: y proximity;
+}
+
 section.secHome {
 	align-items: center;
 	background-color: #121212;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
+	scroll-snap-align: start;
 }
 
 section.secHome h1.tituloSSCJ {
@@ -152,6 +160,7 @@ section.secBotoes {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
+	scroll-snap-align: start;
 }
 
 section.secBotoes div.decoracaoBotoes {
@@ -267,6 +276,7 @@ section.secCronograma {
 	background-color: #121212;
 	display: flex;
 	height: 100vh;
+	scroll-snap-align: start;
 }
 
 section.secCronograma div.tituloCronograma {

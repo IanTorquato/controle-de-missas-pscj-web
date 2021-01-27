@@ -29,7 +29,7 @@ const Home = () => {
 	}, [])
 
 	return (
-		<>
+		<div className="scrollFixado">
 			<Header />
 
 			<section className="secHome">
@@ -121,7 +121,7 @@ const Home = () => {
 			</section>
 
 			<Footer />
-		</>
+		</div>
 	)
 }
 
