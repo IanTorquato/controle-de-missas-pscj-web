@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react'
+import React, { useState, FormEvent, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { format } from 'date-fns'
 import { BiChurch } from 'react-icons/bi'
@@ -6,7 +6,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
 
 import api from '../../services/api'
-import Missa from '../../utils/interfaces'
+import { Missa, Local } from '../../utils/interfaces'
 import flechaTorta from '../../assets/icons/flechaTorta.svg'
 import sublinhado from '../../assets/sublinhado.png'
 
@@ -22,11 +22,21 @@ interface FormMissa {
 
 const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquerda, mensagemDireita }) => {
 	const [nome, setNome] = useState(missa?.nome || '')
+	const [locais, setLocais] = useState<Local[]>([])
 	const [local_id, setLocal_id] = useState(missa?.local_id || 0)
 	const [max_pessoas, setMax_pessoas] = useState(missa?.max_pessoas || '')
 	const [data_hora, setData_hora] = useState(missa?.data_hora ? ordenaData(missa.data_hora.split('T')) : '')
 
 	const { push } = useHistory()
+
+	useEffect(() => {
+		api.get('locais')
+			.then(({ data }) => setLocais(data))
+			.catch(({ response }) => {
+				console.log(response)
+				alert(response?.data.erro || 'Falha ao listar locais.')
+			})
+	}, [])
 
 	function ordenaData([data, hora]: string[]) {
 		const [dia, mes, ano] = data.split('/')
@@ -94,8 +104,8 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 						<div>
 							<select value={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
 								<option value="" hidden>Selecione um local</option>
-								<option value="1">Centro</option>
-								<option value="2">Termas</option>
+
+								{!!locais[0] && locais.map(local => <option value={local.id}>{local.nome}</option>)}
 							</select>
 
 							<FaMapMarkedAlt size={20} fill="#747474" />

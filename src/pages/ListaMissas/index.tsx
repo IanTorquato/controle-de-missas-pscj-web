@@ -4,7 +4,7 @@ import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
 
 import api from '../../services/api'
 import Header from '../../components/Header'
-import Missa from '../../utils/interfaces'
+import { Missa } from '../../utils/interfaces'
 import { formatDiaMesHora } from '../../utils/tratandoDatas'
 
 import './styles.css'
@@ -55,14 +55,11 @@ const ListaMissas: React.FC = () => {
 				<div>
 					{missas[0] ? missas.map(missa => {
 						const [data, hora] = missa.data_hora.split('T')
-						const nomeLocal = missa.local_id === 1 ? 'Centro' : 'Termas'
-
-						const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
 
 						return (
 							<div className="missa" key={missa.id}>
 								<div className="imagemNomeMissa">
-									<img src={urlImagem} alt="Imagem da Igreja" />
+									<img src={missa.local_url} alt="Imagem da Igreja" />
 
 									<h1>{missa.nome}</h1>
 								</div>
@@ -72,7 +69,7 @@ const ListaMissas: React.FC = () => {
 								<div className="dadosMissa">
 									<h3>{data}</h3>
 									<h3>{hora}</h3>
-									<h3>{nomeLocal}</h3>
+									<h3>{missa.local_nome}</h3>
 									<h3>{missa.pessoas_cadastradas}/{missa.max_pessoas}</h3>
 								</div>
 

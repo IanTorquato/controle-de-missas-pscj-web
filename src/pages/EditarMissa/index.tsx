@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 
 import api from '../../services/api'
 import FormMissas from '../../components/FormMissas'
-import Missa from '../../utils/interfaces'
+import { Missa } from '../../utils/interfaces'
 import { formatDataHora } from '../../utils/tratandoDatas'
 
 interface RouteParams { id: string }
@@ -16,7 +16,7 @@ const EditarMissa = () => {
 
 	useEffect(() => {
 		api.get(`missas?missa_id=${id}`)
-			.then(({ data }) => setMissa(formatDataHora([data])[0]))
+			.then(({ data }) => setMissa(formatDataHora(data)[0]))
 			.catch(({ response }) => {
 				console.log(response)
 				alert(response?.data.erro || 'Falha ao listar uma única missa.')

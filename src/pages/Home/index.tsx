@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
@@ -7,7 +7,7 @@ import { RiComputerLine } from 'react-icons/ri'
 import api from '../../services/api'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Missa from '../../utils/interfaces'
+import { Missa } from '../../utils/interfaces'
 import { formatDiaMesHora } from '../../utils/tratandoDatas'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
@@ -20,7 +20,7 @@ const Home = () => {
 	const [erroMissas, setErroMissas] = useState('')
 
 	useEffect(() => {
-		api.get('missas?quantMissas=6')
+		api.get('missas?quantidade_missas=6')
 			.then(({ data }) => setMissas(formatDiaMesHora(data)))
 			.catch(({ response }) => {
 				console.log(response)

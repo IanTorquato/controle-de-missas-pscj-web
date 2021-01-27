@@ -7,7 +7,7 @@ import { HiUserGroup } from 'react-icons/hi'
 
 import api from '../../services/api'
 import Header from '../../components/Header'
-import Missa from '../../utils/interfaces'
+import { Missa } from '../../utils/interfaces'
 import { formatDataHora } from '../../utils/tratandoDatas'
 
 import './styles.css'
@@ -36,7 +36,7 @@ const DetalhesMissa: React.FC = () => {
 	useEffect(() => {
 		api.get(`missas?missa_id_usuarios=${id}`)
 			.then(({ data }) => {
-				setMissa(formatDataHora([data.missa])[0])
+				setMissa(formatDataHora(data.missaLocalUrl)[0])
 
 				if (data.usuarios) { setUsuarios(data.usuarios) }
 			})
@@ -63,9 +63,6 @@ const DetalhesMissa: React.FC = () => {
 		}
 	}
 
-	const nomeLocal = missa?.local_id === 1 ? 'Centro' : 'Termas'
-	const urlImagem = `${process.env.REACT_APP_URL_BANCO}/uploads/fotosLocais/igreja${nomeLocal}.jpg`
-
 	return (
 		<>
 			<Header />
@@ -74,7 +71,7 @@ const DetalhesMissa: React.FC = () => {
 				{missa && (
 					<>
 						<header>
-							<img src={urlImagem} alt="Igreja" />
+							<img src={missa.local_url} alt="Igreja" />
 
 							<div className="dadosMissa">
 								<div>
@@ -104,7 +101,7 @@ const DetalhesMissa: React.FC = () => {
 
 									<span>
 										<FaMapMarkedAlt size={24} color="#e5e5e5" />
-										{missa.local_id === 1 ? 'Centro' : 'Termas'}
+										{missa.local_nome}
 									</span>
 
 									<span>

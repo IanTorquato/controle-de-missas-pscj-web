@@ -1,13 +1,12 @@
 import { parseISO, format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
-import Missa from './interfaces'
+import { Missa } from './interfaces'
 
 const diasSemana = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO']
 
 // Home e Lista ==> data: "22/10" e hora: "10:00"
 export function formatDiaMesHora(missas: Missa[]) {
-
 	return missas.map(missa => {
 		const dataMissa = parseISO(missa.data_hora)
 
