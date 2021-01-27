@@ -79,7 +79,7 @@ section.secLogin label {
 	width: 320px;
 }
 
-section.secLogin form button {
+section.secLogin button {
 	background-color: #e41325;
 	border: none;
 	border-radius: 4px;
@@ -89,10 +89,53 @@ section.secLogin form button {
 	font: normal 24px 'Roboto', sans-serif;
 	height: 48px;
 	margin-top: 32px;
-	padding: 8px 0;
 	width: 320px;
 }
 
 section.secLogin form button:hover {
 	background-color: #bb101e;
+}
+
+@media only screen and (max-width: 1400px) {
+	section.secLogin form {
+		height: 372px;
+		width: 440px;
+	}
+	
+	section.secLogin img {
+		height: 72px;
+		margin-bottom: 32px;
+		margin-top: 24px;
+		width: 60px;
+	}
+	
+	section.secLogin div.insereDados {
+		margin-bottom: 24px;
+	}
+	
+	section.secLogin div.insereDados input {
+		height: 40px;
+		width: 264px;
+	}
+	
+	section.secLogin div.insereDados input:focus+span,
+	section.secLogin div.insereDados input:not([value=""])+span {
+	transform: translateX(-8px) translateY(-20px);
+	}
+	
+	section.secLogin div.insereDados span {
+		top: 11px;
+	}
+	
+	section.secLogin label {
+		margin-left: 0;
+		width: 264px;
+	}
+	
+	section.secLogin form button {
+		font: normal 22px 'Roboto', sans-serif;
+		height: 40px;
+		padding-top: 2px;
+		width: 264px;
+	}
 }
