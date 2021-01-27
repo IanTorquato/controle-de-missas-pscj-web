@@ -4,7 +4,8 @@ footer.rodape {
 	display: flex;
 	height: 312px;
 	justify-content: space-between;
-	padding: 0 68px
+	padding: 0 68px;
+	scroll-snap-align: end;
 }
 
 footer.rodape nav {
@@ -51,20 +52,12 @@ footer.rodape li a {
 	width: 60px;
 }
 
-footer.rodape nav img.icons {
-	max-width: 60%;
-}
-
 footer.rodape nav a.whatsapp {
 	background-color: #00e676;
 }
 
 footer.rodape nav a.facebook {
 	background-color: #1877f2;
-}
-
-footer.rodape nav a.facebook img {
-	height: 65%;
 }
 
 footer.rodape nav a.instagram {
@@ -114,4 +107,50 @@ footer.rodape a.contatos {
 footer.rodape a.contatos:hover {
 	background-color: #4396df;
 	color: #252525;
+}
+
+@media only screen and (max-width: 1416px) {
+	footer.rodape {
+		height: 208px;
+		padding: 0 40px;
+	}
+	
+	footer.rodape nav {
+		margin-bottom: 24px;
+	}
+		
+	footer.rodape ul li {
+		margin-right: 16px;
+	}
+		
+	footer.rodape li a {
+		height: 56px;
+		width: 56px;
+	}
+	
+	footer.rodape nav a svg {
+		height: 32px;
+		width: 32px;
+	}
+	
+	footer.rodape p.copyright {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	
+	footer.rodape>div+div {
+		font-size: 20px;
+		width: 248px;
+	}
+	
+	footer.rodape>div+div img {
+		width: 56px;
+	}
+	
+	footer.rodape a.contatos {
+		font-size: 20px;
+		height: 40px;
+		margin-top: 24px;
+		width: 200px;
+	}
 }
