@@ -27,11 +27,11 @@
 		"@types/react-router-dom": "^5.1.5",
 		"typescript": "~3.7.2"
 	},
-	"name": "web",
+	"name": "pscj-web",
 	"private": true,
 	"scripts": {
 		"dev": "react-scripts start",
 		"build": "react-scripts build"
 	},
-	"version": "0.1.0"
+	"version": "2.0.0"
 }
