@@ -113,7 +113,7 @@ const Home = () => {
 							}>
 								<h1>{data} - {hora}</h1>
 
-								<h2>{missa.dia_semana} | {missa.local_id === 1 ? 'CENTRO' : 'TERMAS'}</h2>
+								<h2>{missa.dia_semana} | {missa.local_nome}</h2>
 							</Link>
 						)
 					})}
