@@ -65,6 +65,10 @@ section.secCadastrarEditar form>div.containerInputsForm select {
 	width: 400px;
 }
 
+section.secCadastrarEditar form>div.containerInputsForm input:hover{
+	cursor: text;
+}
+
 section.secCadastrarEditar form>div.containerInputsForm>div {
 	position: relative;
 	margin-bottom: 40px;
