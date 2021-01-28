@@ -128,10 +128,6 @@ section.secContato ul a:hover span.spanLinkedin>svg {
 	fill: #1877f2;
 }
 
-section.secContato ul a:hover span.spanGmail>svg {
-	fill: #e94134;
-}
-
 section.secContato ul a:hover span.spanInsta>svg {
 	fill: #ec5cbe;
 }

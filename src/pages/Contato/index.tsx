@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookSquare, FaEnvelopeSquare, FaInstagramSquare, FaWhatsappSquare, FaGithubSquare, FaLinkedin }
+import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaGithubSquare, FaLinkedin }
 	from 'react-icons/fa'
 
 import './styles.css'
@@ -33,27 +33,9 @@ const Contato = () => {
 							</li>
 
 							<li>
-								<a href="https://www.linkedin.com/in/ian-da-concei%C3%A7%C3%A3o-da-silva-67549b1a2/" target="_blank"
-									rel="noopener noreferrer">
-									<span className="spanLinkedin"> <FaLinkedin size={40} /> </span>
-										Linkedin
-									</a>
-							</li>
-
-							<li>
 								<a href="https://github.com/IanTorquato" target="_blank" rel="noopener noreferrer">
 									<span className="spanGithub"> <FaGithubSquare size={40} /> </span>
 										GitHub
-									</a>
-							</li>
-						</div>
-
-						<div>
-							<li>
-								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
-									rel="noopener noreferrer">
-									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
-										Gmail
 									</a>
 							</li>
 
@@ -61,6 +43,16 @@ const Contato = () => {
 								<a href="https://www.instagram.com/iantorquato" target="_blank" rel="noopener noreferrer">
 									<span className="spanInsta"> <FaInstagramSquare size={40} /> </span>
 										Instagram
+									</a>
+							</li>
+						</div>
+
+						<div>
+							<li>
+								<a href="https://www.linkedin.com/in/ian-da-concei%C3%A7%C3%A3o-da-silva-67549b1a2/" target="_blank"
+									rel="noopener noreferrer">
+									<span className="spanLinkedin"> <FaLinkedin size={40} /> </span>
+										Linkedin
 									</a>
 							</li>
 
@@ -111,11 +103,11 @@ const Contato = () => {
 
 						<div>
 							<li>
-								<a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=CllgCKCDCdQsKfFtsZmBfBNLGDRPBMWtzJGjsdWFCScLsmsPCbkPzJhBnbSXSDQZMlQZXRVXNFg" target="_blank"
+								<a href="https://www.linkedin.com/in/ana-clara-vargas-rodrigues-160a1b56/" target="_blank"
 									rel="noopener noreferrer">
-									<span className="spanGmail"> <FaEnvelopeSquare size={40} /> </span>
-										Gmail
-								</a>
+									<span className="spanLinkedin"> <FaLinkedin size={40} /> </span>
+										Linkedin
+									</a>
 							</li>
 
 							<li>
