@@ -83,10 +83,10 @@ const Home = () => {
 									</Link>
 							</nav>
 
-							<div className="descricaoBotao" id="txtcoladoDireita">
+							<div className="descricaoBotao" id="txtColadoDireita">
 								<img className="flechaCurva" src={iconFlexaCurva} alt="Flecha" />
 									...e aqui, você vê as missas <br /> cadastradas e pode editá-las <br /> ou excluí-las!
-								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@ const Home = () => {
 							}>
 								<h1>{data} - {hora}</h1>
 
-								<h2>{missa.dia_semana} | {missa.local_nome}</h2>
+								<h2>{missa.dia_semana} | {missa.local_nome.toUpperCase()}</h2>
 							</Link>
 						)
 					})}

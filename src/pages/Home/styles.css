@@ -264,7 +264,7 @@ section.secBotoes a.btnsNavegacao:hover {
 	color: #252525;
 }
 
-section.secBotoes div.descricaoBotao#txtcoladoDireita {
+section.secBotoes div.descricaoBotao#txtColadoDireita {
 	margin-left: 152px;
 	margin-top: 32px;
 }
@@ -287,6 +287,7 @@ section.secCronograma div.tituloCronograma {
 	background-image: url('../../assets/tituloCronograma.png');
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: contain;
 	height: 288px;
 	width: 50%;
 }
@@ -433,7 +434,7 @@ section.secCronograma h2 {
 	}
 	
 	section.secBotoes h1.tituloBotoes {
-		font-size: 56px;
+		font-size: 64px;
 		margin-left: 32px;
 	}
 	
@@ -456,11 +457,12 @@ section.secCronograma h2 {
 	
 	section.secBotoes img.flechaLoop {
 		height: 88px;
+		right: 8px;
 		top: 8px;
 	}
 	
 	section.secBotoes nav {
-		height: 88px;
+		height: 80px;
 		margin: 0;
 		width: 136px;
 	}
@@ -470,16 +472,21 @@ section.secCronograma h2 {
 		height: 32px;
 		width: 192px;
 	}
+	
+	section.secBotoes div.descricaoBotao#txtColadoDireita {
+		margin-left: 176px;
+	}
 		
 	section.secBotoes img.flechaCurva {
 		height: 64px;
-		left: 64px;
-		top: 144px;
+		left: 88px;
+		top: 136px;
 	}
 	
 	section.secCronograma div.tituloCronograma {
 		height: 288px;
-		width: 50%;
+		margin-left: 88px;
+		width: 30%;
 	}
 	
 	section.secCronograma h2.semMissas {
@@ -488,21 +495,21 @@ section.secCronograma h2 {
 	}
 	
 	section.secCronograma aside.gridMissas {
-		grid-template-columns: 328px 328px;
+		grid-template-columns: 288px 288px;
 		gap: 32px 0;
 	}
 	
 	section.secCronograma a.detalhesMissa {
-		height: 144px;
-		width: 288px;
+		height: 128px;
+		width: 248px;
 	}
 	
 	section.secCronograma h1 {
-		font-size: 20px;
+		font-size: 32px;
 		margin-bottom: 8px;
 	}
 	
 	section.secCronograma h2 {
-		font: normal 20px 'Cormorant Garamond', serif;
+		font-size: 18px;
 	}
 }
