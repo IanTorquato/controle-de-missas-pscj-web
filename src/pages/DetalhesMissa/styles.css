@@ -64,6 +64,7 @@ section.secDetalhesMissa header div.dadosMissa div:first-child div>div {
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>div:hover {
 	background-color: #E41325cc;
+	cursor: pointer;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>a:hover {
