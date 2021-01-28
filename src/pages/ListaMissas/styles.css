@@ -71,6 +71,7 @@ section.secListaMissas div.missa hr {
 }
 
 section.secListaMissas div.missa div.dadosMissa {
+	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	width: 524px;
@@ -95,7 +96,6 @@ section.secListaMissas div.missa div.btnsMissa div {
 	display: flex;
 	height: 48px;
 	justify-content: center;
-	transition: background-color 0.4s;
 	width: 48px
 }
 
