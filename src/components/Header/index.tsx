@@ -23,7 +23,9 @@ const Header: React.FC = () => {
 			<div>
 				<h2>Gravatal - SC</h2>
 
-				<FiLogOut size={32} onClick={deslogar} />
+				<div className="btnDeslogar" onClick={deslogar}>
+					<FiLogOut size={32} />
+				</div>
 			</div>
 		</header>
 	)

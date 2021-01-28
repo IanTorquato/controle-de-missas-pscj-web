@@ -31,9 +31,19 @@ header.cabecalho div:last-child h2 {
 	font-size: 32px;
 }
 
-header.cabecalho div:last-child svg {
+header.cabecalho div:last-child div.btnDeslogar {
+	align-items: center;
+	border-radius: 8px;
 	cursor: pointer;
-	margin: 0 24px;
+	display: flex;
+	height: 48px;
+	justify-content: center;
+	margin: 0 16px;
+	width: 48px;
+}
+
+header.cabecalho div:last-child div.btnDeslogar:hover {
+	background-color: #e41325;
 }
 
 @media only screen and (max-width: 1416px) {
@@ -55,9 +65,13 @@ header.cabecalho div:last-child svg {
 		font-size: 24px;
 	}
 	
+	header.cabecalho div:last-child div.btnDeslogar {
+		height: 40px;
+		width:40px;
+	}
+	
 	header.cabecalho div:last-child svg {
 		height: 24px;
-		margin: 0 16px;
 		width: 24px;
 	}
 }
