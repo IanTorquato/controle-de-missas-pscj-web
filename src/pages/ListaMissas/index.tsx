@@ -45,10 +45,7 @@ const ListaMissas: React.FC = () => {
 					<h3>Missa</h3>
 
 					<div>
-						<h3>Data</h3>
-						<h3>Horário</h3>
-						<h3>Local</h3>
-						<h3>Pessoas</h3>
+						<h3>Data</h3> <h3>Horário</h3> <h3>Local</h3> <h3>Pessoas</h3>
 					</div>
 				</div>
 

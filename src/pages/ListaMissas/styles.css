@@ -20,7 +20,6 @@ section.secListaMissas div.headerLista h3 {
 
 section.secListaMissas div.headerLista>h3:first-child {
 	padding-left: 112px;
-	margin: 0;
 	width: 584px;
 }
 
@@ -40,6 +39,7 @@ section.secListaMissas div.missa {
 	display: flex;
 	height: 96px;
 	margin-bottom: 24px;
+	padding-right: 8px;
 	transition: background-color 0.2s;
 }
 
@@ -85,8 +85,7 @@ section.secListaMissas div.missa div.dadosMissa h3 {
 section.secListaMissas div.missa div.btnsMissa {
 	display: flex;
 	justify-content: center;
-	margin-left: -16px;
-	width: 176px;
+	margin-left: -8px;
 }
 
 section.secListaMissas div.missa div.btnsMissa a,
@@ -116,9 +115,78 @@ section.secListaMissas div.missa div.btnsMissa a.btnDetalhes:hover {
 	background-color: #747474;
 }
 
-section.secListaMissas h2{
+section.secListaMissas h2 {
 	font: normal 28px 'Shadows Into Light Two';
 	font-weight: normal;
 	letter-spacing: 4px;
 	margin-top: 32px;
+}
+
+@media only screen and (max-width: 1416px) {
+	section.secListaMissas div.headerLista {
+		margin-top: 56px;
+		width: 916px;
+	}
+	
+	section.secListaMissas div.headerLista h3 {
+		font-size: 20px;
+	}
+	
+	section.secListaMissas div.headerLista>h3:first-child {
+		padding-left: 80px;
+		width: 392px;
+	}
+	
+	section.secListaMissas div.headerLista div {
+		padding: 0 8px;
+		width: 376px;
+	}
+	
+	section.secListaMissas div.missa {
+		height: 64px;
+		margin-bottom: 16px;
+	}
+	
+	section.secListaMissas div.missa div.imagemNomeMissa {
+		width: 384px;
+	}
+	
+	section.secListaMissas div.missa div.imagemNomeMissa>img {
+		height: 48px;
+		margin: 0 16px;
+		width: 48px;
+	}
+	
+	section.secListaMissas div.missa div.imagemNomeMissa h1 {
+		font-size: 22px;
+	}
+	
+	section.secListaMissas div.missa hr {
+		height: 56px;
+		margin: 0 8px;
+	}
+	
+	section.secListaMissas div.missa div.dadosMissa {
+		width: 360px;
+	}
+	
+	section.secListaMissas div.missa div.dadosMissa h3 {
+		font-size: 17px;
+	}
+	
+	section.secListaMissas div.missa div.btnsMissa {
+		margin-left: 0px;
+	}
+	
+	section.secListaMissas div.missa div.btnsMissa a,
+	section.secListaMissas div.missa div.btnsMissa div {
+		height: 40px;
+		width: 40px
+	}
+	
+	section.secListaMissas div.missa div.btnsMissa a svg,
+	section.secListaMissas div.missa div.btnsMissa div svg {
+		height: 24px;
+		width: 24px;
+	}
 }
