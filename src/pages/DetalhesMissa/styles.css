@@ -4,19 +4,20 @@ section.secDetalhesMissa {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	padding-top: 88px
+	padding-top: 88px;
 }
 
 section.secDetalhesMissa header {
 	align-items: center;
 	display: flex;
-	height: 392px;
-	width: 1152px
+	justify-content: space-between;
+	width: 1152px;
 }
 
 section.secDetalhesMissa hr {
 	background-image: linear-gradient(90deg, transparent, #e5e5e5, transparent);
 	border: 0;
+	margin: 64px 0;
 	padding-top: 2px;
 	width: 1152px;
 }
@@ -31,9 +32,7 @@ section.secDetalhesMissa header img {
 
 section.secDetalhesMissa header div.dadosMissa div:first-child {
 	display: flex;
-	height: 256px;
 	justify-content: space-between;
-	width: 744px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
@@ -53,7 +52,6 @@ section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
 	display: flex;
 	height: 48px;
 	justify-content: center;
-	transition: background-color 0.4s;
 	width: 48px;
 }
 
@@ -74,8 +72,8 @@ section.secDetalhesMissa header div.dadosMissa div:first-child div>a:hover {
 section.secDetalhesMissa header div.dadosMissa div+div {
 	align-items: center;
 	display: flex;
-	height: 136px;
 	justify-content: space-between;
+	margin-top: 64px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div span {
@@ -91,18 +89,17 @@ section.secDetalhesMissa header div.dadosMissa div span svg {
 
 section.secDetalhesMissa div.gridUsuarios {
 	display: grid;
-	grid-template-columns: 285px 285px 285px 285px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 4px;
-	margin: 48px 0;
-	width: 1152px
+	padding-bottom: 80px;
+	width: 1152px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario {
 	align-items: center;
-	background-color: #747474;
+	background-color: #333;
 	display: flex;
 	height: 132px;
-	width: 286px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario img {
@@ -115,12 +112,14 @@ section.secDetalhesMissa div.gridUsuarios div.usuario img {
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
 	font: normal 24px 'Cormorant Garamond';
+	letter-spacing: 1px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
 	align-items: center;
 	display: flex;
 	font: normal 20px 'Merriweather';
+	letter-spacing: 1px;
 	margin-top: 8px;
 }
 
@@ -128,9 +127,90 @@ section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg 
 	margin-right: 12px;
 }
 
-section.secDetalhesMissa div.semUsuarios h3{
+section.secDetalhesMissa div.semUsuarios h3 {
 	font: normal 28px 'Shadows Into Light Two';
 	font-weight: normal;
 	letter-spacing: 4px;
 	margin-top: 32px;
+}
+
+@media only screen and (max-width: 1416px) {
+	section.secDetalhesMissa {
+		padding-top: 48px;
+	}
+	
+	section.secDetalhesMissa header {
+		width: 860px;
+	}
+	
+	section.secDetalhesMissa hr {
+		margin: 32px 0;
+		width: 860px;
+	}
+	
+	section.secDetalhesMissa header img {
+		height: 184px;
+		margin: 0 32px;
+		width: 184px;
+	}
+	
+	section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
+		font-size: 52px;
+		line-height: 88px;
+	}
+	
+	section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
+	section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
+		height: 40px;
+		width: 40px;
+	}
+		
+	section.secDetalhesMissa header div.dadosMissa div+div {
+		margin-top: 24px;
+	}
+	
+	section.secDetalhesMissa header div.dadosMissa div span {
+		font-size: 16px;
+		margin-right: 64px;
+	}
+	
+	section.secDetalhesMissa header div.dadosMissa div span svg {
+		height: 20px;
+		width: 20px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios {
+		padding-bottom: 48px;
+		width: 860px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios div.usuario {
+		height: 96px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios div.usuario img {
+		height: 56px;
+		width: 56px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
+		font-size: 22px;
+		letter-spacing: 0.4px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
+		font-size: 16px;
+		margin-top: 4px;
+	}
+	
+	section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
+		margin-right: 8px;
+		height: 20px;
+		width:  20px;
+	}
+	
+	section.secDetalhesMissa div.semUsuarios h3 {
+		font-size: 24px;
+		letter-spacing: 2px;
+	}
 }

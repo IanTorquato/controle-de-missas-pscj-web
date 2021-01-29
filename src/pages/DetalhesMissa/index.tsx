@@ -63,6 +63,20 @@ const DetalhesMissa: React.FC = () => {
 		}
 	}
 
+	function bordaCantoUsuario(index: number, totalUsuarios: number) {
+		// Verifica se é o primeiro usuário
+		if (index === 0) { return { borderTopLeftRadius: 8 } }
+
+		// Verifica se é o usuário ao final da primeira linha
+		else if (index === 3) { return { borderTopRightRadius: 8 } }
+
+		// Verifica se é o primeiro usuário da última linha
+		else if (index % 4 === 0 && index >= (totalUsuarios - 4)) { return { borderBottomLeftRadius: 8 } }
+
+		// Verifica se é o último usuário
+		else if ((index + 1) % 4 === 0 && totalUsuarios === index + 1) { return { borderBottomRightRadius: 8 } }
+	}
+
 	return (
 		<>
 			<Header />
@@ -116,8 +130,8 @@ const DetalhesMissa: React.FC = () => {
 
 						{usuarios ?
 							<div className="gridUsuarios">
-								{usuarios.map(usuario => (
-									<div className="usuario" key={usuario.id}>
+								{usuarios.map((usuario, index) => (
+									<div className="usuario" key={usuario.id} style={bordaCantoUsuario(index, usuarios.length)}>
 										<img src={usuario.foto} alt="Avatar do Usuário" />
 
 										<div>
@@ -130,10 +144,8 @@ const DetalhesMissa: React.FC = () => {
 										</div>
 									</div>
 								))}
-							</div> :
-							<div className="semUsuarios">
-								<h3>Ish! Ninguém se cadastrou ainda...</h3>
 							</div>
+							: <div className="semUsuarios"> <h3>Ish! Ninguém se cadastrou ainda...</h3> </div>
 						}
 					</>
 				)}
