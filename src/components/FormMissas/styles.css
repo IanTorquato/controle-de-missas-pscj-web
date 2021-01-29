@@ -5,29 +5,7 @@ section.secCadastrarEditar {
 	flex-direction: column;
 	height: 100vh;
 	justify-content: center;
-}
-
-section.secCadastrarEditar div.decoracaoFormMissa {
-	border-radius: 8px;
-	height: 568px;
-	width: 800px;
-}
-
-section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormVermelha {
-	border: 1px solid #e41325;
-	margin-bottom: -400px;
-	margin-left: 240px;
-}
-
-section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormDourada {
-	border: 1px solid #ffc32c;
-	margin-bottom: -448px;
-	margin-left: -264px;
-}
-
-section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
-	border: 1px solid #4396df;
-	margin-bottom: -768px;
+	position: relative;
 }
 
 section.secCadastrarEditar form {
@@ -37,8 +15,33 @@ section.secCadastrarEditar form {
 	display: flex;
 	flex-direction: column;
 	height: 736px;
-	position: relative;
+	position: sticky;
 	width: 960px;
+	z-index: 1;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa {
+	border-radius: 8px;
+	height: 568px;
+	position: absolute;
+	width: 776px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormVermelha {
+	border: 1px solid #e41325;
+	margin-left: 272px;
+	margin-top: -300px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormDourada {
+	border: 1px solid #ffc32c;
+	margin-left: -312px;
+	margin-top: -24px;
+}
+
+section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
+	border: 1px solid #4396df;
+	margin-top: 240px;
 }
 
 section.secCadastrarEditar form h1 {
@@ -77,7 +80,6 @@ section.secCadastrarEditar form>div.containerInputsForm>div {
 section.secCadastrarEditar form>div.containerInputsForm>div:last-child {
 	display: flex;
 	justify-content: space-between;
-	/* margin-bottom: 40px; */
 }
 
 section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div {
@@ -92,11 +94,11 @@ section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div selec
 section.secCadastrarEditar form>div.containerInputsForm svg {
 	background-color: #e5e5e5;
 	box-sizing: content-box;
-	padding: 8px;
+	padding-right: 4px;
 	pointer-events: none;
 	position: absolute;
-	right: 2px;
-	top: 6px;
+	right: 4px;
+	top: 14px;
 }
 
 section.secCadastrarEditar form>div.containerInputsForm input:focus,
@@ -150,4 +152,91 @@ section.secCadastrarEditar button {
 section.secCadastrarEditar button:hover {
 	background-color: #4396df;
 	color: #252525;
+}
+
+@media only screen and (max-width: 1416px) {	
+	section.secCadastrarEditar form {
+		height: 464px;
+		width: 688px;
+	}
+	
+	section.secCadastrarEditar div.decoracaoFormMissa {
+		height: 344px;
+		width: 472px;
+	}
+	
+	section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormVermelha {
+		margin-top: -200px;		
+	}
+	
+	section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormDourada {
+		margin-top: -24px;		
+	}
+	
+	section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
+		margin-top: 192px;
+	}
+	
+	section.secCadastrarEditar form h1 {
+		font-size: 64px;
+		margin-bottom: 40px;
+		margin-top: 8px;
+	}
+	
+	section.secCadastrarEditar form>div.containerInputsForm {
+		margin-bottom: 48px;
+	}
+	
+	section.secCadastrarEditar form>div.containerInputsForm input,
+	section.secCadastrarEditar form>div.containerInputsForm select {
+		font-size: 13px;
+		height: 40px;
+		width: 304px;
+	}
+	
+	section.secCadastrarEditar form>div.containerInputsForm>div {
+		margin-bottom: 24px;
+	}
+	
+	section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div input,
+	section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div select {
+		width: 148px;
+	}
+	
+	section.secCadastrarEditar form>div.containerInputsForm svg {
+		right: 0;
+		top: 12px; 
+		height: 16px;
+		width: 16px;
+	}
+	
+	section.secCadastrarEditar form div.msgEsquerda {
+		font-size: 16px;
+		left: 24px;
+		top: 288px;
+		width: 144px;
+	}
+	
+	section.secCadastrarEditar form div.msgEsquerda img {
+		margin-left: 96px;
+		transform: rotate(-64deg);
+		height: 80px;
+	}
+	
+	section.secCadastrarEditar form div.msgDireita {
+		font-size: 16px;
+		left: 528px;
+		top: 296px;
+		width: 96px;
+	}
+	
+	section.secCadastrarEditar form div.msgDireita img {
+		width: 96px;
+	}
+	
+	section.secCadastrarEditar button {
+		font-size: 20px;
+		height: 40px;
+		width: 304px;
+	}
 }

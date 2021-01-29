@@ -80,10 +80,6 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 
 	return (
 		<section className="secCadastrarEditar">
-			<div className="decoracaoFormMissa" id="decoracaoFormVermelha"></div>
-			<div className="decoracaoFormMissa" id="decoracaoFormDourada"></div>
-			<div className="decoracaoFormMissa" id="decoracaoFormAzul"></div>
-
 			<form onSubmit={criarEditarMissa}>
 				<h1>{titulo}</h1>
 
@@ -105,7 +101,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 							<select value={local_id} onChange={({ target }) => setLocal_id(+target.value)} required>
 								<option value="" hidden>Selecione um local</option>
 
-								{!!locais[0] && locais.map(local => <option value={local.id}>{local.nome}</option>)}
+								{!!locais[0] && locais.map(local => <option value={local.id} key={local.id}>{local.nome}</option>)}
 							</select>
 
 							<FaMapMarkedAlt size={20} fill="#1c1c1c" />
@@ -136,6 +132,10 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 
 				<button type="submit">{txtBtn}</button>
 			</form>
+
+			<div className="decoracaoFormMissa" id="decoracaoFormVermelha"></div>
+			<div className="decoracaoFormMissa" id="decoracaoFormDourada"></div>
+			<div className="decoracaoFormMissa" id="decoracaoFormAzul"></div>
 		</section>
 	)
 }
