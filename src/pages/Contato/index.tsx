@@ -8,10 +8,6 @@ const Contato = () => {
 	return (
 		<section className="secContato">
 			<section className="contatoPessoa" id="programador">
-				<div className="decoracaoContato" id="corContatoVermelha"></div>
-				<div className="decoracaoContato" id="corContatoDourada"></div>
-				<div className="decoracaoContato" id="corContatoAzul"></div>
-
 				<div className="conteudoContato">
 					<div>
 						<img src="https://avatars3.githubusercontent.com/u/61882248?s=460&u=fbacf3b2ab7fbe9e721081f8774169d9f243fffc&v=4"
@@ -19,7 +15,7 @@ const Contato = () => {
 
 						<div>
 							<h1 className="nomeContato">Ian da Conceição da Silva</h1>
-							<h2 className="setorContato">Programador</h2>
+							<h2 className="setorContato">Desenvolvedor</h2>
 						</div>
 					</div>
 
@@ -65,13 +61,13 @@ const Contato = () => {
 						</div>
 					</ul>
 				</div>
-			</section>
 
-			<section className="contatoPessoa" id="designer">
 				<div className="decoracaoContato" id="corContatoVermelha"></div>
 				<div className="decoracaoContato" id="corContatoDourada"></div>
 				<div className="decoracaoContato" id="corContatoAzul"></div>
+			</section>
 
+			<section className="contatoPessoa" id="designer">
 				<div className="conteudoContato">
 					<div>
 						<img src="https://scontent.fccm4-1.fna.fbcdn.net/v/t1.0-9/132562331_3116464351786410_1684428659415575221_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=zmT_cgBblXIAX9oSrCy&_nc_ht=scontent.fccm4-1.fna&oh=e0b56bfe559099326002afcf35a4bd45&oe=603830D2"
@@ -120,6 +116,10 @@ const Contato = () => {
 						</div>
 					</ul>
 				</div>
+
+				<div className="decoracaoContato" id="corContatoVermelha"></div>
+				<div className="decoracaoContato" id="corContatoDourada"></div>
+				<div className="decoracaoContato" id="corContatoAzul"></div>
 			</section>
 		</section>
 	)

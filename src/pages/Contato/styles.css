@@ -3,34 +3,50 @@ section.secContato {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
+	position: relative;
 }
 
 section.secContato section.contatoPessoa {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin: 0 64px;
+	margin: 0 72px;
+}
+
+section.secContato div.conteudoContato {
+	align-items: center;
+	background-color: #252525;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 296px;
+	justify-content: space-between;
+	padding: 32px 0;
+	position: sticky;
+	width: 512px;
+	z-index: 1;
 }
 
 section.secContato div.decoracaoContato {
 	border-radius: 8px;
 	height: 232px;
+	position: absolute;
 	width: 424px;
 }
 
 section.secContato div.decoracaoContato#corContatoVermelha {
 	border: 1px solid #e41325;
-	margin-bottom: -128px;
+	margin-top: -104px;
 }
 
 section.secContato div.decoracaoContato#corContatoDourada {
 	border: 1px solid #ffc32c;
-	margin-bottom: -160px;
+	margin-top: 32px;
 }
 
 section.secContato div.decoracaoContato#corContatoAzul {
 	border: 1px solid #4396df;
-	margin-bottom: -336px;
+	margin-top: 104px;
 }
 
 section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoVermelha {
@@ -47,18 +63,6 @@ section.secContato section.contatoPessoa#designer div.decoracaoContato#corContat
 
 section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoDourada {
 	margin-left: 200px;
-}
-
-section.secContato div.conteudoContato {
-	align-items: center;
-	background-color: #252525;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	height: 296px;
-	justify-content: space-between;
-	padding: 32px 0;
-	width: 512px;
 }
 
 section.secContato div.conteudoContato>div {
@@ -143,4 +147,42 @@ section.secContato ul span {
 	flex-direction: column;
 	justify-content: center;
 	margin-right: 8px;
+}
+
+@media only screen and (max-width: 1416px) {
+	section.secContato section.contatoPessoa {
+		margin: 0 56px;
+	}
+	
+	section.secContato div.conteudoContato {
+		width: 416px;
+	}
+	
+	section.secContato div.decoracaoContato {
+		width: 344px;
+	}
+		
+	section.secContato div.decoracaoContato#corContatoVermelha {
+		margin-top: -64px;
+	}
+	
+	section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoVermelha {
+		margin-left: 120px;
+	}
+	
+	section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoDourada {
+		margin-left: -144px;
+	}
+	
+	section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoVermelha {
+		margin-left: -120px;
+	}
+	
+	section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoDourada {
+		margin-left: 144px;
+	}
+	
+	section.secContato ul {
+		width: 400px;
+	}
 }
