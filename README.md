@@ -18,5 +18,3 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/IanTorquato/Projeto_PSCJ-Web">
   </a>
 </p>
-
-<img alt="Page Home" src="https://raw.githubusercontent.com/IanTorquato/Projeto_PSCJ-Web/development/preview/pageHome.png">
