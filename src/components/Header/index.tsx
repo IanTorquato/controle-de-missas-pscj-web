@@ -12,6 +12,11 @@ const Header: React.FC = () => {
 	const { deslogar } = useLogin()
 	const { push } = useHistory()
 
+	function confirmarDeslogar() {
+		// eslint-disable-next-line no-restricted-globals
+		confirm('Deseja realmente deslogar?') && deslogar()
+	}
+
 	return (
 		<header className="cabecalho">
 			<div onClick={() => { push('/') }}>
@@ -23,7 +28,7 @@ const Header: React.FC = () => {
 			<div>
 				<h2>Gravatal - SC</h2>
 
-				<div className="btnDeslogar" onClick={deslogar}>
+				<div className="btnDeslogar" onClick={confirmarDeslogar}>
 					<FiLogOut size={32} />
 				</div>
 			</div>
