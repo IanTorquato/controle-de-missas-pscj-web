@@ -18,6 +18,7 @@ import './styles.css'
 const Home = () => {
 	const [missas, setMissas] = useState<Missa[]>([])
 	const [erroMissas, setErroMissas] = useState('')
+	const [imgIgrejaLoad, setImgIgrejaLoad] = useState(false)
 
 	useEffect(() => {
 		api.get('missas?quantidade_missas=6')
@@ -52,11 +53,15 @@ const Home = () => {
 						</div>
 
 						<div className="imagemDecorada">
-							<img src={igrejaCentro} alt="Igreja do Centro" />
+							<img src={igrejaCentro} alt="Igreja do Centro" onLoad={() => setImgIgrejaLoad(true)} />
 
-							<div className="decoracaoImagem" id="decoracaoImgVermelha"></div>
-							<div className="decoracaoImagem" id="decoracaoImgDourada"></div>
-							<div className="decoracaoImagem" id="decoracaoImgAzul"></div>
+							{imgIgrejaLoad && (
+								<>
+									<div className="decoracaoImagem" id="decoracaoImgVermelha"></div>
+									<div className="decoracaoImagem" id="decoracaoImgDourada"></div>
+									<div className="decoracaoImagem" id="decoracaoImgAzul"></div>
+								</>
+							)}
 						</div>
 					</div>
 				</div>

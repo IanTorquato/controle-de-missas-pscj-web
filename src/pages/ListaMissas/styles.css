@@ -43,6 +43,11 @@ section.secListaMissas div.missa {
 	transition: background-color 0.2s;
 }
 
+section.secListaMissas div.missa:last-child {
+	background-color: #ff000066;
+	margin-bottom: 80px;
+}
+
 section.secListaMissas div.missa:hover {
 	background-color: #353535;
 }
