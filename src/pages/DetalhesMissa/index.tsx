@@ -77,6 +77,18 @@ const DetalhesMissa: React.FC = () => {
 		else if ((index + 1) % 4 === 0 && totalUsuarios === index + 1) { return { borderBottomRightRadius: 8 } }
 	}
 
+	function usuariosManualmente() {
+		let usuariosManuais: Usuarios[] = []
+
+		for (let index = 0; index < 15; index++) {
+			usuariosManuais.push({
+				id: index, nome: `Usuario ${index}`, foto: `http://localhost:3333/uploads/fotosPerfis/${index}.png`, quantidade_pessoas: 8
+			})
+		}
+
+		return usuariosManuais
+	}
+
 	return (
 		<>
 			<Header />
