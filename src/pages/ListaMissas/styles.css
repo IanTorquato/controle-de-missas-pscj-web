@@ -44,7 +44,6 @@ section.secListaMissas div.missa {
 }
 
 section.secListaMissas div.missa:last-child {
-	background-color: #ff000066;
 	margin-bottom: 80px;
 }
 
