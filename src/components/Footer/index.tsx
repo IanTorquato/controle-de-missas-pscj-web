@@ -2,7 +2,7 @@ import React from 'react'
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-import flechaTorta from '../../assets/icons/flechaTorta.svg'
+import flechaTorta from '../../assets/icons/flechaTorta.png'
 import './styles.css'
 
 const Footer = () => {

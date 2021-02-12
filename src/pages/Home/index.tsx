@@ -9,9 +9,9 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { Missa } from '../../utils/interfaces'
 import { formatDiaMesHora } from '../../utils/tratandoDatas'
-import igrejaCentro from '../../assets/dentroIgrejaCentro.svg'
-import iconFlexaLoop from '../../assets/icons/flechaLoop.svg'
-import iconFlexaCurva from '../../assets/icons/flechaCurva.svg'
+import igrejaCentro from '../../assets/dentroIgrejaCentro.jpg'
+import iconFlexaLoop from '../../assets/icons/flechaLoop.png'
+import iconFlexaCurva from '../../assets/icons/flechaCurva.png'
 
 import './styles.css'
 

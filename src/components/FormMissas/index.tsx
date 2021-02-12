@@ -7,7 +7,7 @@ import { HiUserGroup } from 'react-icons/hi'
 
 import api from '../../services/api'
 import { Missa, Local } from '../../utils/interfaces'
-import flechaTorta from '../../assets/icons/flechaTorta.svg'
+import flechaTorta from '../../assets/icons/flechaTorta.png'
 import sublinhado from '../../assets/sublinhado.png'
 
 import './styles.css'
