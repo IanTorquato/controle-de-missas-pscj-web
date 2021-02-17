@@ -5,7 +5,7 @@ import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
 import api from '../../services/api'
 import Header from '../../components/Header'
 import { Missa } from '../../utils/interfaces'
-import { formatDiaMesHora } from '../../utils/tratandoDatas'
+import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 
 import './styles.css'
 
@@ -15,7 +15,7 @@ const ListaMissas: React.FC = () => {
 
 	useEffect(() => {
 		api.get('missas')
-			.then(({ data }) => setMissas(formatDiaMesHora(data)))
+			.then(({ data }) => setMissas(formatDataHoraMissas(data)))
 			.catch(({ response }) => {
 				console.log(response)
 				setErroMissas(response?.data.erro || 'Falha ao listar missas.')

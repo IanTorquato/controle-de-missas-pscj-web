@@ -1,28 +1,24 @@
-import { parseISO, format } from 'date-fns'
-import { ptBR } from 'date-fns/locale'
+import { parseISO } from 'date-fns'
+import { format, utcToZonedTime } from 'date-fns-tz'
 
 import { Missa } from './interfaces'
 
 const diasSemana = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO']
 
-// Home e Lista ==> data: "22/10" e hora: "10:00"
-export function formatDiaMesHora(missas: Missa[]) {
+function retornaDiaSemana(dataMissa: string) {
+	const diaSemana = parseISO(dataMissa).getDay()
+
+	return diasSemana[diaSemana]
+}
+
+function formatDataHoraMissas(missas: Missa[], dataComAno = false) {
+	const formato = dataComAno ? "dd/MM/yyyy'T'HH:mm" : "dd/MM'T'HH:mm"
+
 	return missas.map(missa => {
-		const dataMissa = parseISO(missa.data_hora)
+		const data_hora = format(utcToZonedTime(missa.data_hora, 'America/Sao_Paulo'), formato)
 
-		const data_hora = format(dataMissa, "dd/MM'T'HH:mm", { locale: ptBR })
-
-		return { ...missa, data_hora, dia_semana: diasSemana[dataMissa.getDay()] }
+		return { ...missa, data_hora, dia_semana: retornaDiaSemana(missa.data_hora) }
 	})
 }
 
-// Detalhes ==> data: "22/10/2021" e hora: "10:00"
-export function formatDataHora(missas: Missa[]) {
-	return missas.map(missa => {
-		const dataMissa = parseISO(missa.data_hora)
-
-		const data_hora = format(dataMissa, "dd/MM/yyyy'T'HH:mm", { locale: ptBR })
-
-		return { ...missa, data_hora, dia_semana: diasSemana[dataMissa.getDay()] }
-	})
-}
+export { formatDataHoraMissas }

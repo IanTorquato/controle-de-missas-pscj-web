@@ -8,7 +8,7 @@ import { HiUserGroup } from 'react-icons/hi'
 import api from '../../services/api'
 import Header from '../../components/Header'
 import { Missa } from '../../utils/interfaces'
-import { formatDataHora } from '../../utils/tratandoDatas'
+import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 
 import './styles.css'
 
@@ -36,7 +36,7 @@ const DetalhesMissa: React.FC = () => {
 	useEffect(() => {
 		api.get(`missas?missa_id_usuarios=${id}`)
 			.then(({ data }) => {
-				setMissa(formatDataHora(data.missaLocalUrl)[0])
+				setMissa(formatDataHoraMissas(data.missaLocalUrl, true)[0])
 
 				if (data.usuarios) { setUsuarios(data.usuarios) }
 			})

@@ -8,7 +8,7 @@ import api from '../../services/api'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { Missa } from '../../utils/interfaces'
-import { formatDiaMesHora } from '../../utils/tratandoDatas'
+import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.jpg'
 import iconFlexaLoop from '../../assets/icons/flechaLoop.png'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.png'
@@ -22,7 +22,7 @@ const Home = () => {
 
 	useEffect(() => {
 		api.get('missas?quantidade_missas=6')
-			.then(({ data }) => setMissas(formatDiaMesHora(data)))
+			.then(({ data }) => setMissas(formatDataHoraMissas(data)))
 			.catch(({ response }) => {
 				console.log(response)
 				return setErroMissas(response?.data.erro || 'Falha ao listar missas.')
