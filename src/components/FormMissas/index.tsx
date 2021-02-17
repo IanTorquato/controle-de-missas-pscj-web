@@ -1,7 +1,6 @@
 import React, { useState, FormEvent, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { format, parseISO } from 'date-fns'
-import { zonedTimeToUtc } from 'date-fns-tz'
 import { BiChurch } from 'react-icons/bi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
