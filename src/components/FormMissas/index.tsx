@@ -48,7 +48,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 		event.preventDefault()
 
 		if (data_hora) {
-			const dadosMissa = { nome, local_id, data_hora: parseISO(data_hora).toISOString(), max_pessoas }
+			const dadosMissa = { nome, local_id, data_hora, max_pessoas }
 
 			if (!missa) {
 				api.post('missas', dadosMissa)
