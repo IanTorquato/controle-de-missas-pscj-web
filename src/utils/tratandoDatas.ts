@@ -13,13 +13,10 @@ function retornaDiaSemana(dataMissa: string) {
 
 function formatDataHoraMissas(missas: Missa[], dataComAno = false) {
 	const formato = dataComAno ? "dd/MM/yyyy'T'HH:mm" : "dd/MM'T'HH:mm"
+	const local = process.env.REACT_APP_URL_BANCO === 'http://localhost:3333' ? 'America/Sao_Paulo' : 'Europe/London'
 
 	return missas.map(missa => {
-		console.log(missa)
-		const data_hora = process.env.REACT_APP_URL_BANCO === 'http://localhost:3333'
-			? format(utcToZonedTime(missa.data_hora, 'America/Sao_Paulo'), formato)
-			: missa.data_hora.replace(':00.000Z', '')
-		console.log(data_hora)
+		const data_hora = format(utcToZonedTime(missa.data_hora, local), formato)
 
 		return { ...missa, data_hora, dia_semana: retornaDiaSemana(missa.data_hora) }
 	})
