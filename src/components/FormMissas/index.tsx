@@ -1,6 +1,7 @@
 import React, { useState, FormEvent, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { format } from 'date-fns'
+import { format, parseISO } from 'date-fns'
+import { zonedTimeToUtc } from 'date-fns-tz'
 import { BiChurch } from 'react-icons/bi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
 import { HiUserGroup } from 'react-icons/hi'
@@ -48,7 +49,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 		event.preventDefault()
 
 		if (data_hora) {
-			const dadosMissa = { nome, local_id, data_hora, max_pessoas }
+			const dadosMissa = { nome, local_id, data_hora: parseISO(data_hora).toISOString(), max_pessoas }
 
 			if (!missa) {
 				api.post('missas', dadosMissa)
