@@ -70,7 +70,7 @@ footer.rodape nav a.youtube {
 
 footer.rodape p.copyright {
 	cursor: default;
-	font: normal 24px 'Roboto';
+	font: normal 24px 'Roboto', sans-serif;
 	margin-top: 20px;
 }
 
@@ -78,7 +78,7 @@ footer.rodape>div+div {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	font: normal 28px 'Shadows Into Light Two';
+	font: normal 28px 'Shadows Into Light Two', cursive;
 	position: relative;
 	text-align: center;
 	width: 336px;
@@ -97,7 +97,7 @@ footer.rodape a.contatos {
 	border-radius: 4px;
 	color: #4396df;
 	display: flex;
-	font: normal 24px 'Roboto';
+	font: normal 24px 'Roboto', sans-serif;
 	height: 48px;
 	justify-content: center;
 	margin-top: 40px;

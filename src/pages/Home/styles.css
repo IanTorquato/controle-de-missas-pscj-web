@@ -57,8 +57,7 @@ section.secHome div.curiosidade#curiosidadeVermelha:after {
 	color: #fff;
 	content: "Desenvolvido para a nossa paróquia";
 	display: flex;
-	font-family: Oswald;
-	font-size: 20px;
+	font: normal 20px 'Oswald', sans-serif;
 	height: 128px;
 	letter-spacing: 0.8px;
 	padding: 8px;
@@ -83,8 +82,7 @@ section.secHome div.curiosidade#curiosidadeDourada:after {
 	color: #fff;
 	content: "Focado em celebrações mais seguras";
 	display: flex;
-	font-family: Oswald;
-	font-size: 20px;
+	font: normal 20px 'Oswald', sans-serif;
 	height: 128px;
 	letter-spacing: 0.8px;
 	padding: 8px;
@@ -109,8 +107,7 @@ section.secHome div.curiosidade#curiosidadeAzul:after {
 	color: #fff;
 	content: "Criado para auxiliar a Pascom";
 	display: flex;
-	font-family: Oswald;
-	font-size: 20px;
+	font: normal 20px 'Oswald', sans-serif;
 	height: 128px;
 	letter-spacing: 0.8px;
 	padding: 8px;
@@ -201,7 +198,7 @@ section.secBotoes div.decoracaoBotoes#decoracaoBtnAzul {
 }
 
 section.secBotoes h1.tituloBotoes {
-	font: normal 96px 'Oswald';
+	font: normal 96px 'Oswald', sans-serif;
 	margin-left: 56px;
 }
 
@@ -253,7 +250,7 @@ section.secBotoes a.btnsNavegacao {
 	border-radius: 4px;
 	color: #ffc32c;
 	display: flex;
-	font: normal 24px 'Roboto';
+	font: normal 24px 'Roboto', sans-serif;
 	height: 48px;
 	justify-content: center;
 	width: 312px;
@@ -293,8 +290,7 @@ section.secCronograma div.tituloCronograma {
 }
 
 section.secCronograma h2.semMissas {
-	font: normal 28px 'Shadows Into Light Two';
-	font-weight: normal;
+	font: normal 28px 'Shadows Into Light Two', cursive;
 	letter-spacing: 4px;
 	margin-top: 32px;
 }
@@ -335,7 +331,7 @@ section.secCronograma a.detalhesMissa#detalhesMissaAzul {
 }
 
 section.secCronograma h1 {
-	font: normal 40px 'Merriweather';
+	font: normal 40px 'Merriweather', serif;
 	margin-bottom: 8px;
 }
 
@@ -346,7 +342,7 @@ section.secCronograma h2 {
 
 @media only screen and (max-width: 1416px) {
 	section.secHome h1.tituloSSCJ {
-		font: normal 104px 'Cookie', cursive;
+		font-size: 104px;
 		line-height: 80px;
 	}
 	

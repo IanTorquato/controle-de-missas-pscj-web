@@ -45,7 +45,7 @@ section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
 }
 
 section.secCadastrarEditar form h1 {
-	font: normal 96px 'Oswald';
+	font: normal 96px 'Oswald', sans-serif;
 	margin-bottom: 72px;
 	margin-top: 16px;
 }
@@ -61,7 +61,7 @@ section.secCadastrarEditar form>div.containerInputsForm select {
 	border-radius: 4px;
 	color: #000;
 	cursor: pointer;
-	font: normal 16px 'Roboto';
+	font: normal 16px 'Roboto', sans-serif;
 	height: 48px;
 	padding: 0 8px;
 	transition: border 0s;
@@ -115,7 +115,7 @@ section.secCadastrarEditar form>div.containerInputsForm select option {
 }
 
 section.secCadastrarEditar form div.msgEsquerda {
-	font: normal 24px 'Shadows Into Light Two';
+	font: normal 24px 'Shadows Into Light Two', cursive;
 	left: 40px;
 	position: absolute;
 	text-align: center;
@@ -129,7 +129,7 @@ section.secCadastrarEditar form div.msgEsquerda img {
 }
 
 section.secCadastrarEditar form div.msgDireita {
-	font: normal 24px 'Shadows Into Light Two';
+	font: normal 24px 'Shadows Into Light Two', cursive;
 	left: 752px;
 	position: absolute;
 	text-align: center;
@@ -143,7 +143,7 @@ section.secCadastrarEditar button {
 	border-radius: 4px;
 	color: #4396df;
 	cursor: pointer;
-	font: normal 24px 'Roboto';
+	font: normal 24px 'Roboto', sans-serif;
 	height: 48px;
 	text-align: center;
 	width: 400px;

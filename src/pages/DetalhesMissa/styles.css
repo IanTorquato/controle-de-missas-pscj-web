@@ -36,7 +36,7 @@ section.secDetalhesMissa header div.dadosMissa div:first-child {
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
-	font: normal 80px 'Oswald';
+	font: normal 80px 'Oswald', sans-serif;
 	line-height: 128px;
 	overflow: auto;
 }
@@ -79,7 +79,7 @@ section.secDetalhesMissa header div.dadosMissa div+div {
 section.secDetalhesMissa header div.dadosMissa div span {
 	align-items: center;
 	display: flex;
-	font: normal 24px 'Merriweather';
+	font: normal 24px 'Merriweather', serif;
 	margin-right: 48px;
 }
 
@@ -111,14 +111,14 @@ section.secDetalhesMissa div.gridUsuarios div.usuario img {
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
-	font: normal 24px 'Cormorant Garamond';
+	font: normal 24px 'Cormorant Garamond', serif;
 	letter-spacing: 1px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
 	align-items: center;
 	display: flex;
-	font: normal 20px 'Merriweather';
+	font: normal 20px 'Merriweather', serif;
 	letter-spacing: 1px;
 	margin-top: 8px;
 }
@@ -128,8 +128,7 @@ section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg 
 }
 
 section.secDetalhesMissa div.semUsuarios h3 {
-	font: normal 28px 'Shadows Into Light Two';
-	font-weight: normal;
+	font: normal 28px 'Shadows Into Light Two', cursive;
 	letter-spacing: 4px;
 	margin-top: 32px;
 }

@@ -6,7 +6,7 @@ section.secNotFound {
 }
 
 section.secNotFound h1 {
-	font: normal 96px 'Oswald';
+	font: normal 96px 'Oswald', sans-serif;
 	line-height: 128px;
 	margin-bottom: 200px;
 	width: 784px;

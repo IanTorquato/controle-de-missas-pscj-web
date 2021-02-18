@@ -82,7 +82,7 @@ section.secListaMissas div.missa div.dadosMissa {
 }
 
 section.secListaMissas div.missa div.dadosMissa h3 {
-	font: normal 24px 'Merriweather';
+	font: normal 24px 'Merriweather', serif;
 	text-align: center;
 }
 
@@ -120,8 +120,7 @@ section.secListaMissas div.missa div.btnsMissa a.btnDetalhes:hover {
 }
 
 section.secListaMissas h2 {
-	font: normal 28px 'Shadows Into Light Two';
-	font-weight: normal;
+	font: normal 28px 'Shadows Into Light Two', cursive;
 	letter-spacing: 4px;
 	margin-top: 32px;
 }

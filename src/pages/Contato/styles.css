@@ -80,12 +80,12 @@ section.secContato div.conteudoContato>div>img {
 
 section.secContato h1.nomeContato {
 	color: #e9e9e9;
-	font: normal 24px 'Oswald';
+	font: normal 24px 'Oswald', sans-serif;
 }
 
 section.secContato h2.setorContato {
 	color: #c3c3c3;
-	font: normal 16px 'Oswald';
+	font: normal 16px 'Oswald', sans-serif;
 }
 
 section.secContato ul {
