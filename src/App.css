@@ -23,6 +23,10 @@ a {
 	text-decoration: none;
 }
 
+abbr {
+	text-decoration: none;
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }

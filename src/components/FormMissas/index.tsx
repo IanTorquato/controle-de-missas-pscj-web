@@ -7,6 +7,7 @@ import { HiUserGroup } from 'react-icons/hi'
 
 import api from '../../services/api'
 import { Missa, Local } from '../../utils/interfaces'
+import { dataParaSelect } from '../../utils/tratandoDatas'
 import flechaTorta from '../../assets/icons/flechaTorta.png'
 import sublinhado from '../../assets/sublinhado.png'
 
@@ -25,7 +26,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 	const [locais, setLocais] = useState<Local[]>([])
 	const [local_id, setLocal_id] = useState(missa?.local_id || 0)
 	const [max_pessoas, setMax_pessoas] = useState(missa?.max_pessoas || '')
-	const [data_hora, setData_hora] = useState(missa?.data_hora ? ordenaData(missa.data_hora.split('T')) : '')
+	const [data_hora, setData_hora] = useState(missa?.data_hora ? dataParaSelect(missa.data_hora) : '')
 
 	const { push } = useHistory()
 
@@ -37,12 +38,6 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 				alert(response?.data.erro || 'Falha ao listar locais.')
 			})
 	}, [])
-
-	function ordenaData([data, hora]: string[]) {
-		const [dia, mes, ano] = data.split('/')
-
-		return `${ano}-${mes}-${dia}T${hora}`
-	}
 
 	function criarEditarMissa(event: FormEvent) {
 		event.preventDefault()

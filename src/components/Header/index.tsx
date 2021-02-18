@@ -22,11 +22,11 @@ const Header: React.FC = () => {
 			<div onClick={() => { push('/') }}>
 				<img src={logo} alt="Brasão da Paróquia" />
 
-				<h1>PSCJ</h1>
+				<h1><abbr title="Paróquia Sagrado Coração de Jesus">PSCJ</abbr></h1>
 			</div>
 
 			<div>
-				<h2>Gravatal - SC</h2>
+				<h2>Gravatal - <abbr title="Santa Catarina">SC</abbr></h2>
 
 				<div className="btnDeslogar" onClick={confirmarDeslogar}>
 					<FiLogOut size={32} />

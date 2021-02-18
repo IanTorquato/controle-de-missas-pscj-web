@@ -22,4 +22,12 @@ function formatDataHoraMissas(missas: Missa[], dataComAno = false) {
 	})
 }
 
-export { formatDataHoraMissas }
+// 2021-02-22T20:00
+function dataParaSelect(dataHora: string) {
+	const [data, hora] = dataHora.split('T')
+	const [dia, mes, ano] = data.split('/')
+
+	return `${ano}-${mes}-${dia}T${hora}`
+}
+
+export { dataParaSelect, formatDataHoraMissas }
