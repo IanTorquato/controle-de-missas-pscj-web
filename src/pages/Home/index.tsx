@@ -111,7 +111,7 @@ const Home = () => {
 						const [data, hora] = missa.data_hora.split('T')
 
 						return (
-							<Link to={`/detalhes-missa/${missa.id}`} key={missa.id} className="detalhesMissa" id={
+							<Link className="detalhesMissa" to={`/detalhes-missa/${missa.id}`} key={missa.id} id={
 								index < 2 ? 'detalhesMissaVermelha' : index < 4 ? 'detalhesMissaDourada' : 'detalhesMissaAzul'
 							}>
 								<h1>{data} - {hora}</h1>

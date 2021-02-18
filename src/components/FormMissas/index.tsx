@@ -80,7 +80,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 
 				<div className="containerInputsForm">
 					<div>
-						<input type="text" className="nome" placeholder="Dê um nome à missa" required
+						<input className="nome" type="text" placeholder="Dê um nome à missa" required
 							onChange={({ target }) => setNome(target.value)} value={nome} />
 
 						<BiChurch size={20} fill="#1c1c1c" />
@@ -103,7 +103,7 @@ const FormMissas: React.FC<FormMissa> = ({ titulo, txtBtn, missa, mensagemEsquer
 						</div>
 
 						<div>
-							<input type="number" className="maxPessoas" placeholder="Máximo de pessoas" min={1} required
+							<input className="maxPessoas" type="number" placeholder="Máximo de pessoas" min={1} required
 								onChange={({ target }) => setMax_pessoas(+target.value)} value={max_pessoas} />
 
 							<HiUserGroup size={20} fill="#1c1c1c" />

@@ -73,7 +73,7 @@ const ListaMissas: React.FC = () => {
 								<hr />
 
 								<div className="btnsMissa">
-									<Link to={`/editar-missa/${missa.id}`} className="btnEditar">
+									<Link className="btnEditar" to={`/editar-missa/${missa.id}`}>
 										<BiEditAlt size={32} color="#e5e5e5" />
 									</Link>
 
@@ -81,7 +81,7 @@ const ListaMissas: React.FC = () => {
 										<BiTrash size={32} color="#e5e5e5" />
 									</div>
 
-									<Link to={`/detalhes-missa/${missa.id}`} className="btnDetalhes">
+									<Link className="btnDetalhes" to={`/detalhes-missa/${missa.id}`}>
 										<BiDotsVerticalRounded size={32} color="#e5e5e5" />
 									</Link>
 								</div>

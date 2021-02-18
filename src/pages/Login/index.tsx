@@ -24,7 +24,7 @@ const Login: React.FC = () => {
 				<img src={logo} alt="Brasão da Paróquia" />
 
 				<div className="insereDados">
-					<input type="text" value={nome} required className={erroLogin ? 'erro' : ''} autoComplete="off"
+					<input className={erroLogin ? 'erro' : ''} type="text" value={nome} required autoComplete="off"
 						onChange={({ target }) => setNome(target.value)} readOnly={focoInput} onFocus={() => {
 							setErroLogin('')
 							setFocoInput(false)
@@ -33,7 +33,7 @@ const Login: React.FC = () => {
 				</div>
 
 				<div className="insereDados">
-					<input type="password" value={senha} required className={erroLogin ? 'erro' : ''} autoComplete="off"
+					<input className={erroLogin ? 'erro' : ''} type="password" value={senha} required autoComplete="off"
 						onChange={({ target }) => setSenha(target.value)} minLength={8} onFocus={() => {
 							setErroLogin('')
 							setFocoInput(false)

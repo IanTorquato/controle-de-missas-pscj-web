@@ -18,28 +18,28 @@ const Footer = () => {
 				<nav>
 					<ul>
 						<li>
-							<a href="https://api.whatsapp.com/send?phone=554836422121" className="whatsapp" target="_blank"
+							<a className="whatsapp" href="https://api.whatsapp.com/send?phone=554836422121" target="_blank"
 								rel="noopener noreferrer">
 								<FaWhatsapp size={40} />
 							</a>
 						</li>
 
 						<li>
-							<a href="https://www.facebook.com/Paróquia-Santuário-Sagrado-Coração-de-Jesus-108271214142847"
-								className="facebook" target="_blank" rel="noopener noreferrer">
+							<a className="facebook" target="_blank" rel="noopener noreferrer"
+								href="https://www.facebook.com/Paróquia-Santuário-Sagrado-Coração-de-Jesus-108271214142847">
 								<FaFacebookF size={40} />
 							</a>
 						</li>
 
 						<li>
-							<a href="https://www.instagram.com/santuariogravatal" className="instagram" target="_blank"
+							<a className="instagram" href="https://www.instagram.com/santuariogravatal" target="_blank"
 								rel="noopener noreferrer">
 								<FaInstagram size={40} />
 							</a>
 						</li>
 
 						<li>
-							<a href="https://www.youtube.com/channel/UCoWwECJDCgyMggNyKJ14jnA" className="youtube" target="_blank"
+							<a className="youtube" href="https://www.youtube.com/channel/UCoWwECJDCgyMggNyKJ14jnA" target="_blank"
 								rel="noopener noreferrer">
 								<FaYoutube size={40} />
 							</a>
@@ -55,7 +55,7 @@ const Footer = () => {
 
 				<img src={flechaTorta} alt="Flexa" />
 
-				<Link to="/contato" className="contatos" onClick={voltarTopo}>{"< Fale Conosco />"}</Link>
+				<Link className="contatos" to="/contato" onClick={voltarTopo}>{"< Fale Conosco />"}</Link>
 			</div>
 		</footer>
 	)
