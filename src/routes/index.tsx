@@ -13,26 +13,26 @@ import Contato from '../pages/Contato'
 import NotFound from '../pages/NotFound'
 
 const Routes = () => {
-	const { logado } = useLogin()
+  const { logado } = useLogin()
 
-	return (
-		!logado ? (
-			<Switch>
-				<Route component={Login} path="/" />
-				<Redirect to="/" />
-			</Switch>
-		) : (
-				<Switch>
-					<Route component={Home} path="/" exact />
-					<Route component={CadastrarMissa} path="/cadastrar-missa" />
-					<Route component={EditarMissa} path='/editar-missa/:id' />
-					<Route component={ListaMissas} path='/lista-missas' />
-					<Route component={DetalhesMissa} path='/detalhes-missa/:id' />
-					<Route component={Contato} path='/contato' />
-					<Route component={NotFound} />
-				</Switch>
-			)
-	)
+  return (
+    !logado ? (
+      <Switch>
+        <Route component={Login} path="/" />
+        <Redirect to="/" />
+      </Switch>
+    ) : (
+      <Switch>
+        <Route component={Home} path="/" exact />
+        <Route component={CadastrarMissa} path="/cadastrar-missa" />
+        <Route component={EditarMissa} path='/editar-missa/:id' />
+        <Route component={ListaMissas} path='/lista-missas' />
+        <Route component={DetalhesMissa} path='/detalhes-missa/:id' />
+        <Route component={Contato} path='/contato' />
+        <Route component={NotFound} />
+      </Switch>
+    )
+  )
 }
 
 export default Routes

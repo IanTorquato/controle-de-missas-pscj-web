@@ -1,32 +1,32 @@
 section.secNotFound {
-	background-color: #121212;
-	height: 100vh;
-	padding-left: 80px;
-	padding-top: 80px;
+  background-color: #121212;
+  height: 100vh;
+  padding-left: 80px;
+  padding-top: 80px;
 }
 
 section.secNotFound h1 {
-	font: normal 96px 'Oswald', sans-serif;
-	line-height: 128px;
-	margin-bottom: 200px;
-	width: 784px;
+  font: normal 96px 'Oswald', sans-serif;
+  line-height: 128px;
+  margin-bottom: 200px;
+  width: 784px;
 }
 
 section.secNotFound div {
-	font: normal 28px 'Shadows Into Light Two', cursive;
-	letter-spacing: 2px;
-	width: 376px;
+  font: normal 28px 'Shadows Into Light Two', cursive;
+  letter-spacing: 2px;
+  width: 376px;
 }
 
 section.secNotFound div a {
-	color: #ffc32c;
-	text-decoration: underline;
+  color: #ffc32c;
+  text-decoration: underline;
 }
-	
+  
 section.secNotFound img {
-	bottom: 64px;
-	height: 800px;
-	position: absolute;
-	right: 64px;
-	width: 764px;
+  bottom: 64px;
+  height: 800px;
+  position: absolute;
+  right: 64px;
+  width: 764px;
 }

@@ -1,195 +1,195 @@
 section.secListaMissas {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 section.secListaMissas div.headerLista {
-	display: flex;
-	margin-bottom: 16px;
-	margin-top: 88px;
-	width: 1320px
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 88px;
+  width: 1320px
 }
 
 section.secListaMissas div.headerLista h3 {
-	color: #c3c3c3;
-	font: normal 24px 'Roboto', sans-serif;
+  color: #c3c3c3;
+  font: normal 24px 'Roboto', sans-serif;
 }
 
 section.secListaMissas div.headerLista>h3:first-child {
-	padding-left: 112px;
-	width: 584px;
+  padding-left: 112px;
+  width: 584px;
 }
 
 section.secListaMissas div.headerLista div {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	padding: 0 16px;
-	text-align: center;
-	width: 556px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 16px;
+  text-align: center;
+  width: 556px;
 }
 
 section.secListaMissas div.missa {
-	align-items: center;
-	background-color: #252525;
-	border-radius: 8px;
-	cursor: default;
-	display: flex;
-	height: 96px;
-	margin-bottom: 24px;
-	padding-right: 8px;
-	transition: background-color 0.2s;
+  align-items: center;
+  background-color: #252525;
+  border-radius: 8px;
+  cursor: default;
+  display: flex;
+  height: 96px;
+  margin-bottom: 24px;
+  padding-right: 8px;
+  transition: background-color 0.2s;
 }
 
 section.secListaMissas div.missa:last-child {
-	margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 section.secListaMissas div.missa:hover {
-	background-color: #353535;
+  background-color: #353535;
 }
 
 section.secListaMissas div.missa div.imagemNomeMissa {
-	align-items: center;
-	display: flex;
-	width: 568px;
+  align-items: center;
+  display: flex;
+  width: 568px;
 }
 
 section.secListaMissas div.missa div.imagemNomeMissa>img {
-	border-radius: 100%;
-	height: 64px;
-	margin: 0 24px;
-	object-fit: cover;
-	width: 64px;
+  border-radius: 100%;
+  height: 64px;
+  margin: 0 24px;
+  object-fit: cover;
+  width: 64px;
 }
 
 section.secListaMissas div.missa div.imagemNomeMissa h1 {
-	font: normal 32px 'Cormorant Garamond', serif;
+  font: normal 32px 'Cormorant Garamond', serif;
 }
 
 section.secListaMissas div.missa hr {
-	height: 74px;
-	margin: 0 16px;
+  height: 74px;
+  margin: 0 16px;
 }
 
 section.secListaMissas div.missa div.dadosMissa {
-	align-items: center;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	width: 524px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 524px;
 }
 
 section.secListaMissas div.missa div.dadosMissa h3 {
-	font: normal 24px 'Merriweather', serif;
-	text-align: center;
+  font: normal 24px 'Merriweather', serif;
+  text-align: center;
 }
 
 section.secListaMissas div.missa div.btnsMissa {
-	display: flex;
-	justify-content: center;
-	margin-left: -8px;
+  display: flex;
+  justify-content: center;
+  margin-left: -8px;
 }
 
 section.secListaMissas div.missa div.btnsMissa a,
 section.secListaMissas div.missa div.btnsMissa div {
-	align-items: center;
-	border-radius: 8px;
-	display: flex;
-	height: 48px;
-	justify-content: center;
-	width: 48px
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px
 }
 
 section.secListaMissas div.missa div.btnsMissa a.btnEditar:hover {
-	background-color: #4396dfcc;
+  background-color: #4396dfcc;
 }
 
 section.secListaMissas div.missa div.btnsMissa div.btnExcluir {
-	margin: 0 8px;
+  margin: 0 8px;
 }
 
 section.secListaMissas div.missa div.btnsMissa div.btnExcluir:hover {
-	background-color: #E41325cc;
-	cursor: pointer;
+  background-color: #E41325cc;
+  cursor: pointer;
 }
 
 section.secListaMissas div.missa div.btnsMissa a.btnDetalhes:hover {
-	background-color: #747474;
+  background-color: #747474;
 }
 
 section.secListaMissas h2 {
-	font: normal 28px 'Shadows Into Light Two', cursive;
-	letter-spacing: 4px;
-	margin-top: 32px;
+  font: normal 28px 'Shadows Into Light Two', cursive;
+  letter-spacing: 4px;
+  margin-top: 32px;
 }
 
 @media only screen and (max-width: 1416px) {
-	section.secListaMissas div.headerLista {
-		margin-top: 56px;
-		width: 916px;
-	}
-	
-	section.secListaMissas div.headerLista h3 {
-		font-size: 20px;
-	}
-	
-	section.secListaMissas div.headerLista>h3:first-child {
-		padding-left: 80px;
-		width: 392px;
-	}
-	
-	section.secListaMissas div.headerLista div {
-		padding: 0 8px;
-		width: 376px;
-	}
-	
-	section.secListaMissas div.missa {
-		height: 64px;
-		margin-bottom: 16px;
-	}
-	
-	section.secListaMissas div.missa div.imagemNomeMissa {
-		width: 384px;
-	}
-	
-	section.secListaMissas div.missa div.imagemNomeMissa>img {
-		height: 48px;
-		margin: 0 16px;
-		width: 48px;
-	}
-	
-	section.secListaMissas div.missa div.imagemNomeMissa h1 {
-		font-size: 22px;
-	}
-	
-	section.secListaMissas div.missa hr {
-		height: 56px;
-		margin: 0 8px;
-	}
-	
-	section.secListaMissas div.missa div.dadosMissa {
-		width: 360px;
-	}
-	
-	section.secListaMissas div.missa div.dadosMissa h3 {
-		font-size: 17px;
-	}
-	
-	section.secListaMissas div.missa div.btnsMissa {
-		margin-left: 0px;
-	}
-	
-	section.secListaMissas div.missa div.btnsMissa a,
-	section.secListaMissas div.missa div.btnsMissa div {
-		height: 40px;
-		width: 40px
-	}
-	
-	section.secListaMissas div.missa div.btnsMissa a svg,
-	section.secListaMissas div.missa div.btnsMissa div svg {
-		height: 24px;
-		width: 24px;
-	}
+  section.secListaMissas div.headerLista {
+    margin-top: 56px;
+    width: 916px;
+  }
+  
+  section.secListaMissas div.headerLista h3 {
+    font-size: 20px;
+  }
+  
+  section.secListaMissas div.headerLista>h3:first-child {
+    padding-left: 80px;
+    width: 392px;
+  }
+  
+  section.secListaMissas div.headerLista div {
+    padding: 0 8px;
+    width: 376px;
+  }
+  
+  section.secListaMissas div.missa {
+    height: 64px;
+    margin-bottom: 16px;
+  }
+  
+  section.secListaMissas div.missa div.imagemNomeMissa {
+    width: 384px;
+  }
+  
+  section.secListaMissas div.missa div.imagemNomeMissa>img {
+    height: 48px;
+    margin: 0 16px;
+    width: 48px;
+  }
+  
+  section.secListaMissas div.missa div.imagemNomeMissa h1 {
+    font-size: 22px;
+  }
+  
+  section.secListaMissas div.missa hr {
+    height: 56px;
+    margin: 0 8px;
+  }
+  
+  section.secListaMissas div.missa div.dadosMissa {
+    width: 360px;
+  }
+  
+  section.secListaMissas div.missa div.dadosMissa h3 {
+    font-size: 17px;
+  }
+  
+  section.secListaMissas div.missa div.btnsMissa {
+    margin-left: 0px;
+  }
+  
+  section.secListaMissas div.missa div.btnsMissa a,
+  section.secListaMissas div.missa div.btnsMissa div {
+    height: 40px;
+    width: 40px
+  }
+  
+  section.secListaMissas div.missa div.btnsMissa a svg,
+  section.secListaMissas div.missa div.btnsMissa div svg {
+    height: 24px;
+    width: 24px;
+  }
 }

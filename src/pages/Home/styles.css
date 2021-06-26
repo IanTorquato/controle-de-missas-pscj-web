@@ -1,511 +1,511 @@
 div.scrollFixado{
-	height: 100vh;
-	overflow-y: scroll;
-	position: relative;
-	scroll-snap-type: y proximity;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  scroll-snap-type: y proximity;
 }
 
 section.secHome {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	scroll-snap-align: start;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  scroll-snap-align: start;
 }
 
 section.secHome h1.tituloSSCJ {
-	font: normal 144px 'Cookie', cursive;
+  font: normal 144px 'Cookie', cursive;
 }
 
 section.secHome div.alinhaHorizontal {
-	display: flex;
-	width: 72vw;
+  display: flex;
+  width: 72vw;
 }
 
 section.secHome div.alinhaHorizontal>div.alinhaHorizontal {
-	margin-top: 112px;
+  margin-top: 112px;
 }
 
 section.secHome div.curiosidade {
-	align-items: center;
-	background-color: #252525;
-	border-radius: 8px;
-	display: flex;
-	height: 128px;
-	justify-content: center;
-	margin-right: 24px;
-	transform-style: preserve-3d;
-	width: 128px;
+  align-items: center;
+  background-color: #252525;
+  border-radius: 8px;
+  display: flex;
+  height: 128px;
+  justify-content: center;
+  margin-right: 24px;
+  transform-style: preserve-3d;
+  width: 128px;
 }
 
 section.secHome div.curiosidade:hover {
-	transform-origin: bottom center;
-	transform: rotateX(-90deg) translateY(100%);
+  transform-origin: bottom center;
+  transform: rotateX(-90deg) translateY(100%);
 }
 
 section.secHome div.curiosidade#curiosidadeVermelha {
-	border: 1px solid #e41325;
+  border: 1px solid #e41325;
 }
 
 section.secHome div.curiosidade#curiosidadeVermelha:after {
-	align-items: center;
-	background-color: #252525;
-	border: 1px solid #e41325;
-	border-radius: 8px;
-	box-sizing: border-box;
-	color: #fff;
-	content: "Desenvolvido para a nossa paróquia";
-	display: flex;
-	font: normal 20px 'Oswald', sans-serif;
-	height: 128px;
-	letter-spacing: 0.8px;
-	padding: 8px;
-	position: absolute;
-	text-align: center;
-	top: -100%;
-	transform: rotateX(90deg);
-	transform-origin: left bottom;
-	width: 128px;
+  align-items: center;
+  background-color: #252525;
+  border: 1px solid #e41325;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  content: "Desenvolvido para a nossa paróquia";
+  display: flex;
+  font: normal 20px 'Oswald', sans-serif;
+  height: 128px;
+  letter-spacing: 0.8px;
+  padding: 8px;
+  position: absolute;
+  text-align: center;
+  top: -100%;
+  transform: rotateX(90deg);
+  transform-origin: left bottom;
+  width: 128px;
 }
 
 section.secHome div.curiosidade#curiosidadeDourada {
-	border: 1px solid #ffc32c;
+  border: 1px solid #ffc32c;
 }
 
 section.secHome div.curiosidade#curiosidadeDourada:after {
-	align-items: center;
-	background-color: #252525;
-	border: 1px solid #ffc32c;
-	border-radius: 8px;
-	box-sizing: border-box;
-	color: #fff;
-	content: "Focado em celebrações mais seguras";
-	display: flex;
-	font: normal 20px 'Oswald', sans-serif;
-	height: 128px;
-	letter-spacing: 0.8px;
-	padding: 8px;
-	position: absolute;
-	text-align: center;
-	top: -100%;
-	transform: rotateX(90deg);
-	transform-origin: left bottom;
-	width: 128px;
+  align-items: center;
+  background-color: #252525;
+  border: 1px solid #ffc32c;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  content: "Focado em celebrações mais seguras";
+  display: flex;
+  font: normal 20px 'Oswald', sans-serif;
+  height: 128px;
+  letter-spacing: 0.8px;
+  padding: 8px;
+  position: absolute;
+  text-align: center;
+  top: -100%;
+  transform: rotateX(90deg);
+  transform-origin: left bottom;
+  width: 128px;
 }
 
 section.secHome div.curiosidade#curiosidadeAzul {
-	border: 1px solid #4396df;
+  border: 1px solid #4396df;
 }
 
 section.secHome div.curiosidade#curiosidadeAzul:after {
-	align-items: center;
-	background-color: #252525;
-	border: 1px solid #4396df;
-	border-radius: 8px;
-	box-sizing: border-box;
-	color: #fff;
-	content: "Criado para auxiliar a Pascom";
-	display: flex;
-	font: normal 20px 'Oswald', sans-serif;
-	height: 128px;
-	letter-spacing: 0.8px;
-	padding: 8px;
-	position: absolute;
-	text-align: center;
-	top: -100%;
-	transform: rotateX(90deg);
-	transform-origin: left bottom;
-	width: 128px;
+  align-items: center;
+  background-color: #252525;
+  border: 1px solid #4396df;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  content: "Criado para auxiliar a Pascom";
+  display: flex;
+  font: normal 20px 'Oswald', sans-serif;
+  height: 128px;
+  letter-spacing: 0.8px;
+  padding: 8px;
+  position: absolute;
+  text-align: center;
+  top: -100%;
+  transform: rotateX(90deg);
+  transform-origin: left bottom;
+  width: 128px;
 }
 
 section.secHome div.imagemDecorada {
-	margin-left: 48px;
-	margin-top: -232px;
+  margin-left: 48px;
+  margin-top: -232px;
 }
 
 section.secHome div.imagemDecorada img {
-	border-radius: 8px;
-	margin-left: 56px;
-	margin-top: 64px;
-	width: 608px;
+  border-radius: 8px;
+  margin-left: 56px;
+  margin-top: 64px;
+  width: 608px;
 }
 
 section.secHome div.decoracaoImagem {
-	border-radius: 8px;
-	height: 256px;
-	width: 560px;
+  border-radius: 8px;
+  height: 256px;
+  width: 560px;
 }
 
 section.secHome div.decoracaoImagem#decoracaoImgVermelha {
-	border: 1px solid #e41325;
-	margin-left: 144px;
-	margin-top: -400px;
+  border: 1px solid #e41325;
+  margin-left: 144px;
+  margin-top: -400px;
 }
 
 section.secHome div.decoracaoImagem#decoracaoImgDourada {
-	border: 1px solid #ffc32c;
-	margin-top: -144px;
+  border: 1px solid #ffc32c;
+  margin-top: -144px;
 }
 
 section.secHome div.decoracaoImagem#decoracaoImgAzul {
-	border: 1px solid #4396df;
-	margin-left: 80px;
-	margin-top: -200px;
+  border: 1px solid #4396df;
+  margin-left: 80px;
+  margin-top: -200px;
 }
 
 section.secBotoes {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	position: relative;
-	scroll-snap-align: start;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: start;
 }
 
 section.secBotoes div.conteudoBotoes {
-	background-color: #252525;
-	height: 736px;
-	padding-top: 16px;
-	position: sticky;
-	width: 1160px;
-	z-index: 1;
+  background-color: #252525;
+  height: 736px;
+  padding-top: 16px;
+  position: sticky;
+  width: 1160px;
+  z-index: 1;
 }
 
 section.secBotoes div.decoracaoBotoes {
-	border-radius: 8px;
-	height: 568px;
-	position: absolute;
-	width: 960px;
+  border-radius: 8px;
+  height: 568px;
+  position: absolute;
+  width: 960px;
 }
 
 section.secBotoes div.decoracaoBotoes#decoracaoBtnVermelho {
-	border: 1px solid #e41325;
-	margin-left: 272px;
-	margin-top: -300px;
+  border: 1px solid #e41325;
+  margin-left: 272px;
+  margin-top: -300px;
 }
 
 section.secBotoes div.decoracaoBotoes#decoracaoBtnDourado {
-	border: 1px solid #ffc32c;
-	margin-left: -312px;
-	margin-top: -24px;
+  border: 1px solid #ffc32c;
+  margin-left: -312px;
+  margin-top: -24px;
 }
 
 section.secBotoes div.decoracaoBotoes#decoracaoBtnAzul {
-	border: 1px solid #4396df;
-	margin-top: 240px;
+  border: 1px solid #4396df;
+  margin-top: 240px;
 }
 
 section.secBotoes h1.tituloBotoes {
-	font: normal 96px 'Oswald', sans-serif;
-	margin-left: 56px;
+  font: normal 96px 'Oswald', sans-serif;
+  margin-left: 56px;
 }
 
 section.secBotoes div.alinhaDireita {
-	align-items: flex-end;
-	display: flex;
-	flex-direction: column;
-	margin-top: -48px;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: -48px;
 }
 
 section.secBotoes div.alinhaDireita div.mensagensBotoes {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	margin-right: 112px;
-	position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 112px;
+  position: relative;
 }
 
 section.secBotoes div.descricaoBotao {
-	font: normal 24px 'Shadows Into Light Two', cursive;
-	letter-spacing: 2px;
-	line-height: 32px;
+  font: normal 24px 'Shadows Into Light Two', cursive;
+  letter-spacing: 2px;
+  line-height: 32px;
 }
 
 section.secBotoes div.descricaoBotao#txtAlinhadoDireita {
-	margin-bottom: 32px;
-	margin-right: -16px;
-	text-align: end;
+  margin-bottom: 32px;
+  margin-right: -16px;
+  text-align: end;
 }
 
 section.secBotoes img.flechaLoop {
-	position: absolute;
-	right: 0;
-	top: 16px;
+  position: absolute;
+  right: 0;
+  top: 16px;
 }
 
 section.secBotoes nav {
-	display: flex;
-	flex-direction: column;
-	height: 128px;
-	justify-content: space-between;
-	margin: 16px 0;
-	width: 312px;
+  display: flex;
+  flex-direction: column;
+  height: 128px;
+  justify-content: space-between;
+  margin: 16px 0;
+  width: 312px;
 }
 
 section.secBotoes a.btnsNavegacao {
-	align-items: center;
-	border: 2px solid #ffc32c;
-	border-radius: 4px;
-	color: #ffc32c;
-	display: flex;
-	font: normal 24px 'Roboto', sans-serif;
-	height: 48px;
-	justify-content: center;
-	width: 312px;
+  align-items: center;
+  border: 2px solid #ffc32c;
+  border-radius: 4px;
+  color: #ffc32c;
+  display: flex;
+  font: normal 24px 'Roboto', sans-serif;
+  height: 48px;
+  justify-content: center;
+  width: 312px;
 }
 
 section.secBotoes a.btnsNavegacao:hover {
-	background-color: #ffc32c;
-	color: #252525;
+  background-color: #ffc32c;
+  color: #252525;
 }
 
 section.secBotoes div.descricaoBotao#txtColadoDireita {
-	margin-left: 152px;
-	margin-top: 32px;
+  margin-left: 152px;
+  margin-top: 32px;
 }
 
 section.secBotoes img.flechaCurva {
-	left: 16px;
-	position: absolute;
-	top: 216px;
+  left: 16px;
+  position: absolute;
+  top: 216px;
 }
 
 section.secCronograma {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	height: 100vh;
-	scroll-snap-align: start;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 section.secCronograma div.tituloCronograma {
-	background-image: url('../../assets/tituloCronograma.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 288px;
-	width: 50%;
+  background-image: url('../../assets/tituloCronograma.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 288px;
+  width: 50%;
 }
 
 section.secCronograma h2.semMissas {
-	font: normal 28px 'Shadows Into Light Two', cursive;
-	letter-spacing: 4px;
-	margin-top: 32px;
+  font: normal 28px 'Shadows Into Light Two', cursive;
+  letter-spacing: 4px;
+  margin-top: 32px;
 }
 
 section.secCronograma aside.gridMissas {
-	display: grid;
-	grid-template-columns: 320px 320px;
-	gap: 88px 48px;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 320px;
+  gap: 88px 48px;
+  margin: 0 auto;
 }
 
 section.secCronograma a.detalhesMissa {
-	background-color: #252525;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	height: 176px;
-	justify-content: center;
-	text-align: center;
-	transition: background-color 0.2s;
-	width: 320px;
+  background-color: #252525;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 176px;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.2s;
+  width: 320px;
 }
 
 section.secCronograma a.detalhesMissa:hover {
-	background-color: #353535;
+  background-color: #353535;
 }
 
 section.secCronograma a.detalhesMissa#detalhesMissaVermelha {
-	border: 1px solid #e41325;
+  border: 1px solid #e41325;
 }
 
 section.secCronograma a.detalhesMissa#detalhesMissaDourada {
-	border: 1px solid #ffc32c;
+  border: 1px solid #ffc32c;
 }
 
 section.secCronograma a.detalhesMissa#detalhesMissaAzul {
-	border: 1px solid #4396df;
+  border: 1px solid #4396df;
 }
 
 section.secCronograma h1 {
-	font: normal 40px 'Merriweather', serif;
-	margin-bottom: 8px;
+  font: normal 40px 'Merriweather', serif;
+  margin-bottom: 8px;
 }
 
 section.secCronograma h2 {
-	color: #e5e5e5;
-	font: normal 24px 'Cormorant Garamond', serif;
+  color: #e5e5e5;
+  font: normal 24px 'Cormorant Garamond', serif;
 }
 
 @media only screen and (max-width: 1416px) {
-	section.secHome h1.tituloSSCJ {
-		font-size: 104px;
-		line-height: 80px;
-	}
-	
-	section.secHome div.alinhaHorizontal>div.alinhaHorizontal {
-		margin-top: 64px;
-	}
-	
-	section.secHome div.curiosidade {
-		height: 112px;
-		margin-right: 24px;
-		width: 112px;
-	}
-	
-	section.secHome div.curiosidade svg {
-		height: 56px;
-		width: 56px;
-	}
-	
-	section.secHome div.curiosidade#curiosidadeVermelha:after {
-		font-size: 16px;
-		height: 112px;
-		letter-spacing: 0.19px;
-		width: 112px;
-	}
-	
-	section.secHome div.curiosidade#curiosidadeDourada:after {
-		font-size: 16px;
-		height: 112px;
-		letter-spacing: 0.19px;
-		width: 112px;
-	}
-	
-	section.secHome div.curiosidade#curiosidadeAzul:after {
-		font-size: 16px;
-		height: 112px;
-		letter-spacing: 0.19px;
-		width: 112px;
-	}
-	
-	section.secHome div.imagemDecorada img {
-		margin-left: 24px;
-		margin-top: 148px;
-		width: 416px;
-	}
-	
-	section.secHome div.decoracaoImagem {
-		height: 176px;
-		width: 368px;
-	}
-	
-	section.secHome div.decoracaoImagem#decoracaoImgVermelha {
-		margin-left: 96px;
-		margin-top: -272px;
-	}
-	
-	section.secHome div.decoracaoImagem#decoracaoImgDourada {
-		margin-top: -104px;
-	}
-	
-	section.secHome div.decoracaoImagem#decoracaoImgAzul {
-		margin-left: 48px;
-		margin-top: -136px;
-	}
-	
-	section.secBotoes div.conteudoBotoes {
-		height: 464px;
-		width: 776px;
-	}
-	
-	section.secBotoes div.decoracaoBotoes {
-		height: 344px;
-		width: 576px;
-	}
-	
-	section.secBotoes div.decoracaoBotoes#decoracaoBtnVermelho {
-		margin-top: -200px;
-	}
-	
-	section.secBotoes div.decoracaoBotoes#decoracaoBtnDourado {
-		margin-top: -24px;
-	}
-	
-	section.secBotoes div.decoracaoBotoes#decoracaoBtnAzul {
-		margin-top: 192px;
-	}
-	
-	section.secBotoes h1.tituloBotoes {
-		font-size: 64px;
-		margin-left: 32px;
-	}
-	
-	section.secBotoes div.alinhaDireita {
-		margin-top: -48px;
-	}
-	
-	section.secBotoes div.alinhaDireita div.mensagensBotoes {
-		margin-right: 64px;
-	}
-	
-	section.secBotoes div.descricaoBotao {
-		font-size: 14px;
-		line-height: 20px;
-	}
-	
-	section.secBotoes div.descricaoBotao#txtAlinhadoDireita {
-		margin-right: -64px;
-	}
-	
-	section.secBotoes img.flechaLoop {
-		height: 88px;
-		right: 8px;
-		top: 8px;
-	}
-	
-	section.secBotoes nav {
-		height: 80px;
-		margin: 0;
-		width: 136px;
-	}
-	
-	section.secBotoes a.btnsNavegacao {
-		font-size: 14px;
-		height: 32px;
-		width: 192px;
-	}
-	
-	section.secBotoes div.descricaoBotao#txtColadoDireita {
-		margin-left: 176px;
-	}
-		
-	section.secBotoes img.flechaCurva {
-		height: 64px;
-		left: 88px;
-		top: 136px;
-	}
-	
-	section.secCronograma div.tituloCronograma {
-		height: 288px;
-		margin-left: 88px;
-		width: 30%;
-	}
-	
-	section.secCronograma h2.semMissas {
-		font-size: 28px;
-		margin-top: 32px;
-	}
-	
-	section.secCronograma aside.gridMissas {
-		grid-template-columns: 288px 288px;
-		gap: 32px 0;
-	}
-	
-	section.secCronograma a.detalhesMissa {
-		height: 128px;
-		width: 248px;
-	}
-	
-	section.secCronograma h1 {
-		font-size: 32px;
-		margin-bottom: 8px;
-	}
-	
-	section.secCronograma h2 {
-		font-size: 18px;
-	}
+  section.secHome h1.tituloSSCJ {
+    font-size: 104px;
+    line-height: 80px;
+  }
+  
+  section.secHome div.alinhaHorizontal>div.alinhaHorizontal {
+    margin-top: 64px;
+  }
+  
+  section.secHome div.curiosidade {
+    height: 112px;
+    margin-right: 24px;
+    width: 112px;
+  }
+  
+  section.secHome div.curiosidade svg {
+    height: 56px;
+    width: 56px;
+  }
+  
+  section.secHome div.curiosidade#curiosidadeVermelha:after {
+    font-size: 16px;
+    height: 112px;
+    letter-spacing: 0.19px;
+    width: 112px;
+  }
+  
+  section.secHome div.curiosidade#curiosidadeDourada:after {
+    font-size: 16px;
+    height: 112px;
+    letter-spacing: 0.19px;
+    width: 112px;
+  }
+  
+  section.secHome div.curiosidade#curiosidadeAzul:after {
+    font-size: 16px;
+    height: 112px;
+    letter-spacing: 0.19px;
+    width: 112px;
+  }
+  
+  section.secHome div.imagemDecorada img {
+    margin-left: 24px;
+    margin-top: 148px;
+    width: 416px;
+  }
+  
+  section.secHome div.decoracaoImagem {
+    height: 176px;
+    width: 368px;
+  }
+  
+  section.secHome div.decoracaoImagem#decoracaoImgVermelha {
+    margin-left: 96px;
+    margin-top: -272px;
+  }
+  
+  section.secHome div.decoracaoImagem#decoracaoImgDourada {
+    margin-top: -104px;
+  }
+  
+  section.secHome div.decoracaoImagem#decoracaoImgAzul {
+    margin-left: 48px;
+    margin-top: -136px;
+  }
+  
+  section.secBotoes div.conteudoBotoes {
+    height: 464px;
+    width: 776px;
+  }
+  
+  section.secBotoes div.decoracaoBotoes {
+    height: 344px;
+    width: 576px;
+  }
+  
+  section.secBotoes div.decoracaoBotoes#decoracaoBtnVermelho {
+    margin-top: -200px;
+  }
+  
+  section.secBotoes div.decoracaoBotoes#decoracaoBtnDourado {
+    margin-top: -24px;
+  }
+  
+  section.secBotoes div.decoracaoBotoes#decoracaoBtnAzul {
+    margin-top: 192px;
+  }
+  
+  section.secBotoes h1.tituloBotoes {
+    font-size: 64px;
+    margin-left: 32px;
+  }
+  
+  section.secBotoes div.alinhaDireita {
+    margin-top: -48px;
+  }
+  
+  section.secBotoes div.alinhaDireita div.mensagensBotoes {
+    margin-right: 64px;
+  }
+  
+  section.secBotoes div.descricaoBotao {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  section.secBotoes div.descricaoBotao#txtAlinhadoDireita {
+    margin-right: -64px;
+  }
+  
+  section.secBotoes img.flechaLoop {
+    height: 88px;
+    right: 8px;
+    top: 8px;
+  }
+  
+  section.secBotoes nav {
+    height: 80px;
+    margin: 0;
+    width: 136px;
+  }
+  
+  section.secBotoes a.btnsNavegacao {
+    font-size: 14px;
+    height: 32px;
+    width: 192px;
+  }
+  
+  section.secBotoes div.descricaoBotao#txtColadoDireita {
+    margin-left: 176px;
+  }
+    
+  section.secBotoes img.flechaCurva {
+    height: 64px;
+    left: 88px;
+    top: 136px;
+  }
+  
+  section.secCronograma div.tituloCronograma {
+    height: 288px;
+    margin-left: 88px;
+    width: 30%;
+  }
+  
+  section.secCronograma h2.semMissas {
+    font-size: 28px;
+    margin-top: 32px;
+  }
+  
+  section.secCronograma aside.gridMissas {
+    grid-template-columns: 288px 288px;
+    gap: 32px 0;
+  }
+  
+  section.secCronograma a.detalhesMissa {
+    height: 128px;
+    width: 248px;
+  }
+  
+  section.secCronograma h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  
+  section.secCronograma h2 {
+    font-size: 18px;
+  }
 }

@@ -1,156 +1,156 @@
 footer.rodape {
-	align-items: center;
-	background-color: #252525;
-	display: flex;
-	height: 312px;
-	justify-content: space-between;
-	padding: 0 68px;
-	scroll-snap-align: end;
+  align-items: center;
+  background-color: #252525;
+  display: flex;
+  height: 312px;
+  justify-content: space-between;
+  padding: 0 68px;
+  scroll-snap-align: end;
 }
 
 footer.rodape nav {
-	margin: 0 auto 56px auto;
+  margin: 0 auto 56px auto;
 }
 
 footer.rodape nav ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 footer.rodape ul li {
-	border-radius: 50%;
-	margin-right: 16px;
-	overflow: hidden;
-	transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  margin-right: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 footer.rodape li:hover {
-	transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 footer.rodape ul>li:hover {
-	box-shadow: 0 32px 16px 0 #00e6773d;
+  box-shadow: 0 32px 16px 0 #00e6773d;
 }
 
 footer.rodape ul>li+li:hover {
-	box-shadow: 0 32px 16px 0 #1877f23d;
+  box-shadow: 0 32px 16px 0 #1877f23d;
 }
 
 footer.rodape ul>li+li+li:hover {
-	box-shadow: 0 32px 16px 0 #ec5cbe3d;
+  box-shadow: 0 32px 16px 0 #ec5cbe3d;
 }
 
 footer.rodape ul>li+li+li+li:hover {
-	box-shadow: 0 32px 16px 0 #ff00003d;
+  box-shadow: 0 32px 16px 0 #ff00003d;
 }
 
 footer.rodape li a {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	height: 60px;
-	width: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
 }
 
 footer.rodape nav a.whatsapp {
-	background-color: #00e676;
+  background-color: #00e676;
 }
 
 footer.rodape nav a.facebook {
-	background-color: #1877f2;
+  background-color: #1877f2;
 }
 
 footer.rodape nav a.instagram {
-	background-color: #ec5cbe;
+  background-color: #ec5cbe;
 }
 
 footer.rodape nav a.youtube {
-	background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 footer.rodape p.copyright {
-	cursor: default;
-	font: normal 24px 'Roboto', sans-serif;
-	margin-top: 20px;
+  cursor: default;
+  font: normal 24px 'Roboto', sans-serif;
+  margin-top: 20px;
 }
 
 footer.rodape>div+div {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	font: normal 28px 'Shadows Into Light Two', cursive;
-	position: relative;
-	text-align: center;
-	width: 336px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font: normal 28px 'Shadows Into Light Two', cursive;
+  position: relative;
+  text-align: center;
+  width: 336px;
 }
 
 footer.rodape>div+div img {
-	left: 0;
-	position: absolute;
-	top: 4px;
+  left: 0;
+  position: absolute;
+  top: 4px;
 }
 
 footer.rodape a.contatos {
-	align-items: center;
-	background-color: #252525;
-	border: 2px solid #4396df;
-	border-radius: 4px;
-	color: #4396df;
-	display: flex;
-	font: normal 24px 'Roboto', sans-serif;
-	height: 48px;
-	justify-content: center;
-	margin-top: 40px;
-	width: 256px;
+  align-items: center;
+  background-color: #252525;
+  border: 2px solid #4396df;
+  border-radius: 4px;
+  color: #4396df;
+  display: flex;
+  font: normal 24px 'Roboto', sans-serif;
+  height: 48px;
+  justify-content: center;
+  margin-top: 40px;
+  width: 256px;
 }
 
 footer.rodape a.contatos:hover {
-	background-color: #4396df;
-	color: #252525;
+  background-color: #4396df;
+  color: #252525;
 }
 
 @media only screen and (max-width: 1416px) {
-	footer.rodape {
-		height: 208px;
-		padding: 0 40px;
-	}
-	
-	footer.rodape nav {
-		margin-bottom: 24px;
-	}
-		
-	footer.rodape ul li {
-		margin-right: 16px;
-	}
-		
-	footer.rodape li a {
-		height: 56px;
-		width: 56px;
-	}
-	
-	footer.rodape nav a svg {
-		height: 32px;
-		width: 32px;
-	}
-	
-	footer.rodape p.copyright {
-		font-size: 20px;
-		margin-top: 20px;
-	}
-	
-	footer.rodape>div+div {
-		font-size: 20px;
-		width: 248px;
-	}
-	
-	footer.rodape>div+div img {
-		width: 56px;
-	}
-	
-	footer.rodape a.contatos {
-		font-size: 20px;
-		height: 40px;
-		margin-top: 24px;
-		width: 200px;
-	}
+  footer.rodape {
+    height: 208px;
+    padding: 0 40px;
+  }
+  
+  footer.rodape nav {
+    margin-bottom: 24px;
+  }
+    
+  footer.rodape ul li {
+    margin-right: 16px;
+  }
+    
+  footer.rodape li a {
+    height: 56px;
+    width: 56px;
+  }
+  
+  footer.rodape nav a svg {
+    height: 32px;
+    width: 32px;
+  }
+  
+  footer.rodape p.copyright {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  footer.rodape>div+div {
+    font-size: 20px;
+    width: 248px;
+  }
+  
+  footer.rodape>div+div img {
+    width: 56px;
+  }
+  
+  footer.rodape a.contatos {
+    font-size: 20px;
+    height: 40px;
+    margin-top: 24px;
+    width: 200px;
+  }
 }

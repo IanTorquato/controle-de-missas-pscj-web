@@ -1,214 +1,214 @@
 section.secDetalhesMissa {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	padding-top: 88px;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 88px;
 }
 
 section.secDetalhesMissa header {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	width: 1152px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 1152px;
 }
 
 section.secDetalhesMissa hr {
-	background-image: linear-gradient(90deg, transparent, #e5e5e5, transparent);
-	border: 0;
-	margin: 64px 0;
-	padding-top: 2px;
-	width: 1152px;
+  background-image: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+  border: 0;
+  margin: 64px 0;
+  padding-top: 2px;
+  width: 1152px;
 }
 
 section.secDetalhesMissa header img {
-	border-radius: 100%;
-	height: 304px;
-	margin: 0 52px;
-	object-fit: cover;
-	width: 304px;
+  border-radius: 100%;
+  height: 304px;
+  margin: 0 52px;
+  object-fit: cover;
+  width: 304px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
-	font: normal 80px 'Oswald', sans-serif;
-	line-height: 128px;
-	overflow: auto;
+  font: normal 80px 'Oswald', sans-serif;
+  line-height: 128px;
+  overflow: auto;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div {
-	text-align: center;
+  text-align: center;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
 section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
-	align-items: center;
-	border-radius: 8px;
-	display: flex;
-	height: 48px;
-	justify-content: center;
-	width: 48px;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>div {
-	margin-bottom: 8px;
-	margin-top: 24px;
+  margin-bottom: 8px;
+  margin-top: 24px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>div:hover {
-	background-color: #E41325cc;
-	cursor: pointer;
+  background-color: #E41325cc;
+  cursor: pointer;
 }
 
 section.secDetalhesMissa header div.dadosMissa div:first-child div>a:hover {
-	background-color: #4396dfcc;
+  background-color: #4396dfcc;
 }
 
 section.secDetalhesMissa header div.dadosMissa div+div {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 64px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div span {
-	align-items: center;
-	display: flex;
-	font: normal 24px 'Merriweather', serif;
-	margin-right: 48px;
+  align-items: center;
+  display: flex;
+  font: normal 24px 'Merriweather', serif;
+  margin-right: 48px;
 }
 
 section.secDetalhesMissa header div.dadosMissa div span svg {
-	margin-right: 8px;
+  margin-right: 8px;
 }
 
 section.secDetalhesMissa div.gridUsuarios {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 4px;
-	padding-bottom: 80px;
-	width: 1152px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  padding-bottom: 80px;
+  width: 1152px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario {
-	align-items: center;
-	background-color: #333;
-	display: flex;
-	height: 132px;
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  height: 132px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario img {
-	border-radius: 100%;
-	height: 80px;
-	margin: 0 16px;
-	object-fit: cover;
-	width: 80px;
+  border-radius: 100%;
+  height: 80px;
+  margin: 0 16px;
+  object-fit: cover;
+  width: 80px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
-	font: normal 24px 'Cormorant Garamond', serif;
-	letter-spacing: 1px;
+  font: normal 24px 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
-	align-items: center;
-	display: flex;
-	font: normal 20px 'Merriweather', serif;
-	letter-spacing: 1px;
-	margin-top: 8px;
+  align-items: center;
+  display: flex;
+  font: normal 20px 'Merriweather', serif;
+  letter-spacing: 1px;
+  margin-top: 8px;
 }
 
 section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
-	margin-right: 12px;
+  margin-right: 12px;
 }
 
 section.secDetalhesMissa div.semUsuarios h3 {
-	font: normal 28px 'Shadows Into Light Two', cursive;
-	letter-spacing: 4px;
-	margin-top: 32px;
+  font: normal 28px 'Shadows Into Light Two', cursive;
+  letter-spacing: 4px;
+  margin-top: 32px;
 }
 
 @media only screen and (max-width: 1416px) {
-	section.secDetalhesMissa {
-		padding-top: 48px;
-	}
-	
-	section.secDetalhesMissa header {
-		width: 860px;
-	}
-	
-	section.secDetalhesMissa hr {
-		margin: 32px 0;
-		width: 860px;
-	}
-	
-	section.secDetalhesMissa header img {
-		height: 184px;
-		margin: 0 32px;
-		width: 184px;
-	}
-	
-	section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
-		font-size: 52px;
-		line-height: 88px;
-	}
-	
-	section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
-	section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
-		height: 40px;
-		width: 40px;
-	}
-		
-	section.secDetalhesMissa header div.dadosMissa div+div {
-		margin-top: 24px;
-	}
-	
-	section.secDetalhesMissa header div.dadosMissa div span {
-		font-size: 16px;
-		margin-right: 64px;
-	}
-	
-	section.secDetalhesMissa header div.dadosMissa div span svg {
-		height: 20px;
-		width: 20px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios {
-		width: 860px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios div.usuario {
-		height: 96px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios div.usuario img {
-		height: 56px;
-		width: 56px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
-		font-size: 22px;
-		letter-spacing: 0.4px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
-		font-size: 16px;
-		margin-top: 4px;
-	}
-	
-	section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
-		margin-right: 8px;
-		height: 20px;
-		width:  20px;
-	}
-	
-	section.secDetalhesMissa div.semUsuarios h3 {
-		font-size: 24px;
-		letter-spacing: 2px;
-	}
+  section.secDetalhesMissa {
+    padding-top: 48px;
+  }
+  
+  section.secDetalhesMissa header {
+    width: 860px;
+  }
+  
+  section.secDetalhesMissa hr {
+    margin: 32px 0;
+    width: 860px;
+  }
+  
+  section.secDetalhesMissa header img {
+    height: 184px;
+    margin: 0 32px;
+    width: 184px;
+  }
+  
+  section.secDetalhesMissa header div.dadosMissa div:first-child h1 {
+    font-size: 52px;
+    line-height: 88px;
+  }
+  
+  section.secDetalhesMissa header div.dadosMissa div:first-child div>div,
+  section.secDetalhesMissa header div.dadosMissa div:first-child div>a {
+    height: 40px;
+    width: 40px;
+  }
+    
+  section.secDetalhesMissa header div.dadosMissa div+div {
+    margin-top: 24px;
+  }
+  
+  section.secDetalhesMissa header div.dadosMissa div span {
+    font-size: 16px;
+    margin-right: 64px;
+  }
+  
+  section.secDetalhesMissa header div.dadosMissa div span svg {
+    height: 20px;
+    width: 20px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios {
+    width: 860px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios div.usuario {
+    height: 96px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios div.usuario img {
+    height: 56px;
+    width: 56px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios div.usuario div span.nomeUsuario {
+    font-size: 22px;
+    letter-spacing: 0.4px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+  
+  section.secDetalhesMissa div.gridUsuarios div.usuario div span.quantUsuario svg {
+    margin-right: 8px;
+    height: 20px;
+    width:  20px;
+  }
+  
+  section.secDetalhesMissa div.semUsuarios h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
 }

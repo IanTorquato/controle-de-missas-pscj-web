@@ -1,141 +1,141 @@
 section.secLogin {
-	align-items: center;
-	background-color: #121212;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 section.secLogin form {
-	align-items: center;
-	background-color: #252525;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	height: 544px;
-	width: 544px;
+  align-items: center;
+  background-color: #252525;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 544px;
+  width: 544px;
 }
 
 section.secLogin img {
-	height: 128px;
-	margin-bottom: 48px;
-	margin-top: 32px;
-	width: 104px;
+  height: 128px;
+  margin-bottom: 48px;
+  margin-top: 32px;
+  width: 104px;
 }
 
 section.secLogin div.insereDados {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 32px;
-	position: relative;
-	text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  position: relative;
+  text-align: left;
 }
 
 section.secLogin div.insereDados input {
-	background-color: transparent;
-	border: solid 1px #fff;
-	border-radius: 4px;
-	color: #fff;
-	font: normal 16px 'Roboto', sans-serif;
-	height: 48px;
-	outline: none;
-	padding: 0 24px;
-	width: 320px;
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 4px;
+  color: #fff;
+  font: normal 16px 'Roboto', sans-serif;
+  height: 48px;
+  outline: none;
+  padding: 0 24px;
+  width: 320px;
 }
 
 section.secLogin div.insereDados input:-webkit-autofill+span {
-	background-color: transparent;
-	color: #fff !important;
-	text-shadow: 1px 1px 2px #000;
+  background-color: transparent;
+  color: #fff !important;
+  text-shadow: 1px 1px 2px #000;
 }
 
 section.secLogin div.insereDados input.erro {
-	border: 2px solid #E41325;
+  border: 2px solid #E41325;
 }
 
 section.secLogin div.insereDados input:focus+span,
 section.secLogin div.insereDados input:not([value=""])+span {
-	transform: translateX(-8px) translateY(-24px);
-	color: #fff;
+  transform: translateX(-8px) translateY(-24px);
+  color: #fff;
 }
 
 section.secLogin div.insereDados span {
-	background-color: #252525;
-	color: #747474;
-	font: normal 16px 'Roboto', sans-serif;
-	left: 16px;
-	padding: 0 8px;
-	position: absolute;
-	pointer-events: none;
-	top: 14px;
-	transition: 0.2s
+  background-color: #252525;
+  color: #747474;
+  font: normal 16px 'Roboto', sans-serif;
+  left: 16px;
+  padding: 0 8px;
+  position: absolute;
+  pointer-events: none;
+  top: 14px;
+  transition: 0.2s
 }
 
 section.secLogin label {
-	color: #e41325;
-	font: normal 16px 'Roboto', sans-serif;
-	margin-bottom: -8px;
-	margin-top: -8px;
-	width: 320px;
+  color: #e41325;
+  font: normal 16px 'Roboto', sans-serif;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  width: 320px;
 }
 
 section.secLogin button {
-	background-color: #e41325;
-	border: none;
-	border-radius: 4px;
-	box-shadow: 4px 4px 8px #ff000088;
-	color: #e5e5e5;
-	cursor: pointer;
-	font: normal 24px 'Roboto', sans-serif;
-	height: 48px;
-	margin-top: 32px;
-	width: 320px;
+  background-color: #e41325;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px #ff000088;
+  color: #e5e5e5;
+  cursor: pointer;
+  font: normal 24px 'Roboto', sans-serif;
+  height: 48px;
+  margin-top: 32px;
+  width: 320px;
 }
 
 section.secLogin form button:hover {
-	background-color: #bb101e;
+  background-color: #bb101e;
 }
 
 @media only screen and (max-width: 1400px) {
-	section.secLogin form {
-		height: 372px;
-		width: 440px;
-	}
-	
-	section.secLogin img {
-		height: 72px;
-		margin-bottom: 32px;
-		margin-top: 24px;
-		width: 60px;
-	}
-	
-	section.secLogin div.insereDados {
-		margin-bottom: 24px;
-	}
-	
-	section.secLogin div.insereDados input {
-		height: 40px;
-		width: 264px;
-	}
-	
-	section.secLogin div.insereDados input:focus+span,
-	section.secLogin div.insereDados input:not([value=""])+span {
-	transform: translateX(-8px) translateY(-20px);
-	}
-	
-	section.secLogin div.insereDados span {
-		top: 11px;
-	}
-	
-	section.secLogin label {
-		margin-left: 0;
-		width: 264px;
-	}
-	
-	section.secLogin form button {
-		font: normal 22px 'Roboto', sans-serif;
-		height: 40px;
-		padding-top: 2px;
-		width: 264px;
-	}
+  section.secLogin form {
+    height: 372px;
+    width: 440px;
+  }
+  
+  section.secLogin img {
+    height: 72px;
+    margin-bottom: 32px;
+    margin-top: 24px;
+    width: 60px;
+  }
+  
+  section.secLogin div.insereDados {
+    margin-bottom: 24px;
+  }
+  
+  section.secLogin div.insereDados input {
+    height: 40px;
+    width: 264px;
+  }
+  
+  section.secLogin div.insereDados input:focus+span,
+  section.secLogin div.insereDados input:not([value=""])+span {
+  transform: translateX(-8px) translateY(-20px);
+  }
+  
+  section.secLogin div.insereDados span {
+    top: 11px;
+  }
+  
+  section.secLogin label {
+    margin-left: 0;
+    width: 264px;
+  }
+  
+  section.secLogin form button {
+    font: normal 22px 'Roboto', sans-serif;
+    height: 40px;
+    padding-top: 2px;
+    width: 264px;
+  }
 }

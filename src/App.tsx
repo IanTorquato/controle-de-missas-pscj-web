@@ -7,13 +7,13 @@ import Routes from './routes'
 import './App.css'
 
 const App = () => {
-	return (
-		<BrowserRouter>
-			<LoginProvider>
-				<Routes />
-			</LoginProvider>
-		</BrowserRouter>
-	)
+  return (
+    <BrowserRouter>
+      <LoginProvider>
+        <Routes />
+      </LoginProvider>
+    </BrowserRouter>
+  )
 }
 
 export default App
