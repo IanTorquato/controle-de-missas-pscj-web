@@ -70,7 +70,7 @@ const Contato = () => {
       <section className="contatoPessoa" id="designer">
         <div className="conteudoContato">
           <div>
-            <img src="https://scontent.fccm4-1.fna.fbcdn.net/v/t1.0-9/132562331_3116464351786410_1684428659415575221_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=zmT_cgBblXIAX9oSrCy&_nc_ht=scontent.fccm4-1.fna&oh=e0b56bfe559099326002afcf35a4bd45&oe=603830D2"
+            <img src="https://github.com/AnaClara0607.png"
               alt="Foto da designer" />
 
             <div>
