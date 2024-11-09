@@ -36,3 +36,23 @@ a, abbr {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
+
+.avisoBackend {
+  display: flex;
+  justify-content: center;
+  padding: 8px 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.avisoBackend > span {
+  background-color: #a46a2d;
+  border-radius: 4px;
+  display: block;
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 2px 8px;
+  width: max-content;
+}

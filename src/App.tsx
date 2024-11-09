@@ -10,6 +10,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <LoginProvider>
+        <div className="avisoBackend">
+          <span>O backend já não existe mais, dados totalmente mockados</span>
+        </div>
+        
         <Routes />
       </LoginProvider>
     </BrowserRouter>
