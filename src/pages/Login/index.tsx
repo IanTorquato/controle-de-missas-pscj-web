@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from 'react'
 
-import { useLogin } from '../../contexts/login'
 import logo from '../../assets/logo.svg'
+import { useLogin } from '../../contexts/login'
 
 import './styles.css'
 
@@ -24,20 +24,36 @@ const Login: React.FC = () => {
         <img src={logo} alt="Brasão da Paróquia" />
 
         <div className="insereDados">
-          <input className={erroLogin ? 'erro' : ''} type="text" value={nome} required autoComplete="off"
-            onChange={({ target }) => setNome(target.value)} readOnly={focoInput} onFocus={() => {
+          <input
+            title="123pascom-Admin"
+            autoComplete="off"
+            className={erroLogin ? 'erro' : ''}
+            type="text"
+            value={nome}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNome(event.target.value)} readOnly={focoInput} onFocus={() => {
               setErroLogin('')
               setFocoInput(false)
-            }} />
+            }}
+            required
+          />
+
           <span>Usuário</span>
         </div>
 
         <div className="insereDados">
-          <input className={erroLogin ? 'erro' : ''} type="password" value={senha} required autoComplete="off"
+          <input
+            title="Admin-pascom123"
+            className={erroLogin ? 'erro' : ''}
+            type="password"
+            value={senha}
+            autoComplete="off"
             onChange={({ target }) => setSenha(target.value)} minLength={8} onFocus={() => {
               setErroLogin('')
               setFocoInput(false)
-            }} />
+            }}
+            required
+          />
+
           <span>Senha</span>
         </div>
 

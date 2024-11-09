@@ -1,6 +1,4 @@
 import React, { createContext, useContext, useState } from 'react'
-import { AxiosResponse } from 'axios'
-import { fromUnixTime, compareAsc } from 'date-fns'
 
 import api from '../services/api'
 
@@ -18,7 +16,11 @@ interface ResponseData {
 
 const LoginContext = createContext<LoginContextData>({} as LoginContextData)
 
-export const LoginProvider: React.FC = ({ children }) => {
+interface LoginProviderProps {
+  children: React.ReactNode;
+}
+
+export const LoginProvider: React.FC<LoginProviderProps> = ({ children }) => {
   const [erroLogin, setErroLogin] = useState('')
   const [tokenPascom, setTokenPascom] = useState<string | null>(pascomLogada())
 
@@ -26,33 +28,43 @@ export const LoginProvider: React.FC = ({ children }) => {
     const tokenLocalStorage = localStorage.getItem('@PSCJ:token')
 
     if (tokenLocalStorage) {
-      const { exp } = JSON.parse(atob(tokenLocalStorage.split('.')[1]))
+      return tokenLocalStorage
+      // const { exp } = JSON.parse(atob(tokenLocalStorage.split('.')[1]))
 
-      const dataTokenVencimento = fromUnixTime(exp)
+      // const dataTokenVencimento = fromUnixTime(exp)
 
-      if (compareAsc(dataTokenVencimento, new Date()) > 0) {
-        api.defaults.headers.Authorization = `Bearer ${tokenLocalStorage}`
+      // if (compareAsc(dataTokenVencimento, new Date()) > 0) {
+      //   api.defaults.headers.Authorization = `Bearer ${tokenLocalStorage}`
 
-        return tokenLocalStorage
-      }
+      //   return tokenLocalStorage
+      // }
 
-      localStorage.clear()
-      setErroLogin('Infelizmente, sua sessão expirou! Por favor, faça o login novamente.')
+      // localStorage.clear()
+      // setErroLogin('Infelizmente, sua sessão expirou! Por favor, faça o login novamente.')
     }
 
     return null
   }
 
   async function logar(nome: string, senha: string) {
-    api.post(`/login_pascom`, { nome, senha }).then(({ data }: AxiosResponse<ResponseData>) => {
-      localStorage.setItem('@PSCJ:token', data.token)
-      api.defaults.headers.Authorization = `Bearer ${data.token}`
+    if ('123pascom-Admin' === nome && senha === 'Admin-pascom123') {
+      localStorage.setItem('@PSCJ:token', 'token')
+      api.defaults.headers.Authorization = `Bearer ${'token'}`
 
-      setTokenPascom(data.token)
-    }).catch((error) => {
-      console.log(error)
-      setErroLogin(error.response?.data.erro || 'Falha ao efetuar o login')
-    })
+      setTokenPascom('token')
+    } else {
+      setErroLogin('Falha ao efetuar o login')
+    }
+
+    // api.post(`/login_pascom`, { nome, senha }).then(({ data }: AxiosResponse<ResponseData>) => {
+    //   localStorage.setItem('@PSCJ:token', data.token)
+    //   api.defaults.headers.Authorization = `Bearer ${data.token}`
+
+    //   setTokenPascom(data.token)
+    // }).catch((error) => {
+    //   console.log(error)
+    //   setErroLogin(error.response?.data.erro || 'Falha ao efetuar o login')
+    // })
   }
 
   function deslogar() {
