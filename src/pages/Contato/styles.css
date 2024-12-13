@@ -153,35 +153,35 @@ section.secContato ul span {
   section.secContato section.contatoPessoa {
     margin: 0 56px;
   }
-  
+
   section.secContato div.conteudoContato {
     width: 416px;
   }
-  
+
   section.secContato div.decoracaoContato {
     width: 344px;
   }
-    
+
   section.secContato div.decoracaoContato#corContatoVermelha {
     margin-top: -64px;
   }
-  
+
   section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoVermelha {
     margin-left: 120px;
   }
-  
+
   section.secContato section.contatoPessoa#programador div.decoracaoContato#corContatoDourada {
     margin-left: -144px;
   }
-  
+
   section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoVermelha {
     margin-left: -120px;
   }
-  
+
   section.secContato section.contatoPessoa#designer div.decoracaoContato#corContatoDourada {
     margin-left: 144px;
   }
-  
+
   section.secContato ul {
     width: 400px;
   }

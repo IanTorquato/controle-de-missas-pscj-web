@@ -1,66 +1,76 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useHistory, useParams } from 'react-router-dom'
-import { BiEditAlt, BiTrash, BiCalendar } from 'react-icons/bi'
-import { FiClock } from 'react-icons/fi'
+import { BiCalendar, BiEditAlt, BiTrash } from 'react-icons/bi'
 import { FaMapMarkedAlt } from 'react-icons/fa'
+import { FiClock } from 'react-icons/fi'
 import { HiUserGroup } from 'react-icons/hi'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
-import api from '../../services/api'
 import Header from '../../components/Header'
 import { Missa } from '../../utils/interfaces'
 import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 
+import { mockedMissas } from '../../utils/mocks/missas'
+import { mockedUsuarios } from '../../utils/mocks/usuarios'
+
 import './styles.css'
 
-interface Usuarios {
+export interface Usuario {
   id: number
   nome: string
   foto: string
   quantidade_pessoas: number
 }
 
-interface RouteParams {
+type RouteParams = {
   id: string
 }
 
 const DetalhesMissa: React.FC = () => {
   const [missa, setMissa] = useState<Missa | null>(null)
-  const [usuarios, setUsuarios] = useState<Usuarios[] | null>(null)
+  const [usuarios, setUsuarios] = useState<Usuario[] | null>(null)
 
-  const { push } = useHistory()
+  const navigate = useNavigate()
 
   const { id } = useParams<RouteParams>()
 
   const [data, hora] = missa ? missa.data_hora.split('T') : []
 
   useEffect(() => {
-    api.get(`missas?missa_id_usuarios=${id}`)
-      .then(({ data }) => {
-        setMissa(formatDataHoraMissas(data.missaLocalUrl, true)[0])
+    const randomMockedMissa = mockedMissas[Math.round(Math.random() * mockedMissas.length)]
 
-        if (data.usuarios) { setUsuarios(data.usuarios) }
-      })
-      .catch(({ response }) => {
-        console.log(response)
-        alert(response?.data.erro || 'Falha ao listar uma única missa.')
-        push('/lista-missas')
-      })
-  }, [id, push])
+    setMissa(formatDataHoraMissas([randomMockedMissa], true)[0])
+
+    if (randomMockedMissa.pessoas_cadastradas > 0) {
+      setUsuarios(mockedUsuarios)
+    }
+
+    // api.get(`missas?missa_id_usuarios=${id}`)
+    //   .then(({ data }) => {
+    //     setMissa(formatDataHoraMissas(data.missaLocalUrl, true)[0])
+
+    //     if (data.usuarios) { setUsuarios(data.usuarios) }
+    //   })
+    //   .catch(({ response }) => {
+    //     console.log(response)
+    //     alert(response?.data.erro || 'Falha ao listar uma única missa.')
+    //     navigate('/lista-missas')
+    //   })
+  }, [id])
 
   function excluirMissa(id: number) {
     // eslint-disable-next-line no-restricted-globals
-    if (confirm('Deseja realmente excluir esta missa?')) {
-      api.delete(`missas/${id}`)
-        .then(({ data }) => {
-          alert(data.mensagem)
-          push('/lista-missas')
-        })
-        .catch(({ response }) => {
-          console.log(response)
-          alert(response?.data.erro || 'Falha ao excluir missa.')
-          window.location.reload()
-        })
-    }
+    // if (confirm('Deseja realmente excluir esta missa?')) {
+    //   api.delete(`missas/${id}`)
+    //     .then(({ data }) => {
+    //       alert(data.mensagem)
+    //       navigate('/lista-missas')
+    //     })
+    //     .catch(({ response }) => {
+    //       console.log(response)
+    //       alert(response?.data.erro || 'Falha ao excluir missa.')
+    //       window.location.reload()
+    //     })
+    // }
   }
 
   function bordaCantoUsuario(index: number, totalUsuarios: number) {
@@ -104,7 +114,7 @@ const DetalhesMissa: React.FC = () => {
                   <h1>{missa.nome}</h1>
 
                   <div>
-                    <div onClick={() => excluirMissa(+id)}>
+                    <div onClick={() => excluirMissa(Number(id))}>
                       <BiTrash size={24} color="#e5e5e5" />
                     </div>
 

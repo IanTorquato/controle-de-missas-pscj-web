@@ -114,39 +114,39 @@ footer.rodape a.contatos:hover {
     height: 208px;
     padding: 0 40px;
   }
-  
+
   footer.rodape nav {
     margin-bottom: 24px;
   }
-    
+
   footer.rodape ul li {
     margin-right: 16px;
   }
-    
+
   footer.rodape li a {
     height: 56px;
     width: 56px;
   }
-  
+
   footer.rodape nav a svg {
     height: 32px;
     width: 32px;
   }
-  
+
   footer.rodape p.copyright {
     font-size: 20px;
     margin-top: 20px;
   }
-  
+
   footer.rodape>div+div {
     font-size: 20px;
     width: 248px;
   }
-  
+
   footer.rodape>div+div img {
     width: 56px;
   }
-  
+
   footer.rodape a.contatos {
     font-size: 20px;
     height: 40px;

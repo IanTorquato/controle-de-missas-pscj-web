@@ -1,5 +1,3 @@
-import React from 'react'
-
 import FormMissas from '../../components/FormMissas'
 
 const CadastrarMissa = () => {

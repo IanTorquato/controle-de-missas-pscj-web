@@ -1,38 +1,37 @@
-import React from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 import { useLogin } from '../contexts/login'
 
-import Login from '../pages/Login'
-import Home from '../pages/Home'
 import CadastrarMissa from '../pages/CadastrarMissa'
-import EditarMissa from '../pages/EditarMissa'
-import ListaMissas from '../pages/ListaMissas'
-import DetalhesMissa from '../pages/DetalhesMissa'
 import Contato from '../pages/Contato'
+import DetalhesMissa from '../pages/DetalhesMissa'
+import EditarMissa from '../pages/EditarMissa'
+import Home from '../pages/Home'
+import ListaMissas from '../pages/ListaMissas'
+import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 
-const Routes = () => {
+const MyRoutes = () => {
   const { logado } = useLogin()
 
   return (
     !logado ? (
-      <Switch>
-        <Route component={Login} path="/" />
-        <Redirect to="/" />
-      </Switch>
+      <Routes>
+        <Route element={<Login/>} path="/" />
+        <Route element={<Navigate to="/" />}  />
+      </Routes>
     ) : (
-      <Switch>
-        <Route component={Home} path="/" exact />
-        <Route component={CadastrarMissa} path="/cadastrar-missa" />
-        <Route component={EditarMissa} path='/editar-missa/:id' />
-        <Route component={ListaMissas} path='/lista-missas' />
-        <Route component={DetalhesMissa} path='/detalhes-missa/:id' />
-        <Route component={Contato} path='/contato' />
-        <Route component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route element={<Home/>} path="/"  index />
+        <Route element={<CadastrarMissa/>} path="/cadastrar-missa" />
+        <Route element={<EditarMissa/>} path='/editar-missa/:id' />
+        <Route element={<ListaMissas/>} path='/lista-missas' />
+        <Route element={<DetalhesMissa/>} path='/detalhes-missa/:id' />
+        <Route element={<Contato/>} path='/contato' />
+        <Route element={<NotFound/>} />
+      </Routes>
     )
   )
 }
 
-export default Routes
+export default MyRoutes

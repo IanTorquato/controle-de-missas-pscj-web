@@ -1,6 +1,6 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import { FiLogOut } from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom'
 
 import { useLogin } from '../../contexts/login'
 
@@ -10,7 +10,7 @@ import './styles.css'
 
 const Header: React.FC = () => {
   const { deslogar } = useLogin()
-  const { push } = useHistory()
+  const navigate = useNavigate()
 
   function confirmarDeslogar() {
     // eslint-disable-next-line no-restricted-globals
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="cabecalho">
-      <div onClick={() => { push('/') }}>
+      <div onClick={() => { navigate('/') }}>
         <img src={logo} alt="Brasão da Paróquia" />
 
         <h1><abbr title="Paróquia Sagrado Coração de Jesus">PSCJ</abbr></h1>

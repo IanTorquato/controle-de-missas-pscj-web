@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { BiDotsVerticalRounded, BiEditAlt, BiTrash } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
-import api from '../../services/api'
 import Header from '../../components/Header'
 import { Missa } from '../../utils/interfaces'
 import { formatDataHoraMissas } from '../../utils/tratandoDatas'
+
+import { mockedMissas } from '../../utils/mocks/missas'
 
 import './styles.css'
 
 const ListaMissas: React.FC = () => {
   const [missas, setMissas] = useState<Missa[]>([])
-  const [erroMissas, setErroMissas] = useState('')
+  const [erroMissas] = useState('')
 
   useEffect(() => {
-    api.get('missas')
-      .then(({ data }) => setMissas(formatDataHoraMissas(data)))
-      .catch(({ response }) => {
-        console.log(response)
-        setErroMissas(response?.data.erro || 'Falha ao listar missas.')
-      })
+    // api.get('missas')
+    //   .then(({ data }) => setMissas(formatDataHoraMissas(data)))
+    //   .catch(({ response }) => {
+    //     console.log(response)
+    //     setErroMissas(response?.data.erro || 'Falha ao listar missas.')
+    //   })
+
+    setMissas(formatDataHoraMissas(mockedMissas))
   }, [])
 
   function excluirMissa(id: number) {
@@ -27,12 +30,12 @@ const ListaMissas: React.FC = () => {
     if (confirm('Deseja realmente excluir esta missa?')) {
       setMissas(missas.filter(missa => missa.id !== id))
 
-      api.delete(`missas/${id}`)
-        .catch(({ response }) => {
-          console.log(response)
-          alert(response?.data.erro || 'Falha ao excluir missa.')
-          window.location.reload()
-        })
+      // api.delete(`missas/${id}`)
+      //   .catch(({ response }) => {
+      //     console.log(response)
+      //     alert(response?.data.erro || 'Falha ao excluir missa.')
+      //     window.location.reload()
+      //   })
     }
   }
 

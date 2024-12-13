@@ -1,8 +1,7 @@
-import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
 import { LoginProvider } from './contexts/login'
-import Routes from './routes'
+import MyRoutes from './routes'
 
 import './App.css'
 
@@ -13,8 +12,8 @@ const App = () => {
         <div className="avisoBackend">
           <span>O backend já não existe mais, dados totalmente mockados</span>
         </div>
-        
-        <Routes />
+
+        <MyRoutes />
       </LoginProvider>
     </BrowserRouter>
   )
