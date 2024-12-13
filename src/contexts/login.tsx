@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 
+import { useNavigate } from 'react-router-dom'
 import api from '../services/api'
 
 interface LoginContextData {
@@ -23,6 +24,8 @@ interface LoginProviderProps {
 export const LoginProvider: React.FC<LoginProviderProps> = ({ children }) => {
   const [erroLogin, setErroLogin] = useState('')
   const [tokenPascom, setTokenPascom] = useState<string | null>(pascomLogada())
+
+  const navigate = useNavigate()
 
   function pascomLogada() {
     const tokenLocalStorage = localStorage.getItem('@PSCJ:token')
@@ -70,6 +73,8 @@ export const LoginProvider: React.FC<LoginProviderProps> = ({ children }) => {
   function deslogar() {
     localStorage.clear()
     setTokenPascom(null)
+
+    navigate('/')
   }
 
   return (

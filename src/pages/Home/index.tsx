@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { BiChurch } from 'react-icons/bi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { RiComputerLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
-import api from '../../services/api'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import { Missa } from '../../utils/interfaces'
-import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 import igrejaCentro from '../../assets/dentroIgrejaCentro.jpg'
-import iconFlexaLoop from '../../assets/icons/flechaLoop.png'
 import iconFlexaCurva from '../../assets/icons/flechaCurva.png'
+import iconFlexaLoop from '../../assets/icons/flechaLoop.png'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import { Missa } from '../../utils/interfaces'
+import { mockedMissas } from '../../utils/mocks/missas'
+import { formatDataHoraMissas } from '../../utils/tratandoDatas'
 
 import './styles.css'
 
 const Home = () => {
   const [missas, setMissas] = useState<Missa[]>([])
-  const [erroMissas, setErroMissas] = useState('')
+  const [erroMissas] = useState('')
   const [imgIgrejaLoad, setImgIgrejaLoad] = useState(false)
 
   useEffect(() => {
-    api.get('missas?quantidade_missas=6')
-      .then(({ data }) => setMissas(formatDataHoraMissas(data)))
-      .catch(({ response }) => {
-        console.log(response)
-        return setErroMissas(response?.data.erro || 'Falha ao listar missas.')
-      })
+    // api.get('missas?quantidade_missas=6')
+    //   .then(({ data }) => setMissas(formatDataHoraMissas(data)))
+    //   .catch(({ response }) => {
+    //     console.log(response)
+    //     return setErroMissas(response?.data.erro || 'Falha ao listar missas.')
+    //   })
+
+
+    setMissas(formatDataHoraMissas(mockedMissas))
   }, [])
 
   return (
@@ -35,7 +38,7 @@ const Home = () => {
 
       <section className="secHome">
         <div>
-          <h1 className="tituloSSCJ">Santuário Sagrado <br /> Coração de <br /> Jesus</h1>
+          <h1 className="tituloPSCJ">Santuário Sagrado <br /> Coração de <br /> Jesus</h1>
 
           <div className="alinhaHorizontal">
             <div className="alinhaHorizontal">

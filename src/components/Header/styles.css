@@ -4,7 +4,7 @@ header.cabecalho {
   font-family: 'Cormorant Garamond', serif;
   justify-content: space-between;
   height: 80px;
-  position: absolute; 
+  position: absolute;
   width: 100%;
 }
 
@@ -50,27 +50,27 @@ header.cabecalho div:last-child div.btnDeslogar:hover {
   header.cabecalho {
     height: 56px;
   }
-  
+
   header.cabecalho div:first-child img {
     height: 36px;
     margin: 0 8px 4px 16px;
     width: 24px;
   }
-  
+
   header.cabecalho div:first-child h1 {
     font-size: 32px;
   }
-  
+
   header.cabecalho div:last-child h2 {
     font-size: 24px;
   }
-  
+
   header.cabecalho div:last-child div.btnDeslogar {
     height: 40px;
     margin: 0 8px;
     width: 40px;
   }
-  
+
   header.cabecalho div:last-child svg {
     height: 24px;
     width: 24px;

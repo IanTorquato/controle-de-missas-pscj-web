@@ -1,6 +1,4 @@
-import React from 'react'
-import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare, FaGithubSquare, FaLinkedin }
-  from 'react-icons/fa'
+import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaLinkedin, FaWhatsappSquare } from 'react-icons/fa'
 
 import './styles.css'
 

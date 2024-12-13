@@ -154,86 +154,86 @@ section.secCadastrarEditar button:hover {
   color: #252525;
 }
 
-@media only screen and (max-width: 1416px) {	
+@media only screen and (max-width: 1416px) {
   section.secCadastrarEditar form {
     height: 464px;
     width: 688px;
   }
-  
+
   section.secCadastrarEditar div.decoracaoFormMissa {
     height: 344px;
     width: 472px;
   }
-  
+
   section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormVermelha {
-    margin-top: -200px;		
+    margin-top: -200px;
   }
-  
+
   section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormDourada {
-    margin-top: -24px;		
+    margin-top: -24px;
   }
-  
+
   section.secCadastrarEditar div.decoracaoFormMissa#decoracaoFormAzul {
     margin-top: 192px;
   }
-  
+
   section.secCadastrarEditar form h1 {
     font-size: 64px;
     margin-bottom: 40px;
     margin-top: 8px;
   }
-  
+
   section.secCadastrarEditar form>div.containerInputsForm {
     margin-bottom: 48px;
   }
-  
+
   section.secCadastrarEditar form>div.containerInputsForm input,
   section.secCadastrarEditar form>div.containerInputsForm select {
     font-size: 13px;
     height: 40px;
     width: 304px;
   }
-  
+
   section.secCadastrarEditar form>div.containerInputsForm>div {
     margin-bottom: 24px;
   }
-  
+
   section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div input,
   section.secCadastrarEditar form>div.containerInputsForm>div:last-child>div select {
     width: 148px;
   }
-  
+
   section.secCadastrarEditar form>div.containerInputsForm svg {
     right: 0;
-    top: 12px; 
+    top: 12px;
     height: 16px;
     width: 16px;
   }
-  
+
   section.secCadastrarEditar form div.msgEsquerda {
     font-size: 16px;
     left: 24px;
     top: 288px;
     width: 144px;
   }
-  
+
   section.secCadastrarEditar form div.msgEsquerda img {
     margin-left: 96px;
     transform: rotate(-64deg);
     height: 80px;
   }
-  
+
   section.secCadastrarEditar form div.msgDireita {
     font-size: 16px;
     left: 528px;
     top: 296px;
     width: 96px;
   }
-  
+
   section.secCadastrarEditar form div.msgDireita img {
     width: 96px;
   }
-  
+
   section.secCadastrarEditar button {
     font-size: 20px;
     height: 40px;
