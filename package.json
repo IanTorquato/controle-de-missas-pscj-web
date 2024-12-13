@@ -16,7 +16,7 @@
     "node": ">=20.18.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.28.0",
     "date-fns": "^2.16.1",
     "date-fns-tz": "^1.1.1",
     "react": "^18.3.1",
