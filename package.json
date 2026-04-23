@@ -11,9 +11,10 @@
       "not op_mini all"
     ]
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": ">=20.18.0"
+    "node": ">=24.14.1",
+    "pnpm": ">=10.33.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -26,7 +27,7 @@
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.17.10",
+    "@types/node": "^24.1.0",
     "@types/react": "^18.3.16",
     "@types/react-dom": "^18.3.5",
     "typescript": "^5.7.2"
