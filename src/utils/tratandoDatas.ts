@@ -1,5 +1,5 @@
 import { parseISO } from 'date-fns'
-import { format, utcToZonedTime } from 'date-fns-tz'
+import { format, toZonedTime } from 'date-fns-tz'
 
 import { Missa } from './interfaces'
 
@@ -17,7 +17,7 @@ function formatDataHoraMissas(missas: Missa[], dataComAno = false) {
   const local = 'America/Sao_Paulo'
 
   return missas.map(missa => {
-    const data_hora = format(utcToZonedTime(missa.data_hora, local), formato)
+    const data_hora = format(toZonedTime(missa.data_hora, local), formato)
 
     return { ...missa, data_hora, dia_semana: retornaDiaSemana(missa.data_hora) }
   })
