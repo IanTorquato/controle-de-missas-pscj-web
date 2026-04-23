@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
-import api from '../services/api'
 
 interface LoginContextData {
   logado: boolean
@@ -52,7 +51,7 @@ export const LoginProvider: React.FC<LoginProviderProps> = ({ children }) => {
   async function logar(nome: string, senha: string) {
     if ('123pascom-Admin' === nome && senha === 'Admin-pascom123') {
       localStorage.setItem('@PSCJ:token', 'token')
-      api.defaults.headers.Authorization = `Bearer ${'token'}`
+      // api.defaults.headers.Authorization = `Bearer ${'token'}`
 
       setTokenPascom('token')
     } else {
